@@ -1,0 +1,315 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load Rosa Dialogue File",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Rosa, Characters/Schedules/Rosa",
+      "FromFile": "assets/{{target}}/Rosa.json"
+    },
+    {
+      "LogName": "NPC Dispositions",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Rosa": "adult/neutral/neutral/neutral/female/not-datable/null/Town/null/fall 7/Custom_ES_InnRoomRosa 5 5/{{i18n:Name.Rosa}}"
+      }
+    },
+    /* {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_EastScarpeInn",
+      "MapProperties": {
+          "NPCWarp": "25 4 Custom_ES_InnRoomRosa 3 9"
+      }
+    },*/
+    /* {
+      "LogName": "NPC Manifestation - makes Rosa datable if you're playing a female char (she may ask you at 8-hearts if you are interested in women romantically and if no, remove - or add - a flag)",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Fields": {
+        "Rosa": {
+          "5": "datable"
+        }
+      },
+      "When": {
+        "PlayerGender": "female"
+      }
+    },*/
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Rosa": "{{i18n:gifts.rosa.love}}/540 233 400/{{i18n:gifts.rosa.like}}/-4 -5 -6 -7 -79 422 216 246 768/{{i18n:gifts.rosa.dislike}}/330/{{i18n:gifts.rosa.hate}}/2 769/{{i18n:gifts.rosa.neutral}}/-4/ "
+      }
+    },
+    {
+      "LogName": "Portraits",
+      "Action": "Load",
+      "Target": "Portraits/Rosa",
+      "FromFile": "assets/{{Target}}/Rosa.png"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/Festivals/Rosa.json"
+    },
+    {
+      "LogName": "Schedule Dialogue",
+      "Action": "Load",
+      "Target": "Strings/schedules/Rosa",
+      "FromFile": "assets/Characters/schedules/Rosa/ScheduleDialogueRosa.json"
+    },
+    {
+      "LogName": "Additional Rosa Dialogue",
+      "Action": "Include",
+      "FromFile": "assets/Characters/Dialogue/Rosa/RosaDialogue.json"
+    },
+    {
+      "LogName": "Loads Attic",
+      "Action": "Load",
+      "Target": "Maps/ESInnAttic",
+      "FromFile": "assets/Maps/Attic.tmx"
+    },
+    /*********
+  ** Sprites
+  *********/
+    {
+      "LogName": "Sprites",
+      "Action": "Load",
+      "Target": "Characters/Rosa",
+      "FromFile": "assets/{{Target}}/Rosa.png"
+    },
+    {
+      "LogName": "Sprites",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Rosa",
+      "Entries": {
+        "spring": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
+        "summer": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
+        "fall": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
+        "winter": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
+        "rain": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpeInn 33 28 0/1500 Custom_EastScarpeInn 28 13 3 square_1_2_1/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
+      },
+      "When": {
+        "HasMod": "ItsBenter.InnCompanions.CP"
+      },
+    },
+    {
+      "LogName": "Sprites",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Rosa",
+      "Entries": {
+        "Sat": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1700 Saloon 36 20 1/2400 Custom_ES_InnRoomRosa 5 5 1",
+      },
+      "When": {
+        "HasSeenEvent": "57874001"
+      }
+    },
+    {
+      "LogName": "Sprites",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Rosa",
+      "Entries": {
+        "Thu": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/930 JojaMart 21 15 3/1230 JojaMart 13 6 0/1310 JojaMart 13 6 0/1400 JojaMart 8 5 2/1430 JojaMart 7 24 3/1530 Custom_EastScarpeInn 43 10 0/2200 Custom_ES_InnRoomRosa 5 5 1"
+      },
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+        "HasMod |contains=LemurKat.JulietHouse.NPC": true
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_EastScarpeInn",
+      "Entries": {
+        "57874000": "jaunty/37 15/farmer 40 22 0 Rosa 44 10 0/skippable/addObject 43 19 234 1/addObject 41 8 245 1/addObject 42 8 246 1/move farmer 0 -4 1 true/move Rosa -4 0 2 true/emote Rosa 56/emote farmer 8/move farmer 2 0 1/move Rosa 0 5 2/doAction 40 16/playSound openBox/faceDirection farmer 3/move farmer -2 0 0 true/move Rosa 0 2 2 true/pause 1000/emote Rosa 16/jump Rosa 3/jump farmer 3/move farmer 1 0 3/playSound dwop/addObject 40 18 255 0/textAboveHead Rosa \"{{i18n:57874000.01}}\"/speak Rosa \"{{i18n:57874000.02}}\"/quickQuestion #{{i18n:57874000.03}}#{{i18n:57874000.04}}(break)speak Rosa \"{{i18n:57874000.05}}\"(break)speak Rosa \"{{i18n:57874000.06}}\"/speak Rosa \"{{i18n:57874000.07}}\"/emote farmer 36/speak Rosa \"{{i18n:57874000.08}}\"/playSound pickUpItem/removeSprite 40 18/move Rosa 0 1 1/speak Rosa \"{{i18n:57874000.09}}\"/faceDirection Rosa 3/pause 500/faceDirection Rosa 1/speak Rosa \"{{i18n:57874000.10}}\"/emote farmer 32/pause 500/speak Rosa \"{{i18n:57874000.11}}\"/emote farmer 56/pause 500/speak Rosa \"{{i18n:57874000.12}}\"/pause 500/emote farmer 40/pause 500/speak Rosa \"{{i18n:57874000.13}}\"/pause 500/move Rosa 0 -1 0/move farmer -1 0 0/move Rosa 0 -6 0 true/pause 1000/end",
+        "57874001/f Rosa 500/t 1600 2000": "jaunty/40 12/farmer 40 17 0 Rosa 45 10 0/skippable/pause 1000/move Rosa -2 0 0/playSound clank/doAction 40 16/move farmer 0 -7 1 true/shake Rosa 240/pause 500/emote Rosa 12/pause 1000/playSound clank/pause 1000/emote farmer 56/jump Rosa 2/faceDirection Rosa 3/pause 100/speak Rosa \"{{i18n:57874001.01}}\"/emote farmer 32/pause 1000/speak Rosa \"{{i18n:57874001.02}}\"/pause 500/emote Rosa 28/pause 1000/move Rosa 0 1 2/pause 500/move farmer 2 0 2/playSound slimedead/addObject 43 12 747 0/emote Rosa 20/move farmer 0 1 2/emote farmer 8/speak Rosa \"{{i18n:57874001.03}}\"/pause 1000/quickQuestion #{{i18n:57874001.04}}#{{i18n:57874001.05}}#{{i18n:57874001.06}}(break)textAboveHead Rosa \"{{i18n:57874001.07}}\"\\speak Rosa \"{{i18n:57874001.08}}\"(break)speak Rosa \"{{i18n:57874001.09}}\"(break)speak Rosa \"{{i18n:57874001.10}}\"/pause 1000/faceDirection Rosa 3/faceDirection farmer 1/pause 1000/speak Rosa \"{{i18n:57874001.11}}\"/faceDirection Rosa 0/pause 1000/emote farmer 8/faceDirection Rosa 3/speak Rosa \"{{i18n:57874001.12}}\"/pause 500/faceDirection Rosa 2/faceDirection farmer 2/pause 1000/speak Rosa \"{{i18n:57874001.13}}\"/pause 500/faceDirection farmer 1 true/faceDirection Rosa 3/emote farmer 56/speak Rosa \"{{i18n:57874001.14}}\"/faceDirection Rosa 2/faceDirection farmer 2/emote farmer 40/speak Rosa \"{{i18n:57874001.15}}\"/faceDirection farmer 1 true/faceDirection Rosa 3/speak Rosa \"{{i18n:57874001.16}}\"/emote farmer 32/pause 1000/end",
+        "57874003/f Rosa 1750/w rainy/t 1700 2000": "rain/-100 -100/Rosa 42 30 0 farmer -1000 -1000 0 Jacob -1000 -1000 0/addConversationTopic Rosa_StormDay 7/skippable/viewport 43 32 clamp true/pause 1000/playSound daggerswipe/pause 1000/warp farmer 44 36/pause 500/playSound daggerswipe/move farmer 0 -3 0 true/playSound woodyStep/pause 500/faceDirection Rosa 2/jump Rosa 2/emote Rosa 16/speak Rosa \"{{i18n:57874003.01}}\"/emote farmer 28/pause 1000/move Rosa 0 3 1/faceDirection farmer 3/pause 100/speak Rosa \"{{i18n:57874003.02}}\"/pause 500/emote farmer 8/pause 500/speak Rosa \"{{i18n:57874003.03}}\"/pause 1000/screenFlash .35/playSound thunder/pause 1000/playSound woodyStep/warp Jacob 44 36/jump Rosa 5/showFrame Rosa 19/pause 500/showFrame Rosa 0/faceDirection Rosa 2/faceDirection farmer 2/pause 1000/textAboveHead Rosa \"{{i18n:57874003.04}}\"/speak Jacob \"{{i18n:57874003.05}}\"/jump Rosa 3/emote Rosa 16/speak Rosa \"{{i18n:57874003.06}}\"/pause 1000/textAboveHead Jacob \"{{i18n:57874003.07}}\"/pause 1000/textAboveHead Rosa\"Won't be long!\"/pause 1000/move Rosa -2 0 0/advancedMove Rosa false 0 -10 1 1500 0 10 3 0/move Jacob 0 -2 0/move farmer 1 0 3/move Jacob 0 -1 1/pause 1000/speak Jacob \"{{i18n:57874003.08}}\"/emote Jacob 28/textAboveHead Rosa \"{{i18n:57874003.09}}\"/pause 1000/faceDirection Jacob 3/pause 500/emote Jacob 20/speak Jacob \"{{i18n:57874003.10}}\"/pause 1000/faceDirection Jacob 1/speak Jacob \"{{i18n:57874003.11}}\"/pause 1000/faceDirection Rosa 2/move Jacob 0 3 2/warp Jacob -100 -100/emote Rosa 32/faceDirection Rosa 1/speak Rosa \"{{i18n:57874003.12}}\"/emote farmer 32/pause 1000/end",
+        "57874004/f Rosa 1500/e 57874002/A CherryOrchard_Rosa/p Rosa": "jaunty/40 30/Rosa -1000 -1000 2 farmer -1000 -1000 0/addConversationTopic LilyAnneJournal_Rosa 7/skippable/warp farmer 44 36/move farmer 0 -3 0 true/pause 100/emote farmer 8/pause 2000/faceDirection farmer 1/pause 1000/move farmer -4 0 0/playSound stairsdown/emote farmer 56/move farmer 0 -5 0/viewport move 0 -2 2500 true/pause 2000/fade/viewport -100 -100/pause 2000/doAction 40 16/playSound doorCreak/pause 1000/warp Rosa 43 10 true/warp farmer 40 14 true/animate Rosa false true 240 16 16 16 17 18 16 16/viewport 39 12 clamp true/pause 1000/move farmer 0 -4 1 true/emote farmer 32/pause 1000/stopAnimation Rosa/faceDirection Rosa 3/textAboveHead Rosa \"{{i18n:57874004.01}}\"/pause 1000/emote farmer 8/speak Rosa \"{{i18n:57874004.02}}\"/pause 1000/jump Rosa 3/speak Rosa \"{{i18n:57874004.03}}\"/pause 1000/emote farmer 56/textAboveHead Rosa \"{{i18n:57874004.04}}\"/speak Rosa \"{{i18n:57874004.05}}\"/move farmer -1 0 0/move farmer 0 -2 0 true/move Rosa -2 0 3 true/pause 1000/viewport -1000 -1000/speak Rosa \"{{i18n:57874004.06}}\"/pause 500/playSound ow/pause 500/speak Rosa \"{{i18n:57874004.07}}\"/warp Rosa 9 9 true/warp farmer 6 6 true/changeToTemporaryMap ESInnAttic/viewport -1000 -1000/viewport 6 5/faceDirection farmer 3/move Rosa 0 -2 0/faceDirection farmer 1/pause 500/move Rosa -4 0 0/pause 1000/faceDirection Rosa 1/faceDirection farmer 2/textAboveHead Rosa \"{{i18n:57874004.08}}\"/pause 1000/speak Rosa \"{{i18n:57874004.09}}\"/emote farmer 60/speak Rosa \"{{i18n:57874004.10}}\"/emote farmer 56/pause 1000/speak Rosa \"{{i18n:57874004.11}}\"/pause 1000/move farmer 1 0 3/move farmer 2 0 0 true/move Rosa -2 0 3 true/pause 2500/playSound woodWhack/pause 500/speak Rosa \"{{i18n:57874004.12}}\"/faceDirection Rosa 1/pause 1000/playSound achievement/showFrame 57/addObject 9 4 102 1/message \"{{i18n:57874004.13}}\"/pause 1000/removeSprite 9 4/faceDirection farmer 2/addObject 9 7 102 1/playSound axe/speed Rosa 3/move Rosa 5 0 1/pause 2000/speak Rosa \"{{i18n:57874004.14}}\"/emote farmer 8/pause 1000/jump Rosa 3/speak Rosa \"{{i18n:57874004.15}}\"/playSound pickUpItem/removeSprite 9 7/move Rosa 1 0 0/faceDirection farmer 2/speak Rosa \"{{i18n:57874004.16}}\"/move Rosa 0 2 2/emote farmer 8/warp Rosa -100 -100/end",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_EastScarpe",
+      "Entries": {
+        "57874002/f Rosa 750/d tue wed fri/t 1000 1600/w sunny": "{{season}}_day_ambient/38 67/farmer 38 69 1 Rosa 47 69 0 Eloise 49 64 2/addConversationTopic CherryOrchard_Rosa 7/skippable/showFrame Eloise 22/pause 500/move farmer 7 0 1 true/viewport move 2 0 3500 true/playSound crafting/pause 1200/playSound crafting/pause 1200/playSound crafting/pause 1200/faceDirection Rosa 3/speak Rosa \"{{i18n:57874002.01}}\"/pause 1000/faceDirection farmer 0/pause 1000/faceDirection farmer 1/emote farmer 8/pause 1000/speak Rosa \"{{i18n:57874002.02}}\"/playSound crow/jump Eloise 3/emote farmer 8 true/pause 1000/speak Rosa \"{{i18n:57874002.03}}\"/move Eloise 0 1 2/faceDirection Eloise 1 true/pause 1000/speak Rosa \"{{i18n:57874002.04}}\"/faceDirection Eloise 2 true/speak Rosa \"{{i18n:57874002.05}}\"/advancedMove Eloise false 4 0 0 -4 5 0 0 -2/pause 1000/speak Rosa \"{{i18n:57874002.06}}\"/pause 1000/speak Rosa \"{{i18n:57874002.07}}\"/emote farmer 32/pause 1000/speak Rosa \"{{i18n:57874002.08}}\"/pause 1000/faceDirection farmer 0 true/faceDirection Rosa 0 true/textAboveHead Rosa \"{{i18n:57874002.09}}\"/pause 1000/jump Rosa 3/textAboveHead Rosa \"{{i18n:57874002.10}}\"/pause 1000/playSound crickets/pause 1000/faceDirection Rosa 3 true/faceDirection farmer 1 true/speak Rosa \"{{i18n:57874002.11}}\"/pause 1000/textAboveHead Rosa \"{{i18n:57874002.12}}\"/pause 1000/fade/viewport -100 -100/warp farmer 74 49/warp Rosa 75 49/warp Eloise -1000 -1000/viewport 74 48 clamp true/pause 1000/speak Rosa \"{{i18n:57874002.13}}\"/speak Eloise \"{{i18n:57874002.14}}\"/jump Rosa 4/faceDirection Rosa 1/textAboveHead Rosa \"{{i18n:57874002.15}}\"/speed Rosa 5/move Rosa 4 0 1/warp Rosa -1000 -1000/speed farmer 5/move farmer 4 0 1/warp farmer -1000 -1000/fade/viewport -100 -100/changeLocation Custom_ESOrchard/viewport -100 -100/warp Eloise 4 18/faceDirection Eloise 1/viewport 8 18 clamp true/warp Rosa 0 17/pause 500/speed Rosa 5/move Rosa 3 0 2 true/textAboveHead Rosa \"{{i18n:57874002.16}}\"/pause 2000/warp farmer 0 18/faceDirection Eloise 3/move farmer 1 0 1/speak Rosa \"{{i18n:57874002.17}}\"/pause 100/faceDirection Eloise 1/pause 500/faceDirection Eloise 3/emote Eloise 28/pause 1000/speak Eloise \"{{i18n:57874002.18}}\"/textAboveHead Eloise \"{{i18n:57874002.19}}\"/pause 1000/speak Rosa \"{{i18n:57874002.20}}\"/pause 1000/speak Eloise \"{{i18n:57874002.21}}\"/pause 1000/emote Rosa 40/pause 1000/speak Rosa \"{{i18n:57874002.22}}\"/emote Eloise 28/pause 1000/speak Rosa \"{{i18n:57874002.23}}\"/textAboveHead Eloise \"{{i18n:57874002.24}}\"/pause 1000/advancedMove Eloise false -3 0/pause 1500/move farmer 0 -1 2/faceDirection Eloise 1/move Rosa 0 1 1/move Rosa 2 0 1/pause 1000/speak Rosa \"{{i18n:57874002.25}}\"/pause 1000/end",
+        // "57874006/e 57874004/f Rosa 2000/A LilyAnneJournal_Rosa/w sunny/t 800 1600":"{{season}}_day_ambient/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Saloon",
+      "Entries": {
+        "57874007/f Rosa 1000/e 57874001/": "Saloon1/11 18/Gus 11 18 2 Rosa 11 20 0 farmer -100 -100 0/skippable/pause 1000/speak Rosa \"Oh Gus, you would've wept if you'd seen it! The pastry was soggy, and the texture... ugh... so coarse.$2#$b#I couldn't have fed it to a pig, let alone a guest.$3\"/pause 500/emote Gus 40/pause 1000/speak Rosa \"I thought kale would prove a decent alternative for spinach, but I was very wrong.$2\"/pause 500/speak Gus \"Oh, but you can! You've just got to understand kale's temperament! It's more robust than spinach.$1#$b#You have to saute in oil first, give it a chance to wilt.\"/pause 500/emote Gus 40/pause 1000/speak Gus \"Why the sudden interest in cooking, Rosa? Looking to impress someone?$1\"/pause 500/emote Rosa 60/pause 1000/playSound doorOpen/warp farmer 14 23/textAboveHead Gus \"Hello {{playerName}}!\"/faceDirection Rosa 2/speak Gus \"What impeccable timing! We were just thinking about you!$1\"/emote farmer 8/pause 500/faceDirection Rosa 0/textAboveHead Rosa \"We were?\"/move farmer 0 -2 3/move farmer -2 0 0/move farmer 0 -1 0 true/speak Gus \"Do you want to know the real secret to making delicious food?\"/emote Rosa 56/pause 500/speak Gus \"You need to start with quality ingredients, and fresh produce is always best.$1#$b#Perhaps @ could supply you with some?\"/faceDirection farmer 3/faceDirection Rosa 1/emote Rosa 16/jump Rosa 3/pause 1000/faceDirection Rosa 0/speak Rosa \"Oh no! I couldn't possibly ask for something so valuable!$2\"/pause 1000/faceDirection Rosa 1/speak Rosa \"You'd prefer to sell your produce right? Profit from it, rather than have it used in a failed cooking experiment?\"/quickQuestion #I'm afraid I would. It's my livelihood, after all.#I'd love to share some ingredients with you.(break)pause 500\\faceDirection Rosa 0\\speak Rosa \"Sorry Gus. Guess I'll just have to fumble along with Joja produce, until I get the knack of it.\"(break)pause 500\\addMailReceived Rosa_Ingredients\\textAboveHead Rosa \"You would!\"\\pause 500\\speak Rosa \"Thank you, @. That's very generous.$5#$b#I'll send you a list of what I need.\"/faceDirection Rosa 0/faceDirection farmer 0/speak Rosa \"And maybe I could help out in the kitchen? Wash the dishes and watch the master chef at work?$1\"/emote Gus 32/speak Gus \"Hah, of course! It'd be my pleasure.$1\"/pause 500/emote Rosa 20/speak Rosa \"Thanks Gus. That'd be wicked.\"/faceDirection Rosa 1/faceDirection farmer 3/pause 1000/speak Rosa \"Hey @, one day I'll cook you dinner - give you a taste of Josa. And that's a promise!$1\"/pause 400/emote farmer 56/pause 1000/end warpOut"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/ArchaeologyHouse",
+      "Entries": {
+        "57874008/e 57874004/f Rosa 2000/A LilyAnneJournal_Rosa/w sunny/t 1000 1600": "libraryTheme/-100 -100/{{57874008Actors}} Penny 18 9 2 Jas 19 10 3 Vincent 16 10 1 Eloise 18 12 0/addConversationTopic LilyAnneDiscuss 14/addConversationTopic GhostHuntTomorrow 0/skippable/showFrame Penny 18/showFrame Jas 22/showFrame Eloise 16/showFrame Vincent 24/viewport 3 12 clamp true/addObject 4 8 102 1/pause 1000/speak Gunther \"It's well before my time, sorry Miss Rosa, but you're welcome to dig through the archives.#$b#Otherwise might I recommend you speak with Mr. Mullner?\"/speak Rosa \"I'll try that. Thanks for your time, Professor Gunther.$1\"/speak Gunther \"Always a pleasure, Miss Rosa. And, once you're finished with that journal, would you consider donating it to the museum?#$b#A piece of history like that? I'd love to add it to the collection.\"/textAboveHead Rosa \"Of course!\"/pause 500/speak Rosa \"See you again soon, Professor Gunther!\"/playSound pickUpItem/removeSprite 4 8/pause 500/emote Gunther 32/pause 1000/faceDirection Rosa 2/pause 500/move Rosa 0 2 2/playSound doorOpen/warp farmer 3 14/showFrame Rosa 19/jump Rosa 5/emote Rosa 16/showFrame Rosa 0/speak Rosa \"Woah @! You startled me!\"/emote farmer 60/speak Rosa \"Regardless, I'm glad I ran into you. Remember that journal we found?\"/emote farmer 12/speak Rosa \"Sorry - YOU found! Well, I read it. Most of it anyway.#$b#Poor Lily-Anne, she was only sixteen when her parents died... and she was sent here, to live with her ailing grand-\"/emote Gunther 40/faceDirection Rosa 0/pause 1000/faceDirection Rosa 2/pause 500/speak Rosa \"Anyway, we should probably take this outside, rather than chat in the doorway.\"/emote farmer 56/faceDirection farmer 2/playSound doorOpen/warp farmer -1000 -1000/move Rosa 0 3 2/warp Rosa -100 -1000/fade/stopMusic/viewport -100 -100/changeLocation Town/viewport -100 -100/pause 1000/playMusic {{season}}_day_ambient/switchEvent ESOrchard_part2"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "ESOrchard_part2": "pause 500/pause 500/warp farmer 100 91/viewport 100 94 clamp true/pause 1000/warp Rosa 101 90/pause 1000/move Rosa 0 4 0/move farmer 0 2 2/faceDirection Rosa 3/pause 500/speak Rosa \"East Scarp was a mining town in those days, full of people - and she's written about all of them. Mr. Mullner included!$1#$b#There's illustrations too. Although she's not the best artist.\"/move farmer -11 0 2 true/move Rosa -11 0 3 true/viewport move -3 0 3500 true/pause 500/speak Rosa \"Life was pretty rough, and by her accounts, it seems her grandfather was probably in the stages of advanced dementia.$2\"/pause 500/emote Rosa 40/pause 1000/speak Rosa \"Yet, she writes with humor, insight, and a touch of melancholy.\"/pause 1000/speak Rosa \"It's crazy, but I think I might be a little bit in love with her.$5\"/pause 500/emote farmer 20/pause 1000/speak Rosa \"The last fifty pages or so... they're just sort of melted away. Whatever was written on them is impossible to read.$2\"/faceDirection Rosa 2/pause 1000/speak Rosa \"I wonder what happened to her?\"/move farmer 0 1 1/faceDirection Rosa 3/quickQuestion #I'm sure she left town and lived her best life.#She was probably dissolved by slimes.(break)speak Rosa \"That's what I'd like to think too.$1\"(break)speak Rosa \"Ugh, please, don't make me think of that, @.$2\"/pause 1000/speak Rosa \"There's only one way to find out, I guess... we have to investigate the old orchard house.#$b#Are you up for a bit of detective work, @?\"/emote farmer 56/pause 1000/speak Rosa \"Sweet. I'll meet you at the orchard tomorrow around noon. Wear sturdy shoes!\"/pause 500/speak Rosa \"Now, I'd better go and talk to Mr Mullner.\"/emote farmer 32/pause 1000/end"
+      },
+      "When": {
+        "HasMod |contains=LemurKat.JulietHouse.NPC": false
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        //
+        "ESOrchard_part2": "pause 500/warp Juliet 83 99/warp farmer 100 91/viewport 100 92 clamp true/pause 1000/warp Rosa 101 90/pause 1000/move Rosa 0 4 0/move farmer 0 2 2/faceDirection Rosa 3/pause 500/speak Rosa \"East Scarp was a mining town then, full of people - and she's written about all of them. Mr. Mullner included!$1#$b#There's illustrations too. Although she's not the best artist.\"/move farmer -11 0 2 true/move Rosa -11 0 3 true/viewport move -2 0 2500 true/pause 500/speak Rosa \"Life was pretty rough back then, and by all accounts, it seems her grandfather was probably in the stages of advanced dementia.$2\"/pause 500/emote Rosa 40/pause 1000/speak Rosa \"Yet, she writes with humor, insight, and a touch of melancholy.\"/pause 1000/move farmer -5 0 2 true/move Rosa -5 0 2 true/viewport move -2 0 2500 true/speak Rosa \"It's crazy, but I think I might be a little bit in love with her.$2#$b#Don't tell Jules... she'd never let me live it down.$5\"/faceDirection Juliet 0/speak Juliet \"Don't tell Jules what?\"/emote Rosa 60/pause 1000/move farmer 0 5 2 true/move Rosa 0 5 3 true/viewport move 0 2 2500 true/pause 1000/pause 1000/faceDirection Juliet 1/textAboveHead Juliet \"Hey cowgirl!\"/pause 2000/textAboveHead Rosa \"Howdy shop girl.\"/pause 2500/emote Juliet 60/speak Rosa \"What are you doing down here? Dodging work?$1\"/speak Juliet \"Hah, like you can talk - skiving off your duties! With farmer no less. Hi @.#$b#I'm actually on break, but you're welcome to think the worst of me.$1\"/emote farmer 32/speak Rosa \"We were cleaning out the old attic, and @ found a journal... it belonged to a girl named Lily-Anne...\"/fade/viewport -100 -100/addObject 84 99 102 1/pause 1000/viewport 84 99 clamp true/speak Rosa \"...and the last fifty pages or so... the paper is just sort of... melted away. Whatever was written on them is impossible to read.$2\"/textAboveHead Juliet \"Wicked!\"/emote farmer 16/pause 1000/speak Juliet \"So, cowgirl - are you proposing we go on a ghost hunt? Cos there's definitely something very freaky about that old cottage.$1\"/speak Rosa \"Actually, it's more like research-\"/speak Juliet \"Hah, researching? That journals what, fifty, sixty years old? And something melted it?#$b#Say it like it is, cowgirl - it's a ghost hunt.\"/faceDirection Juliet 0/speak Juliet \"You agree with me, right, @? She's defo dead?#$b#That orchard is way too creepy and abandoned to not be haunted by some teenage girl's ghost.\"/quickQuestion #Yep, pretty sure she must be dead.#Seventy isn't that old.#A creepy orchard doesn't prove anything.(break)speak Juliet \"Sorry cowgirl, looks like me and @ are in agreement.\"(break)speak Juliet \"It's practically prehistoric! But sure, believe what you want.$a\"(break)speak Juliet \"Proves something bad happened there. And her journal dissolved - that's what we call a 'clue'.\"/pause 500/faceDirection Juliet 1/speak Juliet \"Anyhow, it's agreed! Ghost hunt it is.$1#$b#I'll meet you at the orchard, tomorrow after 6? Sound good?\"/pause 500/speak Rosa \"Actually, wouldn't it be better to go during the day? We have to cross that river.$2\"/speak Juliet \"Can't have a ghost hunt during the day! 'Sides the bossman'd skin me alive if I skived off unannounced.$1\"/pause 500/emote Juliet 40/pause 500/speak Juliet \"Wait, you're not scared, are you cowgirl?$2#$b#'Cos we can go during the day if you prefer?\"/emote Rosa 12/pause 1000/speak Rosa \"No. I'm not scared. After dark is fine. Unless @ objects?$2\"/faceDirection Juliet 0 true/faceDirection Rosa 0 true/quickQuestion #Night-time is fine.#Daylight sounds better.(break)addMailReceived GhostHunt_Night\\speak Juliet \"Tomorrow night it is!\"(break)addMailReceived GhostHunt_Day\\speak Juliet \"Okay, fine. I'll call in sick tomorrow.\"/faceDirection Juliet 1/faceDirection Rosa 3/speak Juliet \"And don't worry, cowgirl. If shit gets weird, I'll hold your hand.#$b#And you'll protect us, right @? I hear you're good with a sword.$1\"/faceDirection Rosa 0/faceDirection Juliet 0/pause 500/emote farmer 60/pause 1000/end warpOut"
+      },
+      "When": {
+        "HasMod |contains=LemurKat.JulietHouse.NPC": true
+      }
+    },
+    {
+      "LogName": "Load Temp Map bookcase moved",
+      "Action": "Load",
+      "Target": "Maps/OrchardHouseBookcaseMoved",
+      "FromFile": "assets/Maps/OrchardHouse-BookcaseMoved.tmx"
+    },
+    {
+      "LogName": "Load Temp Map bookcase moved",
+      "Action": "Load",
+      "Target": "Characters/JunimoGolden",
+      "FromFile": "assets/Characters/JunimoGolden.png"
+    },
+    {
+      "LogName": "Moves the bookcase in the map",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ESOrchardHouse",
+      "FromFile": "assets/Maps/OrchardHouse-BookcaseMoved.tmx",
+      "Update": "OnLocationChange",
+      "FromArea": {
+        "X": 11,
+        "Y": 16,
+        "Width": 4,
+        "Height": 3
+      },
+      "ToArea": {
+        "X": 11,
+        "Y": 16,
+        "Width": 4,
+        "Height": 3
+      },
+      "When": {
+        "HasSeenEvent": "57874009"
+      }
+    },
+    {
+      "LogName": "Both Juliet and Lavril in town",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ESOrchard",
+      "Entries": {
+        "57874009/e 57874008/e 63070010/t {{57874009_Time}}/A GhostHuntTomorrow": "{{57874009_Music}}/32 16/farmer 26 16 1 Rosa 31 14 1 Juliet 32 14 3 Lavril -1000 -1000 2 Void -1000 -1000 1/skippable/{{57874009_Lantern}}/move farmer 6 0 0/emote farmer 56/pause 500/faceDirection Rosa 2 true/faceDirection Juliet 2 true/addTemporaryActor GhostFlame1 16 32 -999 460 2 false/animate GhostFlame1 false true 100 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14/emote Rosa 32/pause 500/speak Juliet \"@! You made it. Rosa and me were just planning our investigation.#$b#You know there's a very special kid living here, right?\"/emote farmer 40/pause 500/speak Juliet \"Oh yeah, of course you do! Sorry... My memory's all a bit hazy about that night.\"/faceDirection Juliet 3/faceDirection Rosa 1/speak Juliet \"I told you about Lavril, didn't I?$2\"/emote Rosa 32/pause 500/faceDirection Juliet 2/speak Juliet \"Anyhoo, would be rude to barge right in to someone's house, so I figured we should wait for you @.#$b#Since you know Lavril better than the rest of us.\"/emote farmer 56/move farmer 1 0 0/move farmer 0 -2 0/pause 500/showFrame farmer 15/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/showFrame farmer 12/pause 1000/speak Void \"Who's there? Uh, I mean-- What's the password?\"/pause 500/emote farmer 40/quickQuestion #...Void is great and mighty.#I brought cookies!#Open Sesame?(break)speak Void \"Hehe! I knew it was you, human!#$b#I am indeed great and mighty! I'm also very handsome!\"(break)speak Void \"R-Really? You better not be lying to me!#$b#Otherwise I will be very disappointed!\"(break)speak Void \"(Oooh, that's a good one. I need to share that with Vincent.)#$b#Ahem! You guessed correctly. You may come in, but only if you brought a gift!$h\"\\pause 500\\textAboveHead Juliet \"Course I did! \"/pause 1000/playSound doorOpen/warp farmer -1000 -1000/pause 1000/move Juliet 1 0 0/stopMusic/fade/viewport -100 -100/changeLocation Custom_ESOrchardHouse/viewport -100 -100/warp farmer 10 23 true/warp Juliet 8 22 true/warp Rosa -1000 -1000 true/warp Lavril 4 22 true/warp Void 6 22 true/playMusic communityCenter/animate Lavril false true 480 18 16 17 16/faceDirection Juliet 3/faceDirection farmer 2/viewport 8 21 clamp true/pause 1000/warp Rosa 9 25/move Rosa 0 -1 3/faceDirection farmer 3/pause 1000/speak Juliet \"So yeh, we brought you something. It's not much but...\"/addObject 7 22 731 1/textAboveHead Juliet \"Rosa made it.\"/stopAnimation Lavril 0/pause 1000/faceDirection Void 3/pause 500/faceDirection Lavril 1/speak Lavril \"You made this for me?$16\"/move Void 0 -1 2/move Void 1 0 2/move Lavril 2 0 1/pause 500/emote Lavril 20/pause 1000/speak Lavril \"Thank you!$19\"/pause 1000/playSound pickUpItem/removeSprite 7 22/move Rosa -2 0 0/move Rosa 0 -1 0/pause 500/speak Rosa \"We've come here looking for someone, Lavril.\"/pause 500/jump Lavril 5/pause 1000/textAboveHead Lavril \"You have?\"/pause 1000/speak Juliet \"Her name was Lily-Anne. We think she might be a ... ghost.\"/pause 1000/speak Lavril \"Another ghost?$7#$b#Hmm... I don't think so. Void and @ scared all the bad ones away.$4\"/emote farmer 60/playSound fireball/warp GhostFlame1 6 20 true/pause 500/emote Juliet 16 true/emote Rosa 16 true/emote farmer 16 true/pause 500/faceDirection Void 3 true/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/faceDirection Lavril 0 true/emote Void 8/textAboveHead Lavril \"Huh? What was that?\"/pause 2700/emote Lavril 56/pause 1000/playSound shadowDie/warp GhostFlame1 999 500/speak Lavril \"Thank you!$h\"/faceDirection Void 2/faceDirection Lavril 1 true/pause 1000/speak Lavril \"Our friend says that person lived here once... A very long time ago.#$b#She's not here anymore... But she left some of her sadness behind.$2\"/jump Rosa 5/pause 1000/speak Rosa \"See, I knew she wasn't dead!$1\"/pause 1000/faceDirection Juliet 2/speak Juliet \"Now, let's not be too hasty there!\"/pause 1000/faceDirection Juliet 3/pause 1000/speak Rosa \"May we have a look around? Please? We're trying to find out what happened to her.\"/pause 1000/faceDirection Lavril 0/faceDirection Void 3/pause 1000/emote Lavril 40/pause 1000/emote Void 12/pause 1000/emote Lavril 56/pause 2000/faceDirection Void 2/faceDirection Lavril 1/pause 1000/speak Void \"Lavril has agreed that you may. (I'll let Arknir write the rest here)\"/emote Lavril 32/move Void 0 1 3/move Juliet 0 -1 2/pause 1000/advancedMove Void false 2 0 0 3/advancedMove Lavril false 3 0 0 2/pause 3000/warp Void -1000 -1000/faceDirection Lavril 0/speak Lavril \"I hope you find what you're looking for!$5\"/move Rosa 0 -1 3/pause 1000/faceDirection Lavril 2/advancedMove Lavril false 0 1/warp Lavril -1000 -1000/pause 1000/move Juliet 3 0 2 true/move Rosa 3 0 2 true/pause 1000/faceDirection farmer 0/move Juliet 0 1 3/speak Rosa \"She's a sweet kid. Now, we need to look for clues. Juliet could you pick up all these pieces of paper?#$b#@, take a look at the book on the floor over there. I'll take a look at this arcane-\"/move Rosa -1 0 3/playSound fireball/warp GhostFlame1 11 19 true/pause 500/faceDirection Juliet 0 true/faceDirection Rosa 0 true/faceDirection farmer 0 true/emote Juliet 16 true/emote Rosa 16 true/emote farmer 16 true/pause 500/positionOffset GhostFlame1 0 4/pause 5/textAboveHead Rosa \"It's back!\"/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/textAboveHead Juliet \"The bookcase!\"/pause 2700/pause 1000/playSound shadowDie/warp GhostFlame1 999 500/speed Juliet 3/move Juliet 0 -3 0/pause 1000/speak Juliet \"There's something under here! Come on, help me move it!\"/jump Rosa 5/jump farmer 5/speed Rosa 3/speed farmer 3/move farmer 0 -4 0 true/move Rosa 0 -4 1 true/pause 1000/fade/viewport -100 -100/playSound woodyStep/pause 5/playSound woodyStep/pause 5/speak Rosa \"Ooof, this is heavy!$2\"/pause 1000/speak Juliet \"I can feel it slipping!$2\"/playSound Ship/pause 1000/changeToTemporaryMap OrchardHouseBookcaseMoved/viewport 11 18 clamp true/pause 1000/textAboveHead Rosa \"A trapdoor!\"/speak Juliet \"Oooh, I bet it leads to hidden treasure!$1#$b#You should open it @, in case something horrible jumps out!$1\"/move Juliet 0 1 0/move Juliet 1 0 0/move farmer 1 0 0/showFrame farmer 62/startJittering/emote farmer 28/pause 500/stopJittering/pause 1000/speak Rosa \"Oh... it's rusted shut?\"/showFrame farmer 12/emote farmer 40/pause 1000/speak Rosa \"I guess we'd better come back with some oil.$2\"/pause 1000/emote farmer 32/pause 2000/end"
+      },
+      "When": {
+        "HasMod |contains=LemurKat.JulietHouse.NPC": true,
+        "HasMod |contains=Arknir27.Lavril": true
+      }
+    },
+    {
+      "LogName": "No Juliet, Lavril in town",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ESOrchard",
+      "Entries": {
+        "57874009/e 57874008/t 1000 1600/e 63070010/A GhostHuntTomorrow": "{{season}}_day_ambient/32 16/farmer 26 16 1 Rosa 32 14 2 Lavril -1000 -1000 2 Void -1000 -1000 1/skippable/move farmer 6 0 0/emote farmer 56/pause 500/faceDirection Rosa 2 true/addTemporaryActor GhostFlame1 16 32 -999 460 2 false/animate GhostFlame1 false true 100 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14/emote Rosa 32/pause 500/speak Rosa \"@! I'm so glad you made it.#$b#A friend of yours lives here, right? Lavril?\"/emote farmer 32/faceDirection Rosa 3/pause 500/faceDirection Rosa 2/pause 500/speak Rosa \"That's one reason I waited for you.\"/emote farmer 8/pause 1000/speak Rosa \"Okay, yeah, the other reason's that I'm just a little bit nervous... even though it's daylight and...$2\"/playSound slime/pause 1500/playSound slime/pause 1500/playSound slimedead/jump Rosa 3/pause 400/shake Rosa 350/pause 1000/speak Rosa \"I think I'd like to go inside now, please. Unless there's more of those things in there?\"/pause 500/emote farmer 56/move farmer 1 0 0/move farmer 0 -2 0/pause 500/showFrame farmer 15/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/showFrame farmer 12/pause 1000/speak Void \"Who's there? Uh, I mean-- What's the password?\"/pause 500/emote farmer 40/quickQuestion #...Void is great and mighty.#I brought cookies!#Open Sesame?(break)speak Void \"Hehe! I knew it was you, human!#$b#I am indeed great and mighty! I'm also very handsome!\"(break)speak Void \"R-Really? You better not be lying to me!#$b#Otherwise I will be very disappointed!\"(break)speak Void \"(Oooh, that's a good one. I need to share that with Vincent.)#$b#Ahem! You guessed correctly. You may come in, but only if you brought a gift!$h\"\\pause 500\\textAboveHead Rosa \"I did! \"/pause 1000/playSound doorOpen/warp farmer -1000 -1000/pause 1000/move Rosa 1 0 0/stopMusic/fade/viewport -100 -100/changeLocation Custom_ESOrchardHouse/viewport -100 -100/warp farmer 8 22 true/warp Rosa -1000 -1000 true/warp Lavril 4 22 true/warp Void 6 22 true/playMusic communityCenter/animate Lavril false true 480 18 16 17 16/faceDirection farmer 3 true/viewport 8 21 clamp true/pause 1000/warp Rosa 9 25/move Rosa 0 -1 3/pause 1000/speak Void \"You mentioned a gift?\"/emote farmer 32/faceDirection farmer 2/emote Rosa 60/move Rosa -2 0 0/move Rosa 0 -1 0/faceDirection farmer 3/addObject 7 22 223 0/speak Rosa \"I baked them this morning. I hope you like them. They're chocolate chip.$1\"/stopAnimation Lavril 0/pause 1000/faceDirection Void 3/pause 500/faceDirection Lavril 1/speak Lavril \"You made these for me?$16\"/move Void 0 -1 2/move Void 1 0 2/move Lavril 2 0 1/pause 500/emote Lavril 20/pause 1000/speak Lavril \"Thank you!$19\"/pause 1000/playSound pickUpItem/removeSprite 7 22/pause 500/speak Rosa \"We've come here looking for someone, Lavril.\"/pause 500/jump Lavril 5/pause 1000/textAboveHead Lavril \"You have?\"/pause 1000/speak Rosa \"Her name was Lily-Anne. I'm worried she might be a ... ghost.$2\"/pause 1000/speak Lavril \"Another ghost?$7#$b#Hmm... I don't think so. Void and @ scared all the bad ones away.$4\"/emote farmer 60/playSound fireball/warp GhostFlame1 6 20 true/pause 500/emote Rosa 16 true/emote farmer 16 true/pause 500/faceDirection Void 3 true/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/faceDirection Lavril 0 true/emote Void 8/textAboveHead Lavril \"Huh? What was that?\"/pause 2700/emote Lavril 56/pause 1000/playSound shadowDie/warp GhostFlame1 999 500/speak Lavril \"Thank you!$h\"/faceDirection Void 2/faceDirection Lavril 1 true/pause 1000/speak Lavril \"Our friend says that person lived here once... A very long time ago.#$b#She's not here anymore... But she left some of her sadness behind.$2\"/jump Rosa 5/pause 1000/speak Rosa \"I knew she wasn't dead!$1\"/pause 1000/faceDirection farmer 2/pause 500/emote farmer 28/pause 1000/faceDirection farmer 3/pause 1000/speak Rosa \"May we have a look around? Please? We're trying to find out what happened to her.\"/pause 1000/faceDirection Lavril 0/faceDirection Void 3/pause 1000/emote Lavril 40/pause 1000/emote Void 12/pause 1000/emote Lavril 56/pause 2000/faceDirection Void 2/faceDirection Lavril 1/pause 1000/speak Void \"Lavril has agreed that you may. (I'll let Arknir write the rest here)\"/emote Lavril 32/move Void 0 1 3/move farmer 0 -1 2/pause 1000/advancedMove Void false 2 0 0 3/advancedMove Lavril false 3 0 0 2/faceDirection Rosa 1/pause 3000/warp Void -1000 -1000/faceDirection Lavril 0/speak Lavril \"I hope you find what you're looking for!$5\"/move Rosa 0 -1 1/textAboveHead Rosa \"Me too.\"/pause 1000/faceDirection Lavril 2/advancedMove Lavril false 0 1/warp Lavril -1000 -1000/pause 1000/move farmer 3 0 2 true/move Rosa 3 0 1 true/pause 1000/move farmer 0 1 3/speak Rosa \"She's a sweet kid. Now, we need to look for clues. @ would you mind picking up all these pieces of paper?#$b#I'll take a look at these books.\"/faceDirection Rosa 3/pause 500/playSound fireball/warp GhostFlame1 11 19 true/pause 500/faceDirection Rosa 0 true/faceDirection farmer 0 true/emote Rosa 16 true/emote farmer 16 true/pause 500/positionOffset GhostFlame1 0 4/pause 5/textAboveHead Rosa \"It's back!\"/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/pause 5/positionOffset GhostFlame1 0 4/textAboveHead Rosa \"The bookcase!\"/pause 2700/pause 1000/playSound shadowDie/warp GhostFlame1 999 500/speed Rosa 3/move Rosa 0 -4 1/pause 1000/speak Rosa \"There's something under here! Come on, help me move it!\"/jump farmer 5/speed farmer 3/move farmer 0 -3 0 true/pause 1000/fade/viewport -100 -100/playSound woodyStep/pause 5/playSound woodyStep/pause 5/speak Rosa \"Ooof, this is heavy!$2#$b#I can feel it slipping!$2\"/playSound Ship/pause 1000/changeToTemporaryMap OrchardHouseBookcaseMoved/viewport 11 18 clamp true/pause 1000/textAboveHead Rosa \"A trapdoor!\"/speak Rosa \"Maybe it leads to a secret passage.$1#$b#Can you open it, please, @?$1\"/showFrame farmer 62/startJittering/emote farmer 28/pause 500/stopJittering/pause 1000/speak Rosa \"Oh... it's rusted shut?\"/showFrame farmer 12/emote farmer 40/pause 1000/speak Rosa \"I guess we'd better come back with some oil.$2\"/pause 1000/emote farmer 32/pause 2000/end"
+      },
+      "When": {
+        "HasMod |contains=LemurKat.JulietHouse.NPC": false,
+        "HasMod |contains=Arknir27.Lavril": true
+      }
+    },
+    {
+      "LogName": "Juliet exists, Lavril not in town",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ESOrchard",
+      "Entries": {
+        "57874009/e 57874008/t 1000 1600/k 63070010/A GhostHuntTomorrow/t {{57874009_Time}}": "{{57874009_Music}}/32 16/farmer 26 16 1 Rosa 31 14 1 Juliet 32 14 3/skippable/addTemporaryActor JunimoGolden 16 32 -200 -200 2 false/skippable/{{57874009_Lantern}}/move farmer 6 0 0/animate JunimoGolden false true 200 16 17 18 19/emote farmer 56/pause 500/faceDirection Rosa 2 true/faceDirection Juliet 2 true/emote Rosa 32/pause 500/speak Juliet \"@! You made it. Rosa and me were just planning our ghost hunt.\"/textAboveHead Rosa \"Investigation!\"/faceDirection Juliet 3/pause 1500/speak Juliet \"We've both got very different ideas on what to call it.\"/faceDirection Juliet 2/speak Juliet \"Anyhoo, you ready, farmer? Got your sword?#$b#We've got our running shoes on - and I reckon I could outrun Cowgirl if spook came to shove.$1\"/speak Rosa \"Hey!\"/emote farmer 56/move farmer 1 0 0/move farmer 0 -2 0/faceDirection Juliet 1/faceDirection Rosa 3/shake Rosa 240/pause 500/showFrame farmer 15/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/showFrame farmer 12/pause 1000/playSound crickets/pause 500/speak Juliet \"No one home? Okay, after you, brave warrior!\"/faceDirection farmer 3/emote farmer 28/pause 1000/faceDirection farmer 0/playSound doorOpen/pause 500/warp farmer -1000 -1000/faceDirection Juliet 3/speak Juliet \"You still okay with this Cowgirl?$2\"/emote Rosa 60/emote Juliet 32/pause 1000/move Juliet 1 0 0/move Rosa 1 0 1/warp Juliet -1000 -1000/stopMusic/fade/viewport -100 -100/changeLocation Custom_ESOrchardHouse/viewport -100 -100/warp farmer 10 23 true/warp Juliet 8 22 true/warp Rosa -1000 -1000 true/playMusic communityCenter/faceDirection Juliet 3 true/faceDirection farmer 1 true/faceDirection Rosa 0 true/viewport 8 21 clamp true/pause 1000/warp Rosa 9 25/pause 1000/shake Rosa 500/faceDirection Juliet 2/pause 500/emote Juliet 32/pause 500/emote Rosa 56/pause 1000/move Rosa 0 -3 1/pause 1000/move farmer 0 -1 1/faceDirection Juliet 1/pause 1000/move farmer 4 0 1/faceDirection Rosa 3/textAboveHead Juliet \"Boo!\"/animate Rosa false true 200 20 21/pause 1000/move farmer 0 -2 3/stopAnimation Rosa 12/textAboveHead Juliet \"Now this is interesting.\"/pause 1000/move Juliet -2 0 3/pause 1000/warp JunimoGolden 7 18/pause 500/playSound junimoMeep1/pause 500/emote Rosa 16/jump Rosa 3/pause 500/faceDirection Rosa 1/pause 100/faceDirection Rosa 2/pause 100/faceDirection Rosa 3/warp JunimoGolden -100 -100/faceDirection Rosa 0/pause 100/speak Rosa \"Did you hear that?$2\"/pause 1000/faceDirection Juliet 1/pause 500/textAboveHead Juliet \"Hear what?\"/move farmer -2 0 2/pause 500/move farmer 0 2 2/emote farmer 40/pause 500/warp JunimoGolden 10 16/pause 500/playSound junimoMeep1/jump farmer 5 true/jump Rosa 5 true/pause 1000/warp JunimoGolden -100 -100/faceDirection Rosa 0 true/faceDirection farmer 0 true/pause 1000/emote farmer 8/pause 1000/speak Juliet \"You guys are really jumpy tonight! Must be the spooky vibes.$1\"/pause 1000/faceDirection Rosa 3/faceDirection farmer 3/emote Rosa 8 true/move Rosa 1 0 1 true/move farmer -1 0 3 true/pause 1000/speak Rosa \"You can hear them too, can't you @? Like mice... only not.$2\"/emote farmer 56/pause 1000/move Juliet 2 0 1/speak Juliet \"Hear what? What's going on?$2\"/warp JunimoGolden 11 19/playSound junimoMeep1/jump JunimoGolden 1/faceDirection Rosa 0/faceDirection farmer 0/pause 500/faceDirection Juliet 0/emote Juliet 12/speak Juliet \"Are you guys messing me with me?$a\"/jump JunimoGolden 1/playSound junimoMeep1/textAboveHead Rosa \"Quiet!\"/speak Rosa \"You'll scare it.\"/speak Juliet \"Scare what?$a\"/jump JunimoGolden 2/playSound junimoMeep1/stopAnimation JunimoGolden/speak Rosa \"It's trying to tell us something. Hello little fella.#$b#You're awfully cute, aren't you? Don't be afraid...$2\"/move Rosa 0 -2 0 true/move Juliet 2 0 0 true/jump JunimoGolden 2/playSound junimoMeep1/shake JunimoGolden 300/pause 500/warp JunimoGolden -100 -100/textAboveHead Rosa \"No...\"/speak Rosa \"Please don't run away... we won't hurt you!$2\"/pause 500/speed Rosa 5/move Rosa 0 -2 1/speak Rosa \"It was trying to show us! There's something under this bookcase!$1#$b#Come on, help me move it!\"/jump Juliet 5/jump farmer 5/speed Juliet 3/speed farmer 3/move Juliet 0 -3 0 true/move farmer 0 -3 0 true/pause 1000/fade/viewport -1000 -1000/playSound woodyStep/pause 5/playSound woodyStep/pause 5/speak Rosa \"Ooof, this is heavy!$2\"/pause 1000/speak Juliet \"I can feel it slipping!$2\"/playSound Ship/pause 1000/changeToTemporaryMap OrchardHouseBookcaseMoved/viewport 11 18 clamp true/pause 1000/textAboveHead Rosa \"A trapdoor!\"/speak Juliet \"Oooh, I bet it leads to hidden treasure!$1#$b#You should open it @, in case something horrible jumps out!$1\"/move Juliet 0 3 0/move Juliet 1 0 0/showFrame farmer 62/startJittering/emote farmer 28/pause 500/stopJittering/pause 1000/speak Rosa \"Oh... it's rusted shut?\"/showFrame farmer 12/emote farmer 40/pause 1000/speak Rosa \"I guess we'd better come back with some oil.$2#$b#And maybe a gift for our little friend.\"/pause 1000/emote farmer 32/pause 2000/end"
+      },
+      "When": {
+        "HasMod |contains=LemurKat.JulietHouse.NPC": true,
+      }
+    },
+    {
+      "LogName": "No Juliet, Lavril not in town",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ESOrchard",
+      "Entries": {
+        "57874009/e 57874008/t 1000 1600/k 63070010/A GhostHuntTomorrow/t 800 1700": "{{season}}_day_ambient/32 16/farmer 26 16 1 Rosa 32 14 1/skippable/addTemporaryActor JunimoGolden 16 32 -200 -200 2 false/skippable/move farmer 6 0 0/animate JunimoGolden false true 200 16 17 18 19/emote farmer 56/pause 500/faceDirection Rosa 2/emote Rosa 32/pause 500/speak Rosa \"@! I'm so glad you made it. My temporary bridge worked okay?\"/emote farmer 32/faceDirection Rosa 3/pause 500/faceDirection Rosa 2/pause 500/pause 1000/speak Rosa \"Okay, yeah, I'm just a little bit nervous... even though it's daylight and...$2\"/playSound slime/pause 1500/playSound slime/pause 1500/playSound slimedead/jump Rosa 3/pause 400/shake Rosa 350/pause 1000/speak Rosa \"I think I'd like to go inside now, please. Unless there's more of those things in there?\"/pause 500/emote farmer 56/move farmer 1 0 0/move farmer 0 -2 0/pause 500/showFrame farmer 15/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/showFrame farmer 12/pause 1000/playSound crickets/pause 500/speak Rosa \"No one home? I guess its safe to go in?$2\"/faceDirection farmer 3/emote farmer 8/pause 1000/faceDirection Rosa 1/emote Rosa 60/speak Rosa \"Yes, I want to do this... it's just an old, empty house, that's all.$2\"/pause 1000/faceDirection farmer 0/playSound doorOpen/pause 500/warp farmer -1000 -1000/move Rosa 1 0 0/warp Rosa -1000 -1000/stopMusic/fade/viewport -100 -100/changeLocation Custom_ESOrchardHouse/viewport -100 -100/warp farmer 9 22 true/warp Rosa -1000 -1000 true/playMusic communityCenter/faceDirection farmer 1 true/faceDirection Rosa 0 true/viewport 8 21 clamp true/pause 1000/warp Rosa 9 25/pause 1000/shake Rosa 500/pause 500/faceDirection farmer 2/emote farmer 32/pause 500/emote Rosa 56/pause 1000/move farmer 2 0 1/move Rosa 0 -3 1/pause 1000/pause 1000/move farmer 3 0 2/faceDirection Rosa 3/pause 1000/move farmer 0 -2 3/faceDirection Rosa 3/textAboveHead Rosa \"This is interesting.\"/pause 1000/move Rosa -3 0 3/pause 1000/warp JunimoGolden 7 18/pause 500/playSound junimoMeep1/pause 500/emote Rosa 16/jump Rosa 3/pause 500/faceDirection Rosa 1/pause 100/faceDirection Rosa 2/pause 100/faceDirection Rosa 3/warp JunimoGolden -100 -100/faceDirection Rosa 0/pause 100/move Rosa 3 0 1/speak Rosa \"Did you hear that?$2\"/faceDirection farmer 3/emote farmer 8/pause 1000/move farmer -2 0 2/pause 500/move farmer 0 2 2/emote farmer 40/pause 500/warp JunimoGolden 10 16/pause 500/playSound junimoMeep1/jump farmer 5 true/jump Rosa 5 true/pause 1000/warp JunimoGolden -100 -100/faceDirection Rosa 0 true/faceDirection farmer 0 true/pause 1000/emote farmer 8/pause 1000/pause 1000/faceDirection Rosa 3/faceDirection farmer 3/emote Rosa 8 true/move Rosa 1 0 1 true/move farmer -1 0 3 true/pause 1000/speak Rosa \"You can hear them too, can't you @? Like mice... only not.$2\"/emote farmer 56/pause 1000/warp JunimoGolden 11 19/playSound junimoMeep1/jump JunimoGolden 1/faceDirection Rosa 0/faceDirection farmer 0/pause 500/jump JunimoGolden 1/playSound junimoMeep1/textAboveHead Rosa \"Quiet!\"/speak Rosa \"You'll scare it.\"/jump JunimoGolden 2/playSound junimoMeep1/stopAnimation JunimoGolden/speak Rosa \"It's trying to tell us something. Hello little fella.#$b#You're awfully cute, aren't you? Don't be afraid...$2\"/move Rosa 0 -2 0 true/jump JunimoGolden 2/playSound junimoMeep1/shake JunimoGolden 300/pause 500/warp JunimoGolden -100 -100/textAboveHead Rosa \"No...\"/speak Rosa \"Please don't run away... we won't hurt you!$2\"/pause 500/speed Rosa 5/move Rosa 0 -2 1/speak Rosa \"It was trying to show us! There's something under this bookcase!$1#$b#Come on, help me move it!\"/jump farmer 5/speed farmer 3/move farmer 0 -3 0 true/pause 1000/fade/viewport -1000 -1000/playSound woodyStep/pause 5/playSound woodyStep/pause 5/speak Rosa \"Ooof, this is heavy!$2\"/pause 1000/speak Rosa \"I can feel it slipping!$2\"/playSound Ship/pause 1000/changeToTemporaryMap OrchardHouseBookcaseMoved/viewport 11 18 clamp true/pause 1000/textAboveHead Rosa \"A trapdoor!\"/speak Rosa \"Maybe it leads to a secret passage.$1#$b#Can you open it, please, @?$1\"/showFrame farmer 62/startJittering/emote farmer 28/pause 500/stopJittering/pause 1000/speak Rosa \"Oh... it's rusted shut?\"/showFrame farmer 12/emote farmer 40/pause 1000/speak Rosa \"I guess we'd better come back with some oil.$2#$b#And maybe a gift for our little friend.\"/pause 1000/emote farmer 32/pause 2000/end"
+      },
+      "When": {
+        "HasMod |contains=LemurKat.JulietHouse.NPC": false
+      }
+    },
+    //With Juliet
+    {
+      "Action": "Include",
+      "FromFile": "assets/RivalHearts/julietRosa.json",
+      "When": {
+        "HasMod": "LemurKat.JulietHouse.NPC"
+      }
+    },
+    //Conversation Topics
+    {
+      "LogName": "Talk to George",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Entries": {
+        "LilyAnneDiscuss": "Lily-Anne Cheridan... now there's a name I haven't heard in years! Do I remember her?#$b#Course I do. Ain't nothing wrong with my memory!$a#$b#She was an odd one, always scribbling away in a notebook or what-not.#$b#Many of the lads had their eye on her. Not me, of course, even then, the only one for me was my Evelyn.$1#$b#Not sure what happened. Figure she must've left when the old man died. Folks were always coming and going."
+      }
+    },
+    {
+      "LogName": "Talk to Evelyn",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Entries": {
+        "LilyAnneDiscuss": "Lily-Anne? I always felt sorry for her. She seemed lost and out of place here. She hardly spoke to anyone.$2#$b#If I remember, she was pretty close to one of the muckers: a tall, broad fellow with pale hair. There was something odd about him; he was foreign.$1#$b#Anyhow, after Mr. Cheridan died, we all just assumed she returned to the city. Was no life for a lass like her here."
+      }
+    },
+    {
+      "LogName": "Talk to Eyvinder",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Eyvinder",
+      "When": {
+        "Hearts:Eyvinder": "{{range:2,5}}"
+      },
+      "Entries": {
+        "LilyAnneDiscuss": "Lily-Anne? I tried to keep an eye on her... but it was hard, me being in the mines most days, and her old grandfather being what he was.$a#$b#No-one saw her leave, but there were other ways out than that bridge. I hope she took one of them.$2"
+      }
+    },
+    {
+      "LogName": "Talk to Eyvinder",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Eyvinder",
+      "When": {
+        "Hearts:Eyvinder": "{{range:6,14}}"
+      },
+      "Entries": {
+        "LilyAnneDiscuss": "Lily-Anne? Yes, I knew her. We were friends: nothing more, nothing less.$2#$b#I'll tell you about her sometime, but know everything ain't as it seems."
+      }
+    },
+    {
+      "LogName": "Talk to Jasper",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jasper",
+      "Entries": {
+        "LilyAnneDiscuss": "I'm afraid I cannot tell you anything about Miss Lily-Anne, but when the mines were opened, there was considerably evidence that smugglers had made use of the natural caves in the area.#$b#It is not impossible that her ancestors were involved in such activities; and entirely possible to leave the valley without setting foot above ground."
+      }
+    },
+    {
+      "LogName": "Talk to Beatrice",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Beatrice",
+      "Entries": {
+        "LilyAnneDiscuss": "I know naught about this Lily-Anne, mon cher!$1^I know naught about this Lily-Anne, ma chérie!#$b#But my Raoul, he always said that this coastline was a smugglers' haven, with its many coves an' natural caves.#$b#He always was fond of tales: of pirates and smugglers and ne'er-do-wells. Oh, I do miss him, rest his soul.$2"
+      }
+    }
+  ]
+}

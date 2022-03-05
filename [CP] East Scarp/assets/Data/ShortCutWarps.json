@@ -1,0 +1,79 @@
+{
+    "changes": [
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Farmcave",
+            "ToArea": {
+                "X": "{{farmcave_trapdoorx}}",
+                "Y": "{{farmcave_trapdoory}}",
+                "Width": 1,
+                "Height": 1
+            },
+            "FromFile": "assets/Patches/trapdoor.tmx",
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange",
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Farmcave",
+            "Update": "OnLocationChange",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": "{{farmcave_trapdoorx}}",
+                        "Y": "{{farmcave_trapdoory}}",
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 10 5 Custom_ESSmugglerDen"
+                    }
+                }
+            ]
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESSmugglerDen",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 10,
+                        "Y": 4
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp {{farmcave_exitx}} {{farmcave_exity}} Farmcave"
+                    }
+                }
+            ]
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Mine",
+            "ToArea": {
+                "X": 25,
+                "Y": 4,
+                "Width": 1,
+                "Height": 1
+            },
+            "FromFile": "assets/Patches/trapdoor.tmx",
+            "PatchMode": "Overlay"
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Mine",
+            "Update": "OnLocationChange",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 25,
+                        "Y": 4
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 36 5 Custom_ESSmugglerDen"
+                    }
+                },
+            ]
+        },
+    ]
+}

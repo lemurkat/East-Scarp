@@ -1,0 +1,417 @@
+{
+  "WeatherForYesterday": "Sunny",
+  "LNOSCounter": {},
+  "ExistingObjectLocations": {},
+  "SavedObjects": [
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "29, 44",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Geode",
+      "Tile": "19, 40",
+      "Type": "Ore",
+      "ID": 75,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "7, 51",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "11, 13",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "8, 38",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "6, 31",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "9, 16",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "7, 34",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Copper",
+      "Tile": "13, 33",
+      "Type": "Ore",
+      "ID": 751,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "7, 15",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Copper",
+      "Tile": "4, 36",
+      "Type": "Ore",
+      "ID": 751,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Gold",
+      "Tile": "19, 43",
+      "Type": "Ore",
+      "ID": 764,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "11, 37",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Iron",
+      "Tile": "5, 51",
+      "Type": "Ore",
+      "ID": 290,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "7, 30",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESJacobBarn",
+      "Name": null,
+      "Tile": "8, 7",
+      "Type": "Forage",
+      "ID": 440,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": null,
+      "Tile": "37, 22",
+      "Type": "Container",
+      "ID": null,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": {
+        "Category": "crate",
+        "Contents": []
+      },
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "18, 12",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Geode",
+      "Tile": "20, 40",
+      "Type": "Ore",
+      "ID": 75,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "19, 11",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "7, 47",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "7, 16",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "13, 53",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "20, 36",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Gem",
+      "Tile": "20, 35",
+      "Type": "Ore",
+      "ID": 6,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "7, 38",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "12, 31",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Stone",
+      "Tile": "5, 25",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": "Copper",
+      "Tile": "30, 42",
+      "Type": "Ore",
+      "ID": 751,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": null,
+      "Tile": "42, 38",
+      "Type": "Container",
+      "ID": null,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": {
+        "Category": "crate",
+        "Contents": []
+      },
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": null,
+      "Tile": "45, 40",
+      "Type": "Container",
+      "ID": null,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": {
+        "Category": "crate",
+        "Contents": []
+      },
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": null,
+      "Tile": "40, 22",
+      "Type": "Container",
+      "ID": null,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": {
+        "Category": "barrel",
+        "Contents": []
+      },
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": null,
+      "Tile": "45, 38",
+      "Type": "Container",
+      "ID": null,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": {
+        "Category": "barrel",
+        "Contents": []
+      },
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_ESDeepDark",
+      "Name": null,
+      "Tile": "43, 48",
+      "Type": "Container",
+      "ID": null,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": {
+        "Category": "barrel",
+        "Contents": [
+          {
+            "Category": "Object",
+            "Name": "Lobster",
+            "Stack": 1,
+            "PercentChanceToSpawn": 1
+          }
+        ]
+      },
+      "MonType": null
+    },
+    {
+      "MapName": "Custom_EastScarpe",
+      "Name": null,
+      "Tile": "43, 111",
+      "Type": "Forage",
+      "ID": 718,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    }
+  ]
+}

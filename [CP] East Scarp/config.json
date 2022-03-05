@@ -1,0 +1,16 @@
+{
+  "TownMap": "default",
+  "River": "true",
+  "Forest": "false",
+  "Skin": "Yri",
+  "EnableMeadowFarm": "true",
+  "WalkTidePools": "true",
+  "ObeliskOptions": "vanilla",
+  "FlowersSpring": "RoseWhite",
+  "FlowersSummer": "ClematisBlue",
+  "FlowersFall": "WisteriaFPink",
+  "farmcave_trapdoorx": "1",
+  "farmcave_trapdoory": "5",
+  "farmcave_exitx": "1",
+  "farmcave_exity": "6"
+}

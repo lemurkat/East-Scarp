@@ -1,0 +1,340 @@
+{
+  "WeatherForYesterday": "Sunny",
+  "LNOSCounter": {},
+  "ExistingObjectLocations": {},
+  "SavedObjects": [
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "10, 37",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "27, 40",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "15, 53",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "5, 22",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "22, 37",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "6, 53",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "22, 52",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "4, 24",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "10, 53",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Aquamarine",
+      "Tile": "19, 40",
+      "Type": "Ore",
+      "ID": 14,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "6, 13",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "19, 53",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "13, 30",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "10, 36",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Geode",
+      "Tile": "8, 33",
+      "Type": "Ore",
+      "ID": 75,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "8, 36",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "7, 44",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "5, 31",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Copper",
+      "Tile": "9, 15",
+      "Type": "Ore",
+      "ID": 751,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Copper",
+      "Tile": "25, 12",
+      "Type": "Ore",
+      "ID": 751,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Copper",
+      "Tile": "28, 42",
+      "Type": "Ore",
+      "ID": 751,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "23, 12",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "6, 50",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "7, 53",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "9, 19",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "31, 12",
+      "Type": "Ore",
+      "ID": 668,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": "Stone",
+      "Tile": "4, 28",
+      "Type": "Ore",
+      "ID": 670,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "Underground1",
+      "Name": null,
+      "Tile": "36, 18",
+      "Type": "Container",
+      "ID": null,
+      "DaysUntilExpire": 2,
+      "SpawnTime": 600,
+      "ConfigItem": {
+        "Category": "barrel",
+        "Contents": []
+      },
+      "MonType": null
+    },
+    {
+      "MapName": "EastScarpe",
+      "Name": null,
+      "Tile": "11, 112",
+      "Type": "Forage",
+      "ID": 394,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    },
+    {
+      "MapName": "EastScarpe",
+      "Name": null,
+      "Tile": "19, 105",
+      "Type": "Forage",
+      "ID": 718,
+      "DaysUntilExpire": 1,
+      "SpawnTime": 600,
+      "ConfigItem": null,
+      "MonType": null
+    }
+  ]
+}
