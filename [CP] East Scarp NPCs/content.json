@@ -45,6 +45,7 @@
 				"HasFlag": "LexiNoneBusiness"
 			}
 		},
+		//Do cats talk?
 		{
 			"Name": "cattalk",
 			"Value": "false",
@@ -59,6 +60,18 @@
 				"HasSeenEvent |contains=50706121": true
 			}
 		},
+		{
+			"Name": "LavrilInstalled",
+			"Value": "e 57874004"
+		},
+		{
+			"Name": "LavrilInstalled",
+			"Value": "k 63070010",
+			"When": {
+				"HasMod |contains=Arknir27.Lavril": true
+			}
+		},
+		//Sheba schedule
 		{
 			"Name": "Sheba.nap",
 			"Value": "{{Random:Custom_EastScarpe 8 85 2 sheba_nap,Custom_EastScarpe 65 76 2 sheba_nap,Custom_EastScarpe 23 79 2 sheba_nap,Custom_EastScarpe 3 101 2 sheba_nap}}"
@@ -75,6 +88,7 @@
 			"Name": "Sheba.groom",
 			"Value": "{{Random:Custom_EastScarpe 11 62 2 sheba_grooming,Custom_EastScarpe 8 53 2 sheba_grooming,Custom_EastScarpe 29 98 2 sheba_grooming,Custom_EastScarpe 53 61 2 sheba_grooming,Custom_EastScarpe 13 92 2 sheba_grooming}}"
 		},
+		//Seasonal crops
 		{
 			"Name": "ESCrop",
 			"Value": "A"
@@ -84,6 +98,18 @@
 			"Value": "B",
 			"When": {
 				"Day": "{{range:15,28}}"
+			}
+		},
+		//Compatibililty with Piper mod
+		{
+			"Name": "pierreorpiper",
+			"Value": "pierre",
+		},
+		{
+			"Name": "pierreorpiper",
+			"Value": "piper",
+			"When": {
+				"HasMod": "piper.holychurros"
 			}
 		},
 		//Joja event with and without SVE chars
@@ -100,12 +126,30 @@
 		},
 		//Rosa Event with and without Juliet
 		{
-			"Name": "57874008Actors",
-			"Value": "Gunther 3 8 2 Rosa 3 10 0 farmer -1000 -1000 0"
+			"Name": "JulietRef",
+			"Value": "false"
+		},
+		{
+			"Name": "JulietRef",
+			"Value": "juliet",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC"
+			}
 		},
 		{
 			"Name": "57874008Actors",
-			"Value": "Gunther 3 8 2 Rosa 3 10 0 farmer -1000 -1000 0 Juliet -1000 -1000 2",
+			"Value": "Gunther 3 8 2 Rosa 3 10 0 farmer -1000 -1000 0",
+		},
+		{
+			"Name": "57874008Actors",
+			"Value": "Gunther 4 8 2 Rosa 4 10 0 farmer -1000 -1000 0",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			}
+		},
+		{
+			"Name": "57874008Actors",
+			"Value": "{{57874008Actors}} Juliet -1000 -1000 2",
 			"When": {
 				"HasMod": "LemurKat.JulietHouse.NPC"
 			}
@@ -118,38 +162,171 @@
 			}
 		},
 		{
-			"Name": "57874009_Time",
-			"Value": "800 1700"
-		},
-		{
-			"Name": "57874008_Time",
-			"Value": "1800 2200",
+			"Name": "57874008.moveRosa",
+			"Value": "move Rosa 0 2 2",
 			"When": {
-				"HasFlag": "GhostHunt_Night"
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
 			}
 		},
 		{
-			"Name": "57874009_Music",
-			"Value": "{{season}}_day_ambient"
-		},
-		{
-			"Name": "57874008_Music",
-			"Value": "nightTime",
+			"Name": "57874008.moveRosa",
+			"Value": "move Rosa 0 1 2/move Rosa -1 0 2/move Rosa 0 1 2",
 			"When": {
-				"HasFlag": "GhostHunt_Night"
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
 			}
 		},
 		{
-			"Name": "57874009_Lantern",
-			"Value": "pause 5"
+			"Name": "jojaORcc",
+			"Value": "jj"
 		},
 		{
-			"Name": "57874009_Lantern",
-			"Value": "addLantern 735 34 14 3/addLantern 735 10 24 3",
+			"Name": "jojaORcc",
+			"Value": "cc",
 			"When": {
-				"HasFlag": "GhostHunt_Night"
+				"IsCommunityCenterComplete": true
 			}
 		},
+		//Rosa's 10 heart event in all its enormous dynamic glory *********************************************************
+		{ //The Actors
+			"Name": "57874015Actors",
+			"Value": "Rosa 22 21 1 Aideen 15 19 0 Jacob 12 21 3 Eloise 19 24 2 LadySheba 10 20 2 Jas 20 25 3 farmer 14 12 2"
+		},
+		{
+			"Name": "57874015Actors",
+			"Value": "{{57874015Actors}} MisterGinger 11 21 1",
+			"When": {
+				"HasMod": "LemurKat.Mr.Ginger.NPC"
+			}
+		},
+		{
+			"Name": "57874015Actors",
+			"Value": "{{57874015Actors}} Gremlin 19 25 1 Juliet 23 21 3",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC",
+				"HasSeenEvent": "86571141"
+			}
+		},
+		//Loads in the ACTIONS
+		{
+			"Name": "57874015.JulietGremlin.0",
+			"Value": "faceDirection Rosa 0/textAboveHead Eloise \"{{i18n:57874015.03}}\"/speak Jas \"{{i18n:57874015.04.alt}}\"/move farmer 0 1 2/pause 500/faceDirection Eloise 3/pause 500/speak Eloise \"{{i18n:57874015.05.alt}}\"/faceDirection Jacob 1/pause 500"
+		},
+		{
+			"Name": "57874015.JulietGremlin.0",
+			"Value": "playSound dog_bark/textAboveHead Eloise \"{{i18n:57874015.03}}\"/speak Jas \"{{i18n:57874015.04}}\"/move farmer 0 1 2/pause 500/faceDirection Eloise 3/pause 500/speak Eloise \"{{i18n:57874015.05}}\"/faceDirection Jacob 1/emote Jacob 40/pause 500",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC",
+				"HasSeenEvent": "86571141"
+			}
+		},
+		{
+			"Name": "57874015.JulietGremlin.1",
+			"Value": "pause 1000"
+		},
+		{
+			"Name": "57874015.JulietGremlin.1",
+			"Value": "pause 1000/emote Juliet 40/animate Rosa false true 200 20 21",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC",
+				"HasSeenEvent": "86571141"
+			}
+		},
+		{
+			"Name": "57874015.JulietGremlin.2",
+			"Value": "textAboveHead Eloise \"{{i18n:57874015.08.alt}}\"/emote Jas 56/emote Jacob 32/pause 1000/faceDirection Jacob 3"
+		},
+		{
+			"Name": "57874015.JulietGremlin.2",
+			"Value": "textAboveHead Eloise \"{{i18n:57874015.08}}\"/playSound dog_pant/emote Jacob 32/pause 1000/faceDirection Jacob 3",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC",
+				"HasSeenEvent": "86571141"
+			}
+		},
+		{
+			"Name": "57874015.JulietGremlin.3",
+			"Value": "pause 500/speak Rosa \"{{i18n:57874015.10.alt}}\"/faceDirection Eloise 0/pause 500/textAboveHead Eloise \"{{i18n:57874015.11.alt}}\"/pause 1000"
+		},
+		{
+			"Name": "57874015.JulietGremlin.3",
+			"Value": "pause 500/move Juliet -4 0 2/speak Rosa \"{{i18n:57874015.10}}\"/faceDirection Rosa 0/pause 500/textAboveHead Juliet \"{{i18n:57874015.11}}\"/pause 1000",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC",
+				"HasSeenEvent": "86571141"
+			}
+		},
+		{
+			"Name": "57874015.JulietGremlin.4",
+			"Value": "faceDirection Eloise 2"
+		},
+		{
+			"Name": "57874015.JulietGremlin.4",
+			"Value": "move Juliet 0 1 2/emote Juliet 56/faceDirection Eloise 0/move Eloise 1 0 3/move Juliet 0 1 2/faceDirection Gremlin 0/jump Gremlin 2/move Gremlin 0 -1 0/playSound dog_bark/emote LadySheba 12",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC",
+				"HasSeenEvent": "86571141"
+			}
+		},
+		{
+			"Name": "57874015.JulietGremlin.5",
+			"Value": "faceDirection Aideen 2 true"
+		},
+		{
+			"Name": "57874015.JulietGremlin.5",
+			"Value": "faceDirection Juliet 0 true",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC",
+				"HasSeenEvent": "86571141"
+			}
+		},
+		{
+			"Name": "57874015.JulietGremlin.6",
+			"Value": "pause 50"
+		},
+		{
+			"Name": "57874015.JulietGremlin.6",
+			"Value": "playSound dog_bark",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC",
+				"HasSeenEvent": "86571141"
+			}
+		},
+		{
+			"Name": "57874015.MrGinger.1",
+			"Value": "textAboveHead Jacob \"{{i18n:57874015.06.alt}}\"/pause 1000/faceDirection Jacob 3/pause 2000/emote LadySheba 12/pause 1000/faceDirection Jacob 1"
+		},
+		{
+			"Name": "57874015.MrGinger.1",
+			"Value": "textAboveHead MisterGinger \"{{i18n:57874015.06}}\"/faceDirection MisterGinger 0/pause 2000/emote LadySheba 20/pause 1000/faceDirection MisterGinger 1",
+			"When": {
+				"HasMod": "LemurKat.Mr.Ginger.NPC",
+				"HasSeenEvent": "50706121"
+			}
+		},
+		{
+			"Name": "57874015.MrGinger.2",
+			"Value": "move Aideen -2 0 2/move Aideen 0 2 3/faceDirection Jacob 1/emote Aideen 40/pause 1000/emote Jacob 32/pause 500"
+		},
+		{
+			"Name": "57874015.MrGinger.2",
+			"Value": "move Aideen 3 0 0/textAboveHead MisterGinger \"{{i18n:57874015.09}}\"/pause 50",
+			"When": {
+				"HasMod": "LemurKat.Mr.Ginger.NPC",
+				"HasSeenEvent": "50706121"
+			}
+		},
+		{
+			"Name": "57874015.MrGinger.3",
+			"Value": "faceDirection Aideen 1"
+		},
+		{
+			"Name": "57874015.MrGinger.3",
+			"Value": "textAboveHead MisterGinger \"{{i18n:57874015.26}}\"/faceDirection Aideen 2 true",
+			"When": {
+				"HasMod": "LemurKat.Mr.Ginger.NPC",
+				"HasSeenEvent": "50706121"
+			}
+		}
 	],
 	"Changes": [
 		/*{
@@ -208,6 +385,72 @@
 			"When": {
 				"HasSeenEvent |contains=57873000": "True",
 				"HasSeenEvent |contains=57873005": "false"
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_EastScarpeInn",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 8,
+						"Y": 16
+					},
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Door JosephineK"
+					}
+				},
+				{
+					"Position": {
+						"X": 15,
+						"Y": 16
+					},
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Door OliverK"
+					}
+				}
+			],
+			"When": {
+				"HasSeenEvent |contains=57873000": "True",
+				"HasSeenEvent |contains=57873005": "false"
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_EastScarpeInn",
+			"FromFile": "assets/Maps/KatRoom.tmx",
+			"Update": "OnLocationChange",
+			"ToArea": {
+				"X": 12,
+				"Y": 4,
+				"Width": 9,
+				"Height": 9
+			},
+			"When": {
+				"HasSeenEvent |contains=57876001": "True",
+				//"HasSeenEvent |contains=57876010": "false"
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_EastScarpeInn",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 15,
+						"Y": 16
+					},
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Door KatarynaLK"
+					}
+				}
+			],
+			"When": {
+				"HasSeenEvent |contains=57876001": "True",
+				//"HasSeenEvent |contains=57876010": "false"
 			}
 		},
 		{
@@ -286,9 +529,7 @@
 				"Duck2NPC": "All",
 				"RichieTheMacaw": "All",
 				"Leximonster": "PerfectFriend,IslandVisit,TownQuest,WinterStar",
-				"OliverK": "All",
-				"JosephineK": "All",
-				"LKKataryna": "All",
+				"KatarynaLK": "All",
 				"LadySheba": "All",
 				"Rosa": "IslandVisit, WinterStar"
 			}
@@ -298,13 +539,25 @@
 			"Action": "EditData",
 			"Target": "Data/CustomNPCExclusions",
 			"When": {
-				"HasSeenEvent": "57873000",
-				"HasSeenEvent |contains=57873005": false
+				"HasSeenEvent |contains=57873000": false
 			},
 			"Entries": {
-				"JosephineK": "PerfectFriend"
+				"OliverK": "All",
+				"JosephineK": "All",
 			}
 		},
+		/*{//Add when relevant
+			"LogName": "NPC Exclusion NPCs to avoid Perfection issues",
+			"Action": "EditData",
+			"Target": "Data/CustomNPCExclusions",
+			"When": {
+				"HasSeenEvent": "5787",
+				"HasSeenEvent |contains=5787": false
+			},
+			"Entries": {
+				"KatarynaLK": "PerfectFriend"
+			}
+		},*/
 		{
 			"LogName": "NPC Exclusion NPCs to avoid Perfection issues",
 			"Action": "EditData",
@@ -313,7 +566,8 @@
 				"HasSeenEvent": "57873000"
 			},
 			"Entries": {
-				"OliverK": "PerfectFriend"
+				"OliverK": "PerfectFriend",
+				"JosephineK": "PerfectFriend"
 			}
 		},
 		{
@@ -335,7 +589,7 @@
 			"Target": "Data/AntiSocialNPCs",
 			"Entries": {
 				"RichieTheMacaw": true,
-				"LKKataryna": true,
+				"KatarynaLK": true,
 				"LadySheba": true
 			}
 		},
@@ -435,17 +689,30 @@
 			"LogName": "Stray Cat Dialogue and Schedule",
 			"Action": "Load",
 			"Target": "Characters/Dialogue/LadySheba, Characters/schedules/LadySheba",
-			"FromFile": "assets/{{Target}}.json",
-			"When": {
-				"HasSeenEvent": "57879903"
-			}
+			"FromFile": "assets/{{Target}}.json"
 		},
 		{
 			"LogName": "Stray Cat Dialogue and Schedule",
 			"Action": "EditData",
 			"Target": "Characters/schedules/LadySheba",
 			"Entries": {
-				"spring": "900 {{sheba.groom}}/1100 {{sheba.wander}}/1300 {{sheba.nap}}/1500 {{sheba.sit}}/1800 {{sheba.wander}}/2200 Custom_ES_CatWarpRoom 2 4 sheba_nap"
+				"spring": "900 {{sheba.groom}}/1100 {{sheba.wander}}/1300 {{sheba.nap}}/1500 {{sheba.sit}}/1800 {{sheba.wander}}/2200 Custom_ES_CatWarpRoom 2 4 sheba_nap",
+				"rain": "610 Custom_ES_CatWarpRoom 2 4 sheba_nap/900 Custom_ESHouse4 9 14 sheba_nap/1400 Custom_EastScarpe 11 62 2 sheba_grooming/1800 Custom_EastScarpe 45 66 0 square 5_0/2100 Custom_ES_CatWarpRoom 2 4 sheba_nap",
+				"winter": "GOTO rain"
+			},
+			"When": {
+				"HasSeenEvent": "57879903"
+			},
+		},
+		{
+			"LogName": "Stray Cat Dialogue and Schedule",
+			"Action": "EditData",
+			"Target": "Characters/schedules/LadySheba",
+			"When": {
+				"HasMod": "skellady.dialacafe.CP"
+			},
+			"Entries": {
+				"rain": "610 Custom_ES_CatWarpRoom 2 4 sheba_nap/900 Custom_EastScarpe 58 84 sheba_nap/1400 Custom_EastScarpe 11 62 2 sheba_grooming/1800 Custom_EastScarpe 45 66 0 square 5_0/2100 Custom_ES_CatWarpRoom 2 4 sheba_nap"
 			}
 		},
 		{
@@ -546,6 +813,15 @@
 				"HasMod": "attonbomb.Beatrice"
 			}
 		},
+		{ // To activate, delete [TMX] Beatrice Festival Locations folder
+			"LogName": "BeatriceFestival",
+			"Action": "Include",
+			"FromFile": "assets/Festivals/Beatrice.json",
+			"When": {
+				"HasMod": "attonbomb.Beatrice",
+				"HasMod |contains=attonbomb.beatricelocations": "false"
+			}
+		},
 		{
 			"LogName": "Beatrice Summer",
 			"Action": "EditData",
@@ -617,7 +893,14 @@
 			"Target": "Data/Events/Farm",
 			"Entries": {
 				"57870000/x EastScarp_IntroMail true": "null",
-				"57873000/j 153/z summer/z winter/z spring/u 28/Hn Oliver_Meet/Hn Josephine_Meet": "continue/64 15/farmer 64 16 2 Lewis 64 18 0/addConversationTopic Josephine_Arrives 1/addConversationTopic Josephine_Introduction 7/pause 1500/speak Lewis \"{{i18n:57873000.01}}\"/pause 500/emote farmer 8/pause 1500/speak Lewis \"{{i18n:57873000.02}}\"/pause 500/jump farmer 3/emote farmer 16/pause 1500/speak Lewis \"{{i18n:57873000.03}}\"/emote farmer 60/speak Lewis \"{{i18n:57873000.04}}\"/pause 500/emote farmer 40/quickQuestion #{{i18n:57873000.q1}}#{{i18n:57873000.q2}}#{{i18n:57873000.q3}}#{{i18n:57873000.q4}}(break)emote Lewis 24\\pause 1000\\speak Lewis \"{{i18n:57873000.r1}}\"(break)emote Lewis 40\\pause 500\\speak Lewis \"{{i18n:57873000.r2}}\"(break)emote Lewis 28\\pause 500\\speak Lewis \"{{i18n:57873000.r3}}\"(break)emote Lewis 12\\speak Lewis \"{{i18n:57873000.r4}}\"/pause 1000/speak Lewis \"{{i18n:57873000.05}}\"/pause 1500/faceDirection Lewis 2/emote farmer 28/pause 1000/end"
+				"57873000/z summer/z winter/z spring/u 28": "continue/64 15/farmer 64 16 2 Lewis 64 18 0/addConversationTopic Josephine_Arrives 1/addConversationTopic Josephine_Introduction 7/pause 1500/speak Lewis \"{{i18n:57873000.01}}\"/pause 500/emote farmer 8/pause 1500/speak Lewis \"{{i18n:57873000.02}}\"/pause 500/jump farmer 3/emote farmer 16/pause 1500/speak Lewis \"{{i18n:57873000.03}}\"/emote farmer 60/speak Lewis \"{{i18n:57873000.04}}\"/pause 500/emote farmer 40/quickQuestion #{{i18n:57873000.q1}}#{{i18n:57873000.q2}}#{{i18n:57873000.q3}}#{{i18n:57873000.q4}}(break)emote Lewis 32\\pause 1000\\speak Lewis \"{{i18n:57873000.r1}}\"(break)emote Lewis 40\\pause 500\\speak Lewis \"{{i18n:57873000.r2}}\"(break)emote Lewis 28\\pause 500\\speak Lewis \"{{i18n:57873000.r3}}\"(break)emote Lewis 12\\speak Lewis \"{{i18n:57873000.r4}}\"/pause 1000/speak Lewis \"{{i18n:57873000.05}}\"/pause 1500/faceDirection Lewis 2/emote farmer 28/pause 1000/end"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/Custom_ESMeadowFarm",
+			"Entries": {
+				"57879002/t 0600 1800": "continue/-100 -100/farmer -1000 -1000 0 Jacob 31 38 1/skippable/addTemporaryActor MidnightBlackKitty 32 32 -1000 -1000 3 false/viewport 31 34 clamp true/pause 500/textAboveHead Jacob \"{{i18n:57879002.01}}\"/pause 1000/move Jacob 5 0 0/textAboveHead Jacob \"{{i18n:57879002.02}}\"/pause 500/warp farmer 30 40/move farmer 0 -2 1/emote farmer 56/faceDirection Jacob 3/pause 500/speak Jacob \"{{i18n:57879002.03}}\"/pause 500/emote farmer 36/pause 2000/move Jacob -4 0 3/emote Jacob 40/speak Jacob \"{{i18n:57879002.04}}\"/pause 500/emote farmer 28/pause 500/speak Jacob \"{{i18n:57879002.05}}\"/faceDirection Jacob 0/speak Jacob \"{{i18n:57879002.06}}\"/faceDirection farmer 0/pause 500/speak Jacob \"{{i18n:57879002.07}}\"/move farmer 1 0 0/speak Jacob \"{{i18n:57879002.08}}\"/faceDirection Jacob 3/emote Jacob 40/playSound cat/jump Jacob 5 true/jump farmer 5 true/faceDirection farmer 0 true/faceDirection Jacob 0 true/warp MidnightBlackKitty 36 36/pause 500/playSound cat/move MidnightBlackKitty -5 0 2/pause 500/animate MidnightBlackKitty false false 120 16 17 18 18 18/textAboveHead Jacob \"{{i18n:57879002.09}}\"/animate MidnightBlackKitty false true 1000 18/pause 3000/emote farmer 32/pause 1000/playSound cat/pause 1000/end"
 			}
 		},
 		{
@@ -641,7 +924,8 @@
 			"Action": "EditData",
 			"Target": "Data/mail",
 			"Entries": {
-				"EastScarp_IntroMail": "{{i18n:ES_IntroMail}}[letterbg Mods/LemurKat.EastScarpe.CP/LetterBackgrounds 0][textcolor black][#]{{i18n:ES_IntroMail.Title}}"
+				"EastScarp_IntroMail": "{{i18n:ES_IntroMail}}[letterbg Mods/LemurKat.EastScarpe.CP/LetterBackgrounds 0][textcolor black][#]{{i18n:ES_IntroMail.Title}}",
+				"Rosa_10HeartInvite": "{{i18n:ES_Rosa10HeartMail}}[letterbg Mods/LemurKat.EastScarpe.CP/LetterBackgrounds 1][textcolor black][#]{{i18n:ES_Rosa10HeartMail.Title}}"
 			}
 		},
 		{ //loads stationery
@@ -787,12 +1071,23 @@
 				"Height": 6
 			}
 		},
+		{
+			"Action": "Load",
+			"Target": "Characters/Monsters/ESMineBat",
+			"FromFile": "assets/Images/ESMineBats.png"
+		},
+		{
+			"Action": "Load",
+			"Target": "Characters/Monsters/ESMineBatIridium",
+			"FromFile": "assets/Images/ESMineBatsIridium.png"
+		},
 		/* Event Key:
 				57870000+ = Jacob and Eloise
 				57871000+ = Aideen
 				57872000+ = Lexi
 				57873000+ = Oliver and Josephine
 				57874000+ = Rosa
+				57876000+ = Kataryna
 				*/
 	]
 }
