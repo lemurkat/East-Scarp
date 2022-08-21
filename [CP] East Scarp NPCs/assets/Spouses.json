@@ -4,7 +4,8 @@
                         "Action": "EditData",
                         "Target": "Data/SpouseRooms",
                         "Entries": {
-                            "Aideen": "Lemurkat_EastScarp_SpouseRoom/0"
+                            "Aideen": "Lemurkat_EastScarp_SpouseRoom/0",
+                            "KatarynaLK":"Lemurkat_EastScarp_SpouseRoom/1"
                         }
                     },
                     {

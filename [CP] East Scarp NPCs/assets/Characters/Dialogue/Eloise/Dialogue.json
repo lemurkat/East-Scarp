@@ -3,7 +3,7 @@
     "Resort_Leaving": "Bye bye parrots! See you again soon.$1",
     "Resort_Shore": "Look at all these pretty shells! Want to help me make a necklace, farmer @?",
     "Resort_Umbrella": "Dad says I've can't stay in the sun all day.",
-    "Resort_Towel":"I'm drawing the birds, farmer @. Just like a true naturalist.$1",
+    "Resort_Towel": "I'm drawing the birds, farmer @. Just like a true naturalist.$1",
     "Resort_Wander": "I bet these all sorts of really cool birds around here.",
     "Resort_Bar": "Gus made me a special punch with coconut water and mango. Look, it has am umbrella in it and everything!$1",
     "Resort": "There's parrots here, @! Aren't they amazing!#$b#Parrots are super-smart you know! Some of them even use tools.",
@@ -24,7 +24,7 @@
     "Wed2": "Do you explore the caves, farmer @? I bet they're home to all sorts of really cool critters.#$b#Some types of swifts live in caves. They make their nests out of saliva.$1#$b#And in some countries they eat the nests! Ick, can you imagine eating someone's spit?$3",
     "Wed4": "You know there's some birds that live in caves? They're called oilbirds. And they fly in the dark using echolocation - just like bats, but not as well!",
     "Wed6": "I think Ms Pam likes my Dad. She's always fluttering her eyelashes at him.#$b#I don't like her. She smells like beer and it makes me queasy to my stomach.#$b#Plus sometimes she's mean to Miss Penny, and Miss Penny is the loveliest person in the whole wide world!$2",
-    "Wed8": "Richie used to belong to my grandada, and he taught him lots of naughty words!#$b#But parrots live a really long time, and when Grandad got too old to look after him, Richie came to live with us.",
+    "Wed8": "Richie used to belong to my grandad, and he taught him lots of naughty words!#$b#But parrots live a really long time, and when Grandad got too old to look after him, Richie came to live with us.",
     "Wed10": "I'm happy just living with my dad and lots of animals, but sometimes dad seems sad.#$b#I think he's lonely. Maybe you could come over sometimes and keep him company?",
     "Thu": "I'm going to be an explorer one day! Maybe I'll even discover a new animal.",
     "Thu2": "You've gotta be careful if you go on the beach after dark, cos the nocturnal rock crabs come out to hunt for sandworms and stuff on the beach.#$b#Once I saw one as big as a cat!#$b#They're bad though, cos they also eat baby birds and pets - and sometimes even foolish children.",
@@ -79,7 +79,7 @@
     //New Dialogue
     "spring_Fri10": "Did you know baby birds - fledglings - can't fly when they first leave the nest?#$b#If you see any, and there's no predators around, they'll be okay. Don't touch them!$3",
     "Sat10": "I've been reading my letters from Sora again. I hope he's okay. His life sounds pretty scary.#$b#I'm glad Dad and Mom and me back here before everything went horrible. I wish we'd brought Sora and his family too though.$2",
-    "Sun10": "Do you want to come beach-combing with us today? Dad lets me bring home shells to draw. I'm making a scrapbook of them!$1",
+    "Sun10": "$c 0.5#Do you want to come beach-combing with us today? Dad lets me bring home shells to draw. I'm making a scrapbook of them!$1$k#We're going beach-combing! I'm looking for sea urchins. Did you know they sometimes put shells on their heads like little hats?!$1",
     "summer_Mon10": "Maybe I'll let you read my journal one day, @.$3#$b#But not today.",
     "summer_Tue10": "What's your favorite season, farmer @?#$b#Autumn's the prettiest, but I think my favorite's spring. Cos there's baby animals - and my birthday.$1",
     "summer_Wed10": "Have you seen any woodpeckers? Did you know that a woodpecker pecks wood with about 1000 times the force of gravity?$3#$b#And they don't even get a headache! Isn't that wicked?$1",
@@ -90,7 +90,7 @@
     "fall_Mon10": "Do you like leaf fights, farmer @? Last time Vinnie and Jas and I had a leaf fight, Vinnie dropped a worm down my neck.#$b#It tickled!$1",
     "fall_Tue10": "I'm trying to teach Richie some new words. But he's very stubborn.#$b#He's old, you know. He belonged to my grandpa. I don't think he was a very nice man. Dad hardly ever talks about him at all.",
     "fall_Wed10": "I've been learning so much in school! Miss Penny is a really good teacher.#$b#Although, she does say I sometimes challenge too much. But I only correct her if she gets things wrong. Cos isn't it better to know the real facts?",
-    "fall_Thu10": "I've been writing to my Nana! She's really nice. She lives in Grampleton with three cats and a lady called Theresa.#$b#She's an author, so I have to make sure my letters are good!$1",
+    "fall_Thu10": "I've been writing to my Nana! She's really nice. She lives in Chestervale with three cats and a lady called Theresa.#$b#She's an author, so I have to make sure my letters are good!$1",
     "fall_Fri10": "I am VERY angry with Princess Midnight.$3#$b#She brought in a bird yesterday. Dad gave it antibiotics... but it was dead this morning.$2",
     "fall_Sat10": "Did you know that penguins used to nest around here, farmer @?#$b#They don't so much anymore. The rock crabs ate their eggs.$2",
     "fall_Sun10": "Do you think Dad and his brother will ever be friends again?#$b#I have to really, really ask lots of questions before Dad'll even talk about him.$2",
@@ -99,14 +99,14 @@
     "winter_Wed10": "Jas was talking about what she wanted to be when she grows up yesterday.#$b#I've been thinking. I want to work with animals, but being a vet is too sad. Maybe I could be an animal trainer in the circus?$3",
     "winter_Thu10": "It's my Uncle's birthday soon. I wanted to give him a gift. Dad said I could draw him a picture.#$b#But what if he doesn't like it?$2",
     "winter_Fri10": "Dad got called out to an emergency in the middle of the night. Don't worry, Miss Rosa came to keep me company.#$b#I like her. She's been to so many places! Maybe one day I'll travel the world too.$1",
-    "winter_Sat10": "Grandma gives the best Winter Star gift! This year I got a shimmery-shiny notebook!$!#$b#It's got a padlock on it too, so no-one can read my secrets.",
+    "winter_Sat10": "Nana gives the best Winter Star gift! This year I got a shimmery-shiny notebook!$!#$b#It's got a padlock on it too, so no-one can read my secrets.",
     "winter_Sun10": "Sometimes we find rubbish on the beach. We always pick it up and throw it out.#$b#Cos if we don't, animals could eat it and get sick. That makes me sad.$2#$b#You don't litter, do you farmer @?$3",
     //Unique Gift Responses
     "GiftReaction_Duck_Feather": "Oooh! I'm going to add this to my collection. Thank you @!",
     "GiftReaction_Rice_Pudding": "It's so sticky! Dad hates it, so we don't eat it at home.",
     "GiftReaction_Dinosaur_Egg": "It's so big! I can hardly carry it. I wonder what sort of bird laid this?",
     "GiftReaction_Dinosaur_Egg~1": "This is so cool. I hope Dad lets me hatch it!",
-    "GiftReaction_Blueberry": "Ah, blueberries. Nature's candy.$1",
     "GiftReaction_Void_Egg": "I've never seen an egg like this before! It feels kinda weird.#$b#I love it!",
-    "GiftReaction_Blobfish": "Ugh, gross! This poor fish. You're really mean!$2"
+    "GiftReaction_Blobfish": "Ugh, gross! This poor fish. You're really mean!$2",
+    "reject_534": "Oooh this is pretty! But it's far too big for me. Looks precious too.#$b#My Nana wears lots of shiny rings, maybe she'd like it!$1"
 }

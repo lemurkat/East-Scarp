@@ -5,6 +5,21 @@
             "Action": "EditData",
             "Target": "Data/ConcessionTastes",
             "Entries": {
+                "KatarynaLK": {
+                    "Name": "KatarynaLK",
+                    "LovedTags": [
+                        "Cappuccino Mousse Cake",
+                        "Chocolate Popcorn"
+                    ],
+                    "LikedTags": [
+                        "Sweet",
+                        "Healthy"
+                    ],
+                    "DislikedTags": [
+                        "Kale Smoothie",
+                        "Salted Peanuts"
+                    ]
+                },
                 "Jacob": {
                     "Name": "Jacob",
                     "LovedTags": [
@@ -116,6 +131,122 @@
             "Action": "EditData",
             "Target": "Data/MoviesReactions",
             "Entries": {
+                "KatarynaLK": {
+                    "NPCName": "KatarynaLK",
+                    "Reactions": [
+                        {
+                            "Tag": "fall_movie_1",//howls in the rain
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.1}}"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "/message \"{{i18n:movies.katarynalk.2}}\"",
+                                    "Text": "{{i18n:movies.katarynalk.3}}"
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.4}}"
+                                }
+                            },
+                            "ID": "reaction_1"
+                        },
+                        {
+                            "Tag": "spring_movie_0",//Little Sapling
+                            "Response": "dislike",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.5}}"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "/message \"{{i18n:movies.katarynalk.6}}\"",
+                                    "Text": ""
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.7}}"
+                                }
+                            },
+                            "ID": "reaction_2"
+                        },
+                        {
+                            "Tag": "spring_movie_1",//Natural Wonders
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.8}}"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": ""
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.9}}"
+                                }
+                            },
+                            "ID": "reaction_3"
+                        },
+                        {
+                            "Tag": "summer_movie_1", //Wumbus
+                            "Response": "like",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.10}}"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "/message \"{{i18n:movies.katarynalk.11}}\"",
+                                    "Text": ""
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.12}}"
+                                }
+                            },
+                            "ID": "reaction_4"
+                        },
+                        {
+                            "Tag": "*",
+                            "Response": "like",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.13}}"
+                                },
+                                "DuringMovie": null,
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "{{i18n:movies.katarynalk.14}}"
+                                }
+                            },
+                            "ID": "reaction_0"
+                        }
+                    ]
+                },
                 "Jacob": {
                     "NPCName": "Jacob",
                     "Reactions": [

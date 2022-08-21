@@ -38,8 +38,9 @@
     "winter_Sun": "You came to see me, even though water is very cold!#$b#Here, this will warm you up, yes? [456 457]",
     //Unique Gift Responses
     "GiftReaction_-74": "These make me thing of Mother. I will plant, nourish it. Hope it grow.#$b#Thank you.$4",
-    "GiftReaction_Beer": "Ugh! This smell horrible... taste like rotten weeds. Why you give me this?",
-    "GiftReaction_Mead": "Is so sweet! Like drink honey. Thank you.",
+    "GiftReaction_Beer": "Ugh! This smells horrible... and tastes like rotten weeds. Why do you give me this?",
+    "GiftReaction_Mead": "It's so sweet! Like drinking honey. Thank you.",
+    "reject_534":"This is precious stone! Gift from earth, deep from earth heart. Not gift for me, is for someone else, I feel it."
   /*"GiftReaction_Frozen_Geode": "Thank you! This is cool. Get it?$3",
   "GiftReaction_Magma_Geode": "Oh, I wonder what's inside?$1",
   "GiftReaction_Omni_Geode": "It's like Mother Nature's lucky dip!$1"*/

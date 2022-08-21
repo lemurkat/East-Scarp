@@ -4,7 +4,7 @@
   "Mon": "When I have the money, I'll catch a train into Zuzu City; my mom teaches there.",
   "Mon4": "I've worked a few jobs, here and there. Fruit picking, dog-walking.#$b#Cleaning fish. Ugh! I didn't enjoy that one bit!$2#$b#I got hired to herd ducks once. That was something of a challenge!$1",
   "winter_Mon4": "Do you think this place is haunted, @? Could've sworn I heard footsteps up and down the hall all night.",
-  "summer_Mon": "It's beautiful here, isn't it? The locals seem a little wary of outsiders though, don't you think?",
+  "summer_Mon": "It's beautiful here, isn't it? The locals seem a little wary of outsiders though.",
   "summer_Mon10": "I rang my dad last night, @. It's always great to chat with him.#$b#He's happy, and the bakery's doing well.#$b#I do miss him though.",
   "fall_Mon": "Are you interested in traveling, @?#$b#I am... I've done a bit of back-packing around the Ferngill republic.",
   "fall_Mon4": "On these cooler days, there's nothing quite like curling up in front of the fire with a book, is there?$1",
@@ -18,7 +18,8 @@
   "fall_Tue2": "Are you much of a reader, @?#$b#I love a good mystery - the more tangled the better!",
   "Tue8": "My parents didn't have the happiest relationship. Almost put me off marriage, truth be told.$2#$b#Still, I suppose if the right gal came along...$1",
   "summer_Tue4": "Ever been surfing, @?#$b#Me? Hah, no. But I did a brief stint as a lifeguard, so I rescued a few!",
-  "summer_Tue": "Be careful, @. When I was walking home last night, a giant crab lunged at me!$2#$b#Dr. Jacob says they're an invasive species, and prey on the native wildlife. Pretty nasty!",
+  "summer_Tue10": "Mom always teased me about my restless feet - but here actually feels like home.#$b#Who knows? Maybe one day I'll settle down!$1",
+  "summer_Tue": "Be careful, @. When I was walking home last night, a giant crab lunged at me!$2#$b#Dr. Jacob says they're an invasive species, and prey on the native wildlife. Pretty nasty!$3",
   "fall_Tue": "There's a lot of little trails around here.#$b#Follow them, and you never know where you might end up.$1",
   "fall_Tue6": "Howdy @! Be right with you. Just trying to get my head around the big reveal from the book I'm reading.#$b#I thought I'd figured it out, but that twist... it completely sidelined me!$1",
   "winter_Tue": "I think I'll stay in here where it's warm.#$b#Oh, no fire - we've got a boiler room. Central heating is the way to go.$1",
@@ -43,7 +44,7 @@
   "fall_Thu4": "Argh, today's been a bit of a rough day. Just feelings, you know?$2#$b#Anyhow, I decided to do some baking... and now I've got enough to feed the whole town. Ugh. Have a muffin.[651]",
   "summer_Thu": "Have you seen the little grey cat wandering around?#$b#Sometimes I leave scraps out for her. Poor wee thing.$2",
   "fall_Thu": "Do you keep in touch with anyone back home, @?#$b#Yeah, Mom rang last night. It was nice. Made me a little.. nostalgic? Not sure that's the right word. But homesick isn't either.$2",
-  "winter_Thu": "The snow here's so fresh and clean. It makes the world seem kind of new, don't you think?#$b#Cold though!",
+  "winter_Thu": "The snow here's so fresh and clean. It makes the world seem kind of new.#$b#Cold though!",
   "winter_Thu6": "There was something scratching in the walls all night. Again...#$b#Probably mice. Ugh, I hope it's not rats. Maybe I should ask Aideen if I can borrow her cat.$1",
   "winter_Thu10": "Howdy sunshine! Wanna pop over tonight and watch a movie?#$b#Maybe some sort of mindless action flick? I'd appreciate the company.",
   //Friday
@@ -56,7 +57,7 @@
   "winter_Fri": "Hey, would you like to hang around for a bit? I'm bored and could do with some company.",
   //Saturday
   "Custom_EastScarpeInn_Sat": "This? Oh, it's temp work, until the owners return. Free food and board? Can't argue with that!$1",
-  "Sat": "It's a pity more people don't come to this beach. It's kinda like Pelican Town's hidden gem, don't you think?$1#$b#More visitors might be better for business, but it would kinda ruin the atmosphere though.",
+  "Sat": "It's a pity more people don't come to this beach. It's kinda like Pelican Town's hidden gem.$1#$b#More visitors might be better for business, but it would kinda ruin the atmosphere though.",
   "Sat_4": "Aideen's cat came to visit yesterday. Please don't tell her, but I fed him...#$b#He really likes fish!$1",
   "Sat4": "I go into town sometimes, but the groups here... they're so tight-knit.#$b#It's easy to feel like a stranger, don't you find?$2",
   "summer_Sat2": "Do you enjoy walking on the beach, @? I love the feeling of sand between my toes.",
@@ -69,7 +70,7 @@
   "Sun6": "Sometimes I miss Fort Josa, you know. Nah, not homesickness, more something else...#$b#Yearning, perhaps? Although I've got to say, it's pretty nice here.",
   "winter_Sun4": "Goodness, Ellie can really chew your ears off, can't she?#$b#She caught me throwing bread scraps to the birds... Oh, did I ever get a telling off!$1",
   "summer_Sun": "Have you ever seen a mermaid, @?#$b#I can't be 100 percent certain, but I know I saw someone - or something - swimming off the bay.",
-  "fall_Sun": "Want a game of pool? I got talked into entering a tournmanent once.#$b#Oh, I was utterly garbage; it's really not my game. Fun though!",
+  "fall_Sun": "Want a game of pool? I got talked into entering a tournament once.#$b#Oh, I was utterly garbage; it's really not my game. Fun though!",
   "winter_Sun": "Are you a fan of horror movies, @?#$b#I watched one last night... it was set in an empty hotel. Closed for the winter...#$b#Possibly not the brightest idea I've ever had!$1",
   //Specific Dates
   "spring_23": "Are you going to being dancing tomorrow, @?#$b#Me? Oh, I suppose so! If the right person asked, of course!",
@@ -85,7 +86,6 @@
   "Resort_Entering": "This island is lovely! Too bad the inn isn't located here.$1",
   "Resort": "Did you know they had a string of forts along islands just like this one? Why couldn't my family choose to live in one of those?",
   "Resort_Shore": "Ouch! I think that crab just pinched me. Where's Willy when you need him?",
-  "Resort_Wander": "Shh, don't tell Juliet, but I'm taking her to see the mermaid later.",
   //UCR
   //Unique Dialogue Mods (Courtship/Jealousy responses)
   //"give_pendant": "",
@@ -106,4 +106,6 @@
   //"refusal_botherB": "",
   "rejectNPCA": "You know I'm only attracted to girls, right?^Too soon, sunshine, I'd rather we got to know each other first.$1",
   "rejectNPCB": "Sorry no, you're not my type.^Sorry sunshine, I'd rather we remain friends for now. Hope that's okay with you?",
+  //Custom Gift Dialogue
+  "reject_534": "You want me to have it? No, I'd better not - I'd probably lose it! You keep it.$5#$b#Who knows? Maybe one day we'll find Lily-Anne and we can return it to her.$1"
 }

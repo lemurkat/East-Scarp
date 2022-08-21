@@ -11,7 +11,7 @@
       "Action": "EditData",
       "Target": "Data/NPCDispositions",
       "Entries": {
-        "Rosa": "adult/neutral/outgoing/positive/female/not-datable/Juliet/Town/fall 7/null/Custom_ES_InnRoomRosa 5 5/{{i18n:Name.Rosa}}"
+        "Rosa": "adult/neutral/outgoing/positive/female/not-datable/Juliet/Town/fall 7/null/Custom_EastScarpeInn 63 8/{{i18n:Name.Rosa}}"
       }
     },
     /* {
@@ -124,7 +124,7 @@
       "Action": "EditData",
       "Target": "Characters/schedules/Rosa",
       "Entries": {
-        "Sat": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1700 Saloon 36 20 1/2400 Custom_ES_InnRoomRosa 5 5 1",
+        "Sat": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1700 Saloon 36 20 1/2400 Custom_EastScarpeInn 66 8 1",
       },
       "When": {
         "HasSeenEvent": "57874005"
@@ -135,7 +135,7 @@
       "Action": "EditData",
       "Target": "Characters/schedules/Rosa",
       "Entries": {
-        "Thu": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/930 JojaMart 21 15 3/1230 JojaMart 13 6 0/1310 JojaMart 13 6 0/1400 JojaMart 8 5 2/1430 JojaMart 7 24 3/1530 Custom_EastScarpeInn 43 10 0/2200 Custom_ES_InnRoomRosa 5 5 1"
+        "Thu": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/930 JojaMart 21 15 3/1230 JojaMart 13 6 0/1310 JojaMart 13 6 0/1400 JojaMart 8 5 2/1430 JojaMart 7 24 3/1530 Custom_EastScarpeInn 43 10 0/2200 Custom_EastScarpeInn 66 8 1"
       },
       "When": {
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
@@ -517,7 +517,7 @@
       "Action": "EditData",
       "Target": "Data/Mail",
       "Entries": {
-        "Rosa_Ingredients_Kale": "{{i18n:Mail.Rosa_Ingredients_Kale}}%item quest 578741 %%{{i18n:Mail.Rosa_Ingredients_Kale_name}}",
+        "Rosa_Ingredients_Kale": "{{i18n:Mail.Rosa_Ingredients_Kale}}%item quest 578741 %%[#]{{i18n:Mail.Rosa_Ingredients_Kale_name}}",
         "Rosa_Ingredients_Amaranth": "{{i18n:Mail.Rosa_Ingredients_Amaranth}}%item quest 578742 %%[#]{{i18n:Mail.Rosa_Ingredients_Amaranth_name}}",
         "Rosa_Ingredients_GoatCheese": "{{i18n:Mail.Rosa_Ingredients_GoatCheese}}%item quest 578743 %%[#]{{i18n:Mail.Rosa_Ingredients_GoatCheese_name}}",
         "RosaCooking": "{{i18n:Mail.Rosa_Recipe_Baklava}}%item cookingRecipe %%[#]{{i18n:Mail.Rosa_Recipe_Baklava_name}}",

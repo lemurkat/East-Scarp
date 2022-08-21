@@ -1,0 +1,56 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Manifestation",
+            "Action": "EditData",
+            "Target": "Data/NPCDispositions",
+            "Entries": {
+                "VivienneLK": "adult/rude/outgoing/positive/female/not-datable/Eyvinder/Other//Jacob 'son' Eloise 'grand-daughter'/Custom_ESVetHouse 17 7/Vivienne"
+            }
+        },
+        //Loved item: ruby ring (but not at the front!)
+        {
+            "LogName": "antisocial flags",
+            "Action": "EditData",
+            "Target": "Data/AntiSocialNPCs",
+            "Entries": {
+                "VivienneLK": true
+            }
+        },
+        {
+            "LogName": "NPC Exclusion NPCs to avoid Perfection issues",
+            "Action": "EditData",
+            "Target": "Data/CustomNPCExclusions",
+            "Entries": {
+                "Vivienne": "All"
+            }
+        },
+        /* {
+            "LogName": "NPC Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "VivienneLK": "{{i18n:gifts.VivienneLK.love}}/64 534/{{i18n:gifts.VivienneLK.like}}/102/{{i18n:gifts.VivienneLK.dislike}}//{{i18n:gifts.VivienneLK.hate}}/638/{{i18n:gifts.VivienneLK.neutral}}//"
+            }
+        },*/
+        //VivienneLK
+        {
+            "LogName": "VivienneLK Portraits",
+            "Action": "Load",
+            "Target": "Portraits/VivienneLK, Characters/VivienneLK",
+            "FromFile": "assets/{{Target}}/VivienneLK.png"
+        },
+        {
+            "LogName": "Dialogue",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/VivienneLK",
+            "FromFile": "assets/{{Target}}/Dialogue.json"
+        },
+        {
+            "LogName": "Schedule",
+            "Action": "Load",
+            "Target": "Characters/schedules/VivienneLK",
+            "FromFile": "assets/{{Target}}/Schedule.json"
+        },
+    ]
+}
