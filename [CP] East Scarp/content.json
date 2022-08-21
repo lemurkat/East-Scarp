@@ -81,7 +81,7 @@
         },
         {
             "Name": "Custom_ESVetHouse",
-            "FromMapFile": "assets/Locations/Interiors/VetHouse.tmx",
+            "FromMapFile": "assets/Locations/Interiors/VetHouse2.tmx",
             "MigrateLegacyNames": [
                 "VetHouse"
             ]
@@ -92,7 +92,7 @@
         },
         {
             "Name": "Custom_ESJacobBarn",
-            "FromMapFile": "assets/Locations/Interiors/Barn3.tmx",
+            "FromMapFile": "assets/Locations/Interiors/JacobBarn.tmx",
             "MigrateLegacyNames": [
                 "JacobBarn"
             ]
@@ -170,13 +170,13 @@
                 "InnBath"
             ]
         },
-        {
+        /*{
             "Name": "Custom_ESHartResidence",
             "FromMapFile": "assets/Locations/InnInteriors/HartResidence.tmx",
             "MigrateLegacyNames": [
                 "HartResidence"
             ]
-        },
+        },*/
         {
             "Name": "Custom_ES_InnRoomRosa",
             "FromMapFile": "assets/Locations/InnInteriors/InnRoomRosa.tmx"
@@ -312,6 +312,38 @@
             "When": {
                 "HasSeenEvent": "57879903"
             }
+        },
+        {
+            "Name": "OutsideAnimals",
+            "Value": "none"
+        },
+        {
+            "Name": "OutsideAnimals",
+            "Value": "Hoofstock",
+            "When": {
+                "HasSeenEvent": "57870004",
+                "Weather": "sun",
+                "season":"spring,summer,fall"
+            }
+        },
+        {
+            "Name": "OutsideAnimals",
+            "Value": "Fowl",
+            "When": {
+                "HasSeenEvent": "57870003",
+                "Weather": "sun",
+                "season":"spring,summer,fall"
+            }
+        },
+        {
+            "Name": "OutsideAnimals",
+            "Value": "{{random:Hoofstock,Fowl}}",
+            "When": {
+                "HasSeenEvent|contains=57870003": true,
+                "HasSeenEvent|contains=57870004": true,
+                "Weather": "sun",
+                "season":"spring,summer,fall"
+            }
         }
     ],
     "Changes": [
@@ -323,14 +355,16 @@
             },
             "Update": "OnTimeChange",
             "When": {
-                "Time": "{{range:0600,1800}}"
+                "Time": "{{range:0600,1800}}",
+                "Weather |contains=rain,storm": false
             }
         },
         {
             "Action": "EditMap",
             "Target": "Maps/Custom_ESOrchard",
             "MapProperties": {
-                "Music": "fall_day_ambient"
+                "Music": "{{season}}_day_ambient",
+                "Weather |contains=rain,storm": false
             }
         },
         {
@@ -341,7 +375,8 @@
             },
             "Update": "OnTimeChange",
             "When": {
-                "Time": "{{range:1800, 2600}}"
+                "Time": "{{range:1800, 2600}}",
+                "Weather |contains=rain,storm": false
             }
         },
         {
@@ -367,6 +402,13 @@
                 "HasMod": "shekurika.EventLookup"
             }
         },
+        { // Farmhouse Visits Compatibility
+            "Action": "Include",
+            "FromFile": "assets/Data/FarmhouseVisits.json",
+            "When": {
+                "HasMod": "mistyspring.farmhousevisits"
+            }
+        },
         {
             "LogName": "Obelisk Texture Load",
             "Action": "Load",
@@ -389,12 +431,12 @@
         },
         {
             "Action": "Load",
-            "Target": "Maps/spring_Cottage, Maps/summer_Cottage, Maps/fall_Cottage , Maps/winter_Cottage, Maps/lemurfurniture",
+            "Target": "Maps/spring_cottage, Maps/summer_cottage, Maps/fall_cottage, Maps/winter_cottage, Maps/lemurfurniture, Maps/lemur_coffeeshop",
             "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png"
         },
         {
             "Action": "Load",
-            "Target": "Maps/spring_Inn, Maps/summer_Inn, Maps/fall_Inn, Maps/winter_Inn",
+            "Target": "Maps/spring_inn, Maps/summer_inn, Maps/fall_inn, Maps/winter_inn",
             "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
             "When": {
                 "HasMod |contains=Gweniaczek.WayBackPT": false
@@ -402,7 +444,7 @@
         },
         {
             "Action": "Load",
-            "Target": "Maps/spring_Inn, Maps/summer_Inn, Maps/fall_Inn, Maps/winter_Inn",
+            "Target": "Maps/spring_inn, Maps/summer_inn, Maps/fall_inn, Maps/winter_inn",
             "FromFile": "assets/TileSheets/Wayback/{{TargetWithoutPath}}.png",
             "When": {
                 "HasMod |contains=Gweniaczek.WayBackPT": true
@@ -415,7 +457,7 @@
         },
         {
             "Action": "Load",
-            "Target": "Maps/z_mine_desert, Maps/DeepDark_outdoorsTilesheet, Maps/MobileVanTeal, Maps/LemurCustom",
+            "Target": "Maps/ES_mine_desert, Maps/DeepDark_outdoorsTileSheet, Maps/MobileVanTeal, Maps/LemurCustom",
             "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png"
         },
         {
@@ -506,6 +548,20 @@
                 "WalkTidePools": "true"
             }
         },
+        { // Adds the mailbox
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EastScarpe",
+            "FromFile": "assets/Patches/EastScarpeMailBox.tmx",
+            "ToArea": {
+                "X": 11,
+                "Y": 68,
+                "Width": 1,
+                "Height": 2
+            },
+            /*  "When": {
+            "HasMod":"Ayeisha"
+        }*/
+        },
         //Mountains
         {
             "Action": "EditMap",
@@ -588,21 +644,6 @@
                 "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
             }
         },
-        //if set to "vanilla" will over-ride every other option.
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Town",
-            "FromFile": "assets/Patches/ES_rev_core.tmx",
-            "ToArea": {
-                "X": 109,
-                "Y": 63,
-                "Width": 11,
-                "Height": 14
-            },
-            "When": {
-                "TownMap": "vanilla"
-            }
-        },
         /*{
             "Action": "EditMap",
             "Target": "Maps/Custom_EastScarpe",
@@ -673,7 +714,28 @@
             },
             "When": {
                 "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
-                "HasMod": "LemurSqueaks.CastlePoint.CP"
+                "HasMod": "SheetCakeGhost.Antoine"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ShearwaterBridge",
+            "FromFile": "assets/Patches/AntoineTreeHouse_SVE.tmx",
+            "ToArea": {
+                "X": 44,
+                "Y": 5,
+                "Width": 13,
+                "Height": 13
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 13,
+                "Height": 13
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+                "HasMod": "SheetCakeGhost.Antoine"
             }
         },
         /*{
@@ -1033,6 +1095,8 @@
                 "Custom_ESClearingHouse": "18 .9/402 .9/410 .6/418 .7 414 .1 283 .5/137 -1 132 -1 143 -1 145 -1 153 -1 706 -1/138 -1 132 -1 144 -1 145 -1 153 -1 706 -1 704 -1/139 -1 137 -1 132 -1 140 -1 143 -1 153 -1 706 -1 699 -1/132 -1 140 -1 141 -1 143 -1 144 -1 153 -1 707 -1 699 -1/378 .2 110 .2 583 .1 102 .2 390 .25 330 1",
                 "Custom_ESMineEntrance": "-1/-1/-1/-1/136 -1 142 -1 153 -1 702 -1 700 -1/136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
                 "Custom_ESSeaCave": "-1/-1/-1/-1/152 -1 153 -1 148 -1 156 -1/152 -1 153 -1 156 -1/152 -1 153 -1 148 -1 154 -1 156 -1/152 -1 153 -1 154 -1 156 -1/110 .1 118 .1 100 .05 103 .05 106 .05 102 .15 390 .25 330 1",
+                "Custom_ESSmugglerDen": "-1/-1/-1/-1/153 -1 157 -1 147 -1 156 -1 796 -1/153 -1 157 -1 147 -1 156 -1 796 -1/153 -1 157 -1 147 -1 156 -1 796 -1/153 -1 157 -1 147 -1 156 -1 796 -1/330 1",
+                "Custom_ESMeadowFarm": "-1/-1/-1/-1/137 -1 132 -1 143 -1 145 -1 153 -1 706 -1/138 -1 132 -1 144 -1 145 -1 153 -1 706 -1 704 -1/139 -1 137 -1 132 -1 140 -1 143 -1 153 -1 706 -1 699 -1/132 -1 140 -1 141 -1 143 -1 144 -1 153 -1 707 -1 699 -1/382 .05 770 .1 390 .25 330 1"
             }
         },
         {
@@ -1405,7 +1469,7 @@
         {
             "LogName": "Events for East Scarpe",
             "Action": "Load",
-            "Target": "Data/Events/Custom_EastScarpe, Data/Events/Custom_ESDeepMountains, Data/Events/Custom_ESSilo, Data/Events/Custom_ESHouse1, Data/Events/Custom_ESHouse2, Data/Events/Custom_ESHouse3, Data/Events/Custom_ESHouse4, Data/Events/Custom_EastScarpeInn, Data/Events/Custom_ESOrchard, Data/Events/Custom_ESSeaCave, Data/Events/Custom_ESClearingHouse, Data/Events/Custom_ESDeepDark,Data/Events/Custom_ESVetHouse, Data/Events/Custom_ESBirdHide, Data/Events/Custom_ESOrchardHouse",
+            "Target": "Data/Events/Custom_EastScarpe, Data/Events/Custom_ESDeepMountains, Data/Events/Custom_ESSilo, Data/Events/Custom_ESHouse1, Data/Events/Custom_ESHouse2, Data/Events/Custom_ESHouse3, Data/Events/Custom_ESHouse4, Data/Events/Custom_EastScarpeInn, Data/Events/Custom_ESOrchard, Data/Events/Custom_ESSeaCave, Data/Events/Custom_ESClearingHouse, Data/Events/Custom_ESDeepDark,Data/Events/Custom_ESVetHouse, Data/Events/Custom_ESBirdHide, Data/Events/Custom_ESOrchardHouse, Data/Events/Custom_ESSmugglerDen, Data/Events/Custom_ESMeadowFarm",
             "FromFile": "assets/Data/EastScarpeEvents.json"
         },
         //TileData messages
@@ -1464,15 +1528,30 @@
                 "HasMod": "LemurKat.CleanerSewer.CP",
                 "Hearts:Krobus": "{{Range: 4,14}}"
             },
+            "ToArea": {
+                "X": 25,
+                "Y": 1,
+                "Width": 1,
+                "Height": 3
+            },
+            "FromFile": "assets/Patches/doorway.tmx",
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESDeepDark",
+            "When": {
+                "HasMod": "LemurKat.CleanerSewer.CP",
+                "Hearts:Krobus": "{{Range: 4,14}}"
+            },
             "MapTiles": [
                 {
                     "Position": {
                         "X": 25,
                         "Y": 3
                     },
-                    "Layer": "Buildings",
+                    "Layer": "Back",
                     "SetProperties": {
-                        "Action": "Warp 32 40 Sewer"
+                        "TouchAction": "Warp Sewer 32 40"
                         //"Warp 44 15 MonsterSaloon"
                     }
                 }
@@ -1722,7 +1801,7 @@
         {
             "Action": "EditMap",
             "Target": "Maps/Custom_EastScarpe",
-            "Update": "OnLocationChange",
+            "Update": "OnTimeChange",
             "When": {
                 "HasMod": "PeacefulEnd.CustomCompanions",
                 "HasSeenEvent": "57870011",
@@ -1746,7 +1825,7 @@
         {
             "Action": "EditMap",
             "Target": "Maps/Custom_EastScarpe",
-            "Update": "OnLocationChange",
+            "Update": "OnTimeChange",
             "When": {
                 "HasMod": "PeacefulEnd.CustomCompanions",
                 "HasSeenEvent": "57870011",
@@ -1767,10 +1846,194 @@
                 }
             ]
         },
+        //Adds animals outside if the weather is sunny
+        //Hoofstock
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EastScarpe",
+            "When": {
+                "HasMod": "PeacefulEnd.CustomCompanions",
+                "OutsideAnimals": "Hoofstock"
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 22,
+                        "Y": 14
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 1 LemurKat.EastScarpeCompanions.Baron_Reginald"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 16,
+                        "Y": 15
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 2 LemurKat.EastScarpeCompanions.Alpaca"
+                    }
+                }
+            ]
+        },
+        //Chickens
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EastScarpe",
+            "When": {
+                "HasMod": "PeacefulEnd.CustomCompanions",
+                "OutsideAnimals":"Fowl"
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 12,
+                        "Y": 14
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 2 LemurKat.EastScarpeCompanions.BrownChicken"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 16,
+                        "Y": 15
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 2 LemurKat.EastScarpeCompanions.WhiteChicken"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 16,
+                        "Y": 13
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 2 LemurKat.EastScarpeCompanions.BabyChick"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 22,
+                        "Y": 16
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 2 LemurKat.EastScarpeCompanions.BabyChick"
+                    }
+                }
+            ]
+        },
+    //Adds animals inside as long as they're not outside!
+    //Alpaca and Horse
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESJacobBarn",
+            "Update": "OnLocationChange",
+            "When": {
+                "HasMod": "PeacefulEnd.CustomCompanions",
+                "OutsideAnimals |contains=Hoofstock": false
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 18,
+                        "Y": 5
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 1 LemurKat.EastScarpeCompanions.Baron_Reginald"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 4,
+                        "Y": 4
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 1 LemurKat.EastScarpeCompanions.Alpaca"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 10,
+                        "Y": 5
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 1 LemurKat.EastScarpeCompanions.Alpaca"
+                    }
+                }
+            ]
+        },
+        //Chickens
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESJacobBarn",
+            "Update": "OnLocationChange",
+            "When": {
+                "HasMod": "PeacefulEnd.CustomCompanions",
+                "OutsideAnimals |contains=Fowl":false,
+                "HasSeenEvent": "57870003"
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 8,
+                        "Y": 11
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 2 LemurKat.EastScarpeCompanions.BrownChicken"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 4,
+                        "Y": 12
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 2 LemurKat.EastScarpeCompanions.WhiteChicken"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 9,
+                        "Y": 12
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 2 LemurKat.EastScarpeCompanions.BabyChick"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 2,
+                        "Y": 12
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "CustomCompanions": "Spawn 2 LemurKat.EastScarpeCompanions.BabyChick"
+                    }
+                }
+            ]
+        },
         {
             "Action": "Load",
             "Target": "Characters/MidnightBlackKitty",
             "FromFile": "assets/Locations/Interiors/VoidCat.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Animals/Reginald, Animals/Alpaca2, Animals/VoidBilly, Animals/VoidNanny,Animals/VoidKid",
+            "FromFile": "assets/{{target}}.png"
         },
         /* //Adds trapdoor to Mine
         {   "Action": "EditMap",
@@ -1799,7 +2062,17 @@
                 "HasMod": "Pillow.Luma"
             }
         },
-        { // Adds NPC Map Locations
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESMeadowFarm",
+            "FromFile": "assets/Patches/MeadowFarm_Paths.tmx",
+            "PatchMode": "ReplaceByLayer",
+            "When": {
+                "HasSeenEvent": "57879002"
+            }
+        },
+        // Adds NPC Map Locations
+        {
             "Action": "Include",
             "FromFile": "assets/Data/NPCMapLocations.json",
             "When": {
@@ -1814,12 +2087,18 @@
                 "HasMod": "FlashShifter.StardewValleyExpandedCP"
             }
         },
+        //Enabling the Smuggler's Den Warps
         {
             "Action": "Include",
             "FromFile": "assets/Data/ShortCutWarps.json",
-            /* "When": {
+            "When": {
                 "HasSeenEvent": "57874010"
-            }*/
+            }
+        },
+        //Map etc changes caused by Lavril
+        {
+            "Action": "Include",
+            "FromFile": "assets/Data/LavrilEdits.json"
         },
     ]
 }
