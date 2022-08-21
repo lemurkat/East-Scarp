@@ -15,6 +15,7 @@
     "Name.Eloise": "Eloise",
     "Name.Lexi": "Lexi",
     "Name.Rosa": "Rosa",
+    "Name.Abyss": "Abyss",
     //********************
     //Gift Taste Reactions
     //********************
@@ -220,6 +221,21 @@
     "movies.rosa.8": "Okay well then... back to my creaky old inn room. Certainly won't be hearing monsters scratching tonight.$2",
     "movies.rosa.9": "This place is so cute! 'Though I bet the cleaner's kept busy scraping up bird droppings.",
     "movies.rosa.10": "Thanks for inviting me, @. It's nice to have a friend in this town.$1",
+    //KatarynaLK
+    "movies.katarynalk.1": "Oooh, I wonder what it might be... perhaps it's black shuck!$1",
+    "movies.katarynalk.2": "(Kataryna is clutching the armrests, tense with anticipation)",
+    "movies.katarynalk.3": "I love a good jumpscare ... Wait for it!",
+    "movies.katarynalk.4": "Haha, a rabbit. Well, they do have a vicious streak a mile wide! Thanks for inviting me, @.$1",
+    "movies.katarynalk.5": "Isn't this a movie for kids?",
+    "movies.katarynalk.6": "(Kataryna does not look impressed)",
+    "movies.katarynalk.7": "Yeh, you should probably invite Eloise next time.$2",
+    "movies.katarynalk.8": "I do love a good nature documentary! You know, once upon a time...#$b#%Kataryna falters off, looking wistful.",
+    "movies.katarynalk.9": "It's a remarkable world we live in, isn't it @?",
+    "movies.katarynalk.10": "Such silliness, but I suppose it should be entertaining.",
+    "movies.katarynalk.11": "(Kataryna is grinning)",
+    "movies.katarynalk.12": "I haven't laughed so much since we stumbled upon a lair of swardle dwardles... but that's a story for another day.",
+    "movies.katarynalk.13": "Thanks for inviting me to the movies, @. Nice little place you've got here.",
+    "movies.katarynalk.14": "It's good to take a break from work for a while. But I suppose it's back to the grind now. Have a good day, @.",
     //************************************************************************
     // R A I N   D I A L O G U E
     //**********************************
@@ -1475,7 +1491,7 @@
     "strings.eloise.tue003": "strings.I dunno why Vinny's always complaining about the food. His mom's a great cook!",
     "strings.eloise.tue004": "Bye Dad! Yes, Jas and I will have heaps of fun playing together today. She likes birds almost as much as me!",
     "strings.eloise.tue005": "Bye Dad! I promise I'll be kind to Vinny today, and I'll try not to get too dirty!",
-    "strings.eloise.vethouse000": "Hmm... what should I write Sora about today?",
+    "strings.eloise.vethouse000": "Hmm... what should I write to Sora about today?",
     "strings.eloise.vethouse001": "Hey Princess Midnight, you're a good kitty, aren't you? You don't hunt birds!",
     "strings.eloise.schoolday000": "Bye Dad. Hope you make heaps of animals better! Miss you already.",
     "strings.eloise.schoolday001": "Yes Dad, I promise I won't ask Miss Penny too many questions today! Even though she likes questions!",
@@ -1508,6 +1524,7 @@
     "57879001.10": "Here she comes.$3", //Jas
     "57879001.11": "It's okay, you can go in.", //Jas
     "57879001.12": "Thanks Dad.", //Jas
+    //
     // ********************   R O S A   *********************
     //Rosa and Juliet in the JojaMart
     "57874005.01": "Hey cowgirl!", //Juliet
@@ -1960,6 +1977,11 @@
     "Munchboi.03": "Munchington sniffs your fingers. He seems to like the way you smell.",
     "Munchboi.04": "With a flick of his tail, Munchington turns away. You must've displeased him. But how?",
     "Munchboi.05": "Munchington insists that you scratching behind his ears. He rewards you with a purr.",
+    "VoidChick.01": "The chick looks like it wants to pick a fight.",
+    "VoidChick.02": "The chick peeps at you.",
+    "VoidChick.03": "The chick seems interested in your pockets. Do you have any crumbs?",
+    "VoidChick.04": "The chick eyes you speculatively. What could it be thinking?",
+    "VoidChick.05": "The chick seems to be appraising your worth.",
     //Quests from Rosa
     "Mail.Rosa_Ingredients_Kale": "Howdy @!^^Hope the farm's coming along nicely and you're not working yourself too hard.^^I've got a little favor to ask: If you happen to be growing any kale, would you be able to bring me some, please? Three bunches would be great! I'm trying to master Nonna's spanakopita.^^Regards, Rosa",
     "Mail.Rosa_Ingredients_Kale_name": "Rosa Requests Kale",
@@ -1984,41 +2006,465 @@
     "quest.578743.rosa.3": "Bring Rosa a goat cheese.",
     "quest.578743.rosa.4": "This smells great! Thank you @.",
     //***************** N E W   W I T H   2.2 *************************
+    ///////////////////////////////////////////////////////////////////
     "ES_Rosa10HeartMail": "Howdy @,^You are invited to a picnic by the sea!^Join us at dusk on East Scarp's foreshore, to enjoy a taste of Josa and watch the sun set over the Gem Sea.^Regards,Rosa^^Will be postponed if it's raining!",
     "ES_Rosa10HeartMail.Title": "Invition to a Twilight Picnic",
-    "57874015.01": "Good evening, ",
-    "57874015.02": "I am so glad you could join our gathering.#$b#You may not reside here in East Scarp, but we do consider you a part of our community.$4",
-    "57874015.03": "Hi!",
-    "57874015.04": "Hello farmer @! We're teaching Gremlin new tricks.$1",
-    "57874015.05": "I wish we had a puppy of our own.$2",
-    "57874015.06": "Hah, cats are better",
-    "57874015.07": "Howdy @, it's good to see you!",
-    "57874015.08": "You want to play fetch?",
-    "57874015.09": "Dogs...hah.",
-    "57874015.10": "I just meant to invite a couple of friends - but Jules insisted on inviting everyone!",
-    "57874015.11": "Sorry, not sorry.",
-    "57874015.12": "There's coffee, and cookies, and baklava. Oh and I finally mastered it!$1",
-    "57874015.13": "My Nonna's spanakopita. With a Stardew twist.",
-    "57874015.14": "What do you think?$2",
-    "57874015.15": "It looks delicious!",
-    "57874015.16": "It looks tasty, I guess.",
-    "57874015.17": "I could do better.",
-    "57874015.18": "Thanks! That means a lot coming from you.$1",
-    "57874015.19": "Oh... I was hoping you'd be a bit more enthusiastic. But I suppose flakey pastry and creamy cheese isn't for everyone.",
-    "57874015.20": "Oh you could, could you?$3",
-    "57874015.21": "You want the recipe? Okay, sure! Here it is.",
-    "57874015.22": "You have learned how to cook 'Rosa's Spanakopita'",
-    "57874015.23": "Okay, who wants to eat?",
-    "57874015.24": "Me!",
-    "57874015.25": "That sounds delightful!",
-    "57874015.26": "Is there cheese?",
-    "57874015.04.alt": "Hello farmer @! We're playing kickball!$1",
-    "57874015.05.alt": "I wish we had a puppy to play with.$2",
-    "57874015.08.alt": "Want to play catch?",
-    "57874015.10.alt": "I just meant to invite a couple of friends - Eloise insisted we invite everyone!",
-    "57874015.11.alt":"It's a real party!",
-    "57874015.06.alt":"We'll have to see...",
+    //Rosa 10 heart event
+    "57874015.01": "Good evening, ", //Aideen
+    "57874015.02": "I am so glad you could join our gathering.#$b#You may not reside here in East Scarp, but we do consider you a part of our community.$4", //Aideen
+    "57874015.03": "Hi!", //Eloise
+    "57874015.04": "Hello farmer @! We're teaching Gremlin new tricks.$1", //Eloise
+    "57874015.05": "I wish we had a puppy of our own.$2", //Eloise
+    "57874015.06": "Hah, cats are better", //Tristan
+    "57874015.07": "Howdy @, it's good to see you!", //Rosa
+    "57874015.08": "You want to play fetch?", //Eloise
+    "57874015.09": "Dogs...hah.", //Tristan
+    "57874015.10": "I just meant to invite a couple of friends - but Jules insisted on inviting everyone!", //Rosa
+    "57874015.11": "Sorry, not sorry.", //Juliet
+    "57874015.12": "There's coffee, and cookies, and baklava. Oh and I finally mastered it!$1", //Rosa
+    "57874015.13": "My Nonna's spanakopita. With a Stardew twist.", //Rosa
+    "57874015.14": "What do you think?$2", //Rosa
+    "57874015.15": "It looks delicious!", //farmer
+    "57874015.16": "It looks tasty, I guess.", //farmer
+    "57874015.17": "I could do better.", //farmer
+    "57874015.18": "Thanks! That means a lot coming from you.$1", //Rosa
+    "57874015.19": "Oh... I was hoping you'd be a bit more enthusiastic. But I suppose flakey pastry and creamy cheese isn't for everyone.", //Rosa
+    "57874015.20": "Oh you could, could you?$3", //Rosa
+    "57874015.21": "You want the recipe? Okay, sure! Here it is.", //Rosa
+    "57874015.22": "You have learned how to cook 'Rosa's Spanakopita'", //message
+    "57874015.23": "Okay, who wants to eat?", //Rosa
+    "57874015.24": "Me!", //Eloise
+    "57874015.25": "That sounds delightful!", //Aideen
+    "57874015.26": "Is there cheese?", //Tristan
+    "57874015.04.alt": "Hello farmer @! We're playing kickball!$1", //Eloise
+    "57874015.05.alt": "I wish we had a puppy to play with.$2", //Eloise
+    "57874015.08.alt": "Want to play catch?", //Eloise
+    "57874015.10.alt": "I just meant to invite a couple of friends - Eloise insisted we invite everyone!", //Rosa
+    "57874015.11.alt": "It's a real party!", //Rosa?
+    "57874015.06.alt": "We'll have to see...", //?
     //Mail
-    "Josephine_GiftMailed1":"Dear @,^^I do hope farming life is treating you well, and you are not working yourself too hard!^^Whilst volunteering at a local artisan market - it is important to help where one can - I stumbled upon this pretty little trinket. I do hope you enjoy it.^^Warmest regards, Josephine",
-    "Josephine_GiftMailed1.Title":"Vase From Josephine"
+    "Josephine_GiftMailed1": "Dear @,^^I do hope farming life is treating you well, and you are not working yourself too hard!^^Whilst volunteering at a local artisan market - it is important to help where one can - I stumbled upon this pretty little trinket. I do hope you enjoy it.^^Warmest regards, Josephine",
+    "Josephine_GiftMailed1.Title": "Vase From Josephine",
+    //Kataryna Dialogue
+    "dialogue.katarynafirstmet": "Hello, I don't believe we've met before? The name's Kataryna. Head researcher for Cryptozoology Today. I'm here to catch up with some colleagues, but if you see anything supernatural, let me know.$1",
+    "dialogue.rosamentionskat": "So... you've probably noticed, Ms. Kataryna's still here. There's a few folks unhappy, but something - or should I say, someone - encouraged her to stay.$2", //Rosa
+    //
+    //Kataryna Events
+    //Kat introduces herself to farmer (on the doorstep)
+    "57876001.01": "Ah, hello!", //Kat
+    "57876001.02": "@ isn't it? Never forget a name. Lovely house you've got here. Very, err... rustic.", //Kat
+    "57876001.03": "Love what you've done with the place.$1", //Kat
+    "57876001.04": "Right, that's the small-talk done and dusted. Time to get down to business.#$b#The name's Kataryna. I'm a field researcher for Cryptozoology Today. You may remember me?", //Kat
+    "57876001.05": "Yes, of course! Welcome back to the valley.", //farmer
+    "57876001.06": "Yes, we've met before. What do you want this time?", //farmer
+    "57876001.07": "Thank you. And I must say - it's good to be back!$1", //farmer
+    "57876001.08": "Yes, yes we have. Apologies for previous impudence. Tired and frustrated has a lot to answer for.$3#$b#I'd like us to start with a clean slate, sound good?", //Kat
+    "57876001.09": "Excellent", //Kat
+    "57876001.10": "As I'm sure you've noticed, living here and all, there's a lot of well, let's say, supernatural activity.", //Kat
+    "57876001.11": "Oh yes, ghosts, mysterious bridges, monsters that lurk beneath the soil... Well, it's a cryptozoologist's dream!$1#$b#Anyway, to keep it short: I'm here for my research. You can find me in the Scarp Inn.", //Kat
+    "57876001.12": "Oh, almost forgot. Here's my business card. Do call me, anytime, if you have any unusual phenomenom to report.", //Kat
+    "57876001.13": "Oh, and don't worry about your amphibious friend.#$b#As fascinating as they are... I'll keep them out of my reports.$2", //Kat
+    "57876001.14": "(For now...)", //Kat
+    //Oliver stops by (to enquire about Kat)
+    "57876004.01": "Oh, good morning @. Hope I haven't dropped by too early.", //Oliver
+    "57876004.02": "Have you heard? That reporter, Ms. Kataryna, is back in town. I've seen her poking around the Scarp.$2", //Oliver
+    "57876004.03": "You knew!", //Oliver
+    "57876004.04": "I don't trust her. She's here for Lexi. I know it!$a", //Oliver
+    "57876004.05": "You're being paranoid.", //farmer
+    "57876004.06": "Well you know what they say... keep your friends close.", //farmer
+    "57876004.07": "I don't trust her either.", //farmer
+    "57876004.08": "Oh really? She came here the moment Mom left! And looked shocked to see me!$a#$b#If that's not suspicious, I don't know what is. Maybe you're just naive.$2", //Oliver
+    "57876004.09": "But Ms. Kataryna isn't my friend.", //Oliver
+    "57876004.10": "And your enemies closer? Oh, that makes sense.$1", //Oliver
+    "57876004.11": "I'm glad to hear it.", //Oliver
+    "57876004.12": "I'm going to be watching her. And I hope you will too. If she tries to hurt Lexi in any way, well...$a", //Oliver
+    "57876004.13": "Okay, I'm not sure what I'll do, but I won't let her get away with it.#$b#You'll help me, won't you @?$2", //Oliver
+    "57876004.14": "Of course!", //farmer
+    "57876004.15": "I'll try.", //farmer
+    "57876004.16": "I'm too busy.", //farmer
+    "57876004.17": "Why? It's nothing to do with me.", //farmer
+    "57876004.18": "Thanks! You're cool.$1", //Oliver
+    "57876004.19": "Thanks. I know you will.", //Oliver
+    "57876004.20": "Yeh, of course... but if you see anything, let me know, okay?$2", //Oliver
+    "57876004.21": "Well, I guess it's times like this you know who your friends are.$a", //Oliver
+    "57876004.22": "Anyway, gotta fly. Jacob's keeping me busy.#$b#See you 'round.", //Oliver
+    //Kat talks to Vincent on the beach
+    "57876002.01": "... and it had lots of sharp pointy teeth - like a shark!", //Vincent
+    "57876002.02": "How fascinating!", //Kat
+    "57876002.03": "Did you talk to it at all?", //Kat
+    "57876002.04": "Nuh-uh. It looked scary. AND it was a monster. Monsters don't talk! Do they?$2", //Vincent
+    "57876002.05": "Some monsters do.", //Kat
+    "57876002.06": "That was a lovely story, Vincent.", //Kat
+    "57876002.07": "Story?", //Vincent
+    "57876002.08": "Here's a few coins. Go and buy yourself an ice cream or something.", //Kat
+    "57876002.09": "Thanks Ms. Kataryna! Smell you later!", //Vincent
+    "57876002.10": "Hello farmer", //Kat
+    "57876002.11": "Kids... what active imaginations they have. Well, I'd best be along. Things to do.", //Kat
+    "57876002.12": "Well... that's not suspicious at all.", //message
+    //Ket tries to film Lexi
+    "57876011.01": "No, not at me! Point it at the water, you fool.$a", //Kat
+    "57876011.02": "Why? There's nothing out there.$a", //Shane
+    "57876011.03": "(I saw the sea monster!)$1#$b#(Now Ms. Kataryna's trying to catch it on film.)$3", //Vincent
+    "57876011.04": "(We've got to keep super quiet, so we don't scare it).$3", //Vincent
+    "57876011.05": "Where are you?", //Kat
+    "57876011.06": "It's a mermaid, right? Mermaids like singing!#$b#You should sing, Ms. Kataryna!", //Vincent
+    "57876011.07": "Yes Ms. Kataryna. You absolutely should.$1", //Shane
+    "57876011.08": "This should be entertaining.", //Shane
+    "57876011.09": "Erm... Well... I suppose it's worth a try.$2", //Kat
+    "57876011.10": "On a wild Gatoran evening I saw sitting on a rock...", //Kat
+    "57876011.11": "(Her singing's so bad!)", //Vincent
+    "57876011.12": "(It really is)", //Shane
+    "57876011.13": "...a lovely merrow maiden, combing her green locks...", //Kat
+    "57876011.14": "...Then across the water, her glowing eyes met mine...", //Kat
+    "57876011.15": "YOU!", //Oliver
+    "57876011.16": "I told you to leave Lexi alone! What part of that don't you understand?$a", //Oliver
+    "57876011.17": "And you're just an interfering CHILD, sticking your nose in where it doesn't belong.$a", //Kat
+    "57876011.18": "You're the one sticking your nose in!$a", //Oliver
+    "57876011.19": "Oh! I hope you can swim!$3", //Vincent?
+    "57876011.20": "Ugh... Get me out of here already...$a", //Kat
+    //Kat approaches Clint and Willy in the Saloon
+    "57876003.01": "Quite a day it's been. Took the boat out this morning, figured I'd do a bit of fishing, but the sea was a bit restless.$2#$b#Anyway how's your day been, lad?", //Willy
+    "57876003.02": "Oh, you know the life. It's a thrill a moment.$2#$b#Picked up a new commission for the Guild though. So that's something.", //Clint
+    "57876003.03": "Hello lads", //Kat
+    "57876003.04": "The Adventurer's Guild? I tried to get in there earlier. Was told it's invite only.$2", //Kat
+    "57876003.05": "Aye, indeed it is. Marlon's a bit of a stickler for that rule.#$b#You're the reporter lass, aren't ye? Hear you've created quite a stir around town.", //Willy
+    "57876003.06": "Well, that's utter nonsense, and the name's Kataryna.$4#$b#I'm merely here to collect local tales. Folklore and the like. Nothing sinister!", //Kat
+    "57876003.07": "You fellows certainly seem like you've a few tales to tell.$1#$b#Now, how about I buy you both a drink? What's your poison?", //Kat
+    "57876003.08": "Mead for me, thanks lass.$1", //Willy
+    "57876003.09": "And for you?", //Kat
+    "57876003.10": "*gulp* Beer's fine. Good. Yes, thanks.", //Clint
+    "57876003.11": "Barmaid!", //Kat
+    "57876003.12": "Emily", //Clint
+    "57876003.13": "Pardon?", //Kat
+    "57876003.14": "Err... Emily. It's her name, um Ma'am. Not 'barmaid'.$2",
+    "57876003.15": "Oh, yes, of course.$2", //Kat
+    "57876003.16": "Excuse me, err, Emily.", //Kat
+    "57876003.17": "How may I help you?", //Emily
+    "57876003.18": "I'm buying a round for these two fine men.", //Kat
+    //Kat returns to console herself and hire a camera man
+    "57876005.01": "... Barmaid, er, I mean Emily, a cider please.", //Kat
+    "57876005.02": "Yes, I know it's only noon but... I really need it today....", //Kat
+    "57876005.03": "Oh! What's wrong, Ms. Kataryna?$2", //Emily
+    "57876005.04": "It's my cameraman, Raoul. He was supposed to be coming over this weekend to take some footage...$2#$b#But what does the young fool decide to do? He decides to go snowboarding! Would you believe it?$a", //Kat
+    "57876005.05": "And of course, reckless youth that he is... he's taken a nasty tumble.$2", //Kat
+    "57876005.06": "Oh! Oh no, will he be okay?$2", //Emily
+    "57876005.07": "It's only a broken leg. Nothing serious. He'll heal.$2", //Kat
+    "57876005.08": "No need to glower at me like that. I'm not entirely unsympathetic. I sent him a fruit basket.$2#$b#It's just extremely inconvenient.$a", //Kat
+    "57876005.09": "I suspect it's more 'inconvenient' for him than it is for you, Ms. Kataryna.$a#$b#I hope he feels better soon.", //Emily
+    "57876005.10": "Here's your cider, Ms. Kataryna.$a", //Emily
+    "57876005.11": "I hope you take the opportunity to reach inside yourself to seek the path of true empathy.$2#$b#Enjoy your drink.", //Emily
+    "57876005.12": "Hello!", //Kat
+    "57876005.13": "Just the person I wanted to see!$1", //Kat
+    "57876005.14": "I'm in need of someone with a camera. Video or still, either's fine.#$b#Do you know of anyone, @?", //Kat
+    "57876005.15": "Shane has a video camera.", //farmer
+    "57876005.16": "I've seen Haley with one.", //farmer
+    "57876005.17": "Nope, no idea.", //farmer
+    "57876005.18": "Even if I did, I'm not helping you.", //farmer
+    "57876005.19": "He's the scruffy unshaven one, right? I'll have a word with him.$3#$b#I suspect he won't say 'no' to a bit of extra cash. Certainly looks like he could use it.", //Kat
+    "57876005.20": "The pretty girl? Really? I'll have a word with her.#$b#She might like to earn a little extra spending money. Those outfits can't come cheap.", //Kat
+    "57876005.21": "Oh really? Huh, fancy that. Figured you must know everyone.#$b#Well, I'm sure I'll find someone. Easy way to earn a few coins. Can't imagine they'd be no takers.", //Kat
+    "57876005.22": "You're so dedicated to making my life difficult, aren't you?$a#$b#With or without your support, I'm going to find someone. Poor town like this? Someone's going to want to earn a few coins.$5",
+    "57876005.23": "I'd best be off. Got some recruiting to do. Ciao!", //Kat
+    //Shane and Kat film footprints
+    "57876006.01": "See these footprints? Looks like something with webbed feet and three toes has come ashore here.$1", //Kat
+    "57876006.02": "You mean like that seagull over there?", //Shane
+    "57876006.03": "kraak!", //Friend Gull (a bird)
+    "57876006.04": "This is a waste of time. It's starting to get dark and my arms feel like jelly.$a", //Shane
+    "57876006.05": "Oh hush! You're not paid to have an opinion!$a", //Kat
+    "57876006.06": "What are you doing?", //farmer
+    "57876006.07": "Finding anything interesting?", //farmer
+    "57876006.08": "You're looking for Lexi, aren't you?", //farmer
+    "57876006.09": "Birdwatching.", //Shane
+    "57876006.10": "We're just filming these interesting shells. Pretty aren't they?$1", //Kat
+    "57876006.11": "No.", //Shane
+    "57876006.12": "Of course! You can find interesting things anywhere. Today has been very productive.$1", //Kat
+    "57876006.13": "Of course not! We wouldn't be doing that, would we Shane?$1", //Kat
+    "57876006.14": "Who's Lexi?", //Shane
+    "57876006.15": "I've no idea. I just point the camera where I'm told.$2", //Shane
+    "57876006.16": "Well, we're starting to lose the light. I'm calling it a wrap for tonight.", //Kat
+    "57876006.17": "Thank Yoba", //Shane
+    "57876006.18": "Well I'll leave you two to it. I'm off to see a friend.$3", //Shane
+    "57876006.19": "See you around, @.", //Shane
+    "57876006.20": "Shane!", //Kat
+    "57876006.21": "What?", //Shane
+    "57876006.22": "I'll meet you here tomorrow at dawn. Best time to get good footage.$1", //Kat
+    "57876006.23": "Ugh. Fine. Whatever.$a", //Shane
+    "57876006.24": "Isn't he just the most charming assistant? Still needs must.$2#$b#I don't suppose you're looking for a change in career, @?$1", //Kat
+    //Plotting the Inn to get rid of Kat
+    "57876007.01": "...so any bright ideas kid?", //Juliet
+    "57876007.02": "Incoming", //Oliver
+    "57876007.03": "Oh, hi @.$4", //Juliet
+    "57876007.04": "...", //farmer
+    "57876007.05": "What are you folks plotting?", //farmer
+    "57876007.06": "Am I interrupting something?", //farmer
+    "57876007.07": "We're trying to decide what to do about that reporter. Kataryna.$a", //Oliver or Shane?
+    "57876007.08": "*They're* deciding. I'm here to make sure that no one causes actual harm to a paying guest.$2", //Rosa
+    "57876007.09": "And I'm here because... well, if there's a prank going, I'm in!$1", //Juliet
+    "57876007.10": "So do you want in on it too, @?$2", //Oliver
+    "57876007.11": "Do you?", //farmer question for
+    "57876007.12": "Yes, ABSOLUTELY count me in!", //farmer 
+    "57876007.13": "Uh, no thanks.", //farmer 
+    "57876007.14": "Oh... well pretend you didn't see or hear anything.", //Oliver
+    "57876007.15": "Yep, nothing to see here!$1", //Juliet
+    "57876007.16": "Now, you do know if she can swim, right?$2", //Juliet
+    "57876007.17": "What could they be scheming?", //message
+    "57876007.LetsPrankKataryna.01": "Sweet", //Oliver
+    "57876007.LetsPrankKataryna.02": "Come and join us.$1", //Juliet
+    "57876007.LetsPrankKataryna.03": "Great! Welcome to our very exclusive Club: Ridding the Town of Obnoxious Reporters.$1#$b#It's a working title.$1#$b#Now, let's get down to business. First and foremost, does anyone know if she can swim?$3", //Juliet
+    //Rosa and Juliet prank Kat
+    "57876008.01": "Oh, howdy @. Lovely morning isn't it. I hope you slept well?$1", //Rosa
+    "57876008.02": "Unlike some people.", //Juliet
+    "57876008.03": "Rosa!$4", //Kat
+    "57876008.04": "Be right with you, Ms. Kataryna!", //Rosa
+    "57876008.05": "Sorry, I'd better attend to our guest. I'll be right back, Jules, @.", //Rosa
+    "57876008.06": "What are we up to? Oh, I'm afraid that's classified information, @.#$b#I'd love to tell you, but then we'd have to kill you. And it's getting harder to hide the bodies.$1", //Juliet
+    "57876008.07": "Oh shush, I'm trying to eavesdrop.$5", //Juliet
+    "57876008.08": "Is there anything I can help you with, Ms. Kataryna?#$b#If you're after breakfast, that finished at 9, I'm afraid.", //Rosa
+    "57876008.09": "Breakfast? No! I wish to make a complaint about the noise! The thumping!$2#$b#It kept me awake half the night!$a", //Kat
+    "57876008.10": "Oh sorry about that, that's probably the heating system. It's ancient.$2#$b#I could offer you some complimentary earplugs?", //Rosa
+    "57876008.11": "That's my cue.", //Juliet
+    "57876008.12": "It's unacceptable!", //Kat
+    "57876008.13": "I'm really sorry you slept in, Ms. Kataryna. We do offer a wake-up call.$2", //Rosa
+    "57876008.14": "It's not the radiator.", //Juliet
+    "57876008.15": "Excuse me?", //Kat
+    "57876008.16": "I said, it ain't the radiator!$1", //Juliet
+    "57876008.17": "You? You're the Joja-girl? What are you doing here?$a", //Kat
+    "57876008.18": "I am! I'm also the resident expert in local ghosts. Personal hobby. And it's not the radiator.", //Juliet
+    "57876008.19": "A ghost?", //Kat
+    "57876008.20": "Oh yeah, Joseph Thomas. He's one of the miners that died here. You know, in the explosion...", //Juliet
+    "57876008.21": "In case you're wondering, it ain't the radiator. Nor the spirit of poor Joseph Thomas, may he rest in peace.$2#$b#She came here looking for ghosts? Well, we're giving her ghosts.$1", //Juliet to farmer
+    //*************************************
+    //The team throw a seance. It backfires.
+    "57876009.01": "I can't believe I let you guys talk me into this... Still, paying guest or not - I won't be sorry to see the end of her.$2", //Rosa
+    "57876009.02": "Yeah, she had poor Ellie in tears last night.$2#$b#Convinced her a basilisk was coming after her precious ducks. As if the rock crabs aren't bad enough.$a", //Rosa
+    "57876009.03": "We're here!", //Juliet
+    "57876009.04": "Has our special guest arrived yet?", //Juliet
+    "57876009.05": "Not yet", //Rosa
+    "57876009.06": "I'll finish getting set up.", //Oliver
+    "57876009.07": "Jules, you look great. Very spiritual.$5", //Rosa
+    "57876009.08": "Thanks", //Juliet
+    "57876009.09": "But today I am not Jules, I am Madame Julianna, from far across the Ferngill republic.", //Juliet
+    "57876009.10": "Howdy @! I'd like to introduce you to Madame Julianna.$1", //Juliet
+    "57876009.11": "Charmed, I'm sure.", //Juliet
+    "57876009.12": "Head on through, both of you. Our special guest should be back any moment.", //Rosa
+    "57876009.13": "Your circle is all set up, Madame Julianna. I hope you brought the magical touch.", //Rosa
+    "57876009.14": "Yep! Arrived from uBuy this morning. Here's hoping it works.$1", //Juliet
+    "57876009.15": "They're here!",
+    "57876009.16": "Ms. Kataryna, you're back just in time! Everything is all set up, if you'll just follow me in", //Rosa
+    "57876009.17": "Greetings mortals! I am Madame Julianna, hailing from far away!#$b#I have journeyed many miles across the Ferngill tundra to speak to the spirits for you today.", //Juliet
+    "57876009.18": "Oh, quit messing around, Juliet. This isn't a LARP.#$b#You say you can summon the ghost? Just do it.$2", //Kat
+    "57876009.19": "Fine.", //Juliet
+    "57876009.20": "Ain't you Ms. Sunshine and Happiness. Okay, well let's see if Mr. Thomas would like to join us.", //Juliet
+    "57876009.21": "If you could dim the light, Rosie.", //Juliet
+    "57876009.22": "Oops... that's a little too far!", //Juliet
+    "57876009.23": "Spirits of the Scarp, hear our call!$3#$b#We seek one of you, the one named Joseph Thomas: Miner, husband, father and friend.$3", //Juliet
+    "57876009.24": "We bid you, come!", //Juliet
+    "57876009.25": "Joseph Thomas! Join us!$1", //Juliet
+    "57876009.26": "GHOST:You dare to summon me?", //male voice
+    "57876009.27": "Mr. Thomas?", //Juliet
+    "57876009.28": "GHOST: That was my name once. Yes.",
+    "57876009.29": "Howdy... Pleased to meet you.$2#$b#(Please don't eat me)$4", //Rosa
+    "57876009.30": "GHOST: Outsider from afar. You are named Kataryna, yes?",
+    "57876009.31": "I am", //Kat
+    "57876009.32": "GHOST: I see darkness ahead for you. I see pain and fear.#GHOST: You must leave the valley at once. Your kind are not welcome here.",
+    "57876009.33": "Oh, do you, Mr. Thomas? A ghost prophesizing my doom. How convenient.$4", //Kat
+    "57876009.34": "Tell me, Mr. Thomas. Joseph. What form does this darkness take?#$b#Will I be rendered limb from limb by foul beasts? Or drowned perhaps?", //Kat
+    "57876009.35": "GHOST: You would be foolish to make mockery of my warning.",
+    "57876009.36": "Seriously? Foolish? Tell me, Mr. Thomas, why is it that the ghost of a grown man sounds not unlike a teenage boy?", //Kat
+    "57876009.37": "Oliver!", //Kat
+    "57876009.38": "I know you're behind this, you little wretch.$a", //Kat
+    "57876009.39": "And as for you... Mr. Thomas indeed! Some sort of apparition. A trinket purchased from a wizard, perhaps?$2", //Kat
+    "57876009.40": "Now, let's not be too hasty here...$2", //Rosa
+    "57876009.41": "Do you know how much that cost?!$a", //Juliet
+    "57876009.42": "You should be ashamed, all of you! Did any of you even, for one minute, consider who Joseph Thomas was? Have you no respect for the dead?$a", //Kat
+    "57876009.43": "I've had enough of these charades. Good night!$2", //Kat
+    "57876009.44": "You caught all that?", //Juliet
+    "57876009.45": "Too right I did. Yoba, she's real pissed. Hope we haven't pushed her too far. And that she remembers to pay me.$2", //Shane
+    "57876009.46": "Me too... me too.$2", //Rosa
+    //Kataryna is upset about the way she was treated - and explains why
+    "57876010.01": "Oh. It's you.", //Kat
+    "57876010.02": "Let me guess, your deceased grandfather wants to have a word with me, and it's along the lines of 'get off my lawn'?$a#$b#I haven't got time for those kids and your hijinks.$2", //Kat
+    "57876010.03": "...",
+    "57876010.04": "I'm sorry we upset you. We went too far.", //farmer
+    "57876010.05": "I can see I'm not welcome here. Goodbye.", //farmer
+    "57876010.06": "Correct", //Kat
+    "57876010.07": "Now, if you'd excuse me. I've deadlines to meet. Good day.", //Kat
+    "57876010.KatarynaExplains.01": "It's not that you made a mockery of my career. That's nothing new. No, it's that they brought up his name. Joseph Thomas.$2", //Kat
+    "57876010.KatarynaExplains.02": "Did I know the man? Hah, how old do you think I am? Well... old enough, I guess. But no.$2#$b#I know his son. Met at ZuCU. Good man. Very patient tutor, now both friend and colleague.#$b#Why do you think I went along with your little game? Certainly not because I believed that Joja girl some sort of seer.$3", //Kat
+    "57876010.KatarynaExplains.03": "If I could give Jasper back even a tiny part of his father, I would.#$b#And that, @, is why your little sham stung like a barb.$2", //Kat
+    "57876010.KatarynaExplains.04": "Now, if you'd excuse me. Some of us have deadlines to meet. Good day.", //Kat
+    //Juliet meets her idol - and is disappointed (happens before above event) - all dialogue Kat or Juliet
+    "57876014.01": "What am I doing here? Oh loitering with intent, of course!",
+    "57876014.02": "For that reporter, Ms. Kataryna. I've been reading her rag for years.",
+    "57876014.03": "Wish me luck!",
+    "57876014.04": "Excuse me, Ms. Kataryna?",
+    "57876014.05": "Yes?",
+    "57876014.06": "I'm a big fan of your mag! Loved the interview with the woman who had a sasquatch's baby. Classic stuff! Laughed for hours!$1",
+    "57876014.07": "I imagine you did. She was faking of course; her son was just uncommonly hirsute. Some people will claim anything for the chance to see their name in print.$a",
+    "57876014.08": "Anywho, here's something I wrote. I hope you'll consider it for your next issue?",
+    "57876014.09": "I'm afraid I'm rejecting your submission.",
+    "57876014.10": "Oh...",
+    "57876014.11": "You're not even gonna read it?$2",
+    "57876014.12": "No need, I've seen enough.#$b#With a heavy rewrite it might be passable, but your spelling's atrocious, and you seem to have only the merest acquantince with grammar.#$b#Also, you are aware that Cyptozoology Today is a factual publication, with its articles based on genuine research? It's not some sort of tacky tabloid filled with sensationalist stories and cheesy headlines.$a",
+    "57876014.13": "Now, if you'll excuse me, I've got places to go and creatures to find.",
+    "57876014.14": "Factual publication? Hah! Could've fooled me!$a#$b#Well, I guess there go my dreams of being a literary genius. Ah well, no big.$2#$b#Ugh, you know what they say about never meeting your idols...$2",
+    //Kat at the bus stop
+    "57876012.01": "Oh. It's you.$2", //Kat
+    "57876012.02": "...",
+    "57876012.03": "You're leaving at last? Good riddance.",
+    "57876012.04": "What's wrong?",
+    "57876012.05": "Oh, now you care about how I feel. Typical...$2",
+    "57876012.06": "Sorry. I'm in a right foul mood. It's not your fault. It's this Yoba-forsaken town.$4#$b#Were they like this when you got here? So closed up to strangers?$2", //Kat
+    "57876012.07": "Okay, yeah, I know I'm not exactly Ms. Rainbows and Sunshine. And yes, I promised to leave well alone...#$b#But it wasn't entirely unjustified, you know.$4", //Kat
+    "57876012.08": "Truth is, Crypto Today's not doing well.$2#$b#ZuCU canceled their subscription, which inspired our sponsors to jump ship... you get the idea.$a#$b#But one groundbreaking story, that might've made the difference.$3", //Kat
+    "57876012.09": "Hah!", //Kat
+    "57876012.10": "I wasn't counting on Mr-I'm-the-Governor's-Son to be a thorn in my side.$a", //Kat
+    "57876012.11": "Oh, don't look at me like that. I don't want your pity. Companies fail, fact of life.$2#$b#Just got to move on, get over it. There's always copy-editing.#$b#Total snorefest, but whatever. A job is a job, after all.", //Kat
+    "57876012.12": "Well, I'd best be off. I didn't expect to pour my heart out. You probably regret asking now.#$b#Well, that's your problem. Ciao.", //Kat
+    "57876012.13": "...",
+    "57876012.14": "Wait, you should stay!",
+    "57876012.15": "Goodbye and good luck.",
+    "57876012.16": "You think I should stay?$3", //Kat
+    "57876012.17": "Well, I suppose I can copy-edit manuscripts anywhere.#$b#Hmm, I need some alone time to think about this.#$b#Thank you, @. It's nice not everyone thinks of me as some sort of meddling monster.#$b#Perhaps I'll see you tomorrow.$1", //Kat
+    "57876012.18": "When you see her next, Kataryna will accept gifts.", //message
+    "57876012.KatarynaDeparts.01": "Yes, I'm leaving. Congratulations. I hope you and your little friends are happy.$4", //Kat
+    "57876012.KatarynaDeparts.02": "Small town hospitality indeed.", //Kat
+    "57876012.KatarynaDeparts2.01": "Have a nice life, @.$2", //Kat
+    "57876012.KatarynaDeparts2.02": "Kataryna has left Pelican Town. Lexi and its other secrets are safe.", //message
+    //Kat's 2 heart event
+    "57876015.01": "We just saw something dart into this bush. Could it be a secretive jackalope?", //Kat
+    "57876015.02": "Or perhaps it's something more mysterious?", //Kat
+    "57876015.03": "It's a rabbit.", //Shane
+    "57876015.04": "Such a skeptic.", //Kat
+    "57876015.05": "Perhaps we've stumbled upon one of M. Jasper's forest spirits? A junimo.", //Kat
+    "57876015.06": "Impeccable timing!", //Kat
+    "57876015.07": "Here's @, the local farmer.", //Kat
+    "57876015.08": "@, what do you think might be hiding in this bush?", //Kat
+    "57876015.09": "Definitely a Junimo.", //farmer
+    "57876015.10": "Probably a rabbit.", //farmer
+    "57876015.11": "A monster with big scary teeth.", //farmer
+    "57876015.12": "Wonderful! See Shane? Not everyone's as cynical as you.$1", //Kat
+    "57876015.13": "Okay fine. I'm surrounded by skeptics.$4", //Kat
+    "57876015.14": "I know you're pulling my leg, but wouldn't that be marvellous?!$3", //Kat
+    "57876015.15": "Hardly", //Shane
+    "57876015.16": "Let's find out, shall we? @, can you please shake the shrubbery?$1", //Kat
+    "57876015.17": "Be ready, Shane!", //Kat
+    "57876015.18": "Called it!", //Shane
+    //Discussion between Lexi and Oliver
+    "57876016.01": "... Was not nice thing, pushing the nosy reporter lady into water.", //Lexi
+    "57876016.02": "I didn't push her, Lex! She slipped. It was an accident.$2#$b#Anyway, I was only trying to look out for you. To keep you safe.", //Olly
+    "57876016.03": "Oliver-friend is not mother, does not need be keeping me safe. Is not child who need protection!", //Lexi
+    "57876016.04": "Yeh, but you're my friend, Lexi, and friends look out for each other. I was worried about you. Okay?#$b#I'm sorry she fell it, but I'm not sorry for what I said to her.", //Olly
+    "57876016.05": "She'd put you in her magazine, your face would be in the news across the country. Is that what you want?", //Olly
+    "57876016.06": "Hey @. Ugh, I suppose you heard that, didn't you?$2", //Olly to farmer
+    "57876016.07": "Oliver, you're right to protect Lexi, they don't know how dangerous the world can be.", //farmer
+    "57876016.08": "Lexi, you're your own person... you have a right to make decisions about your life.", //farmer
+    "57876016.09": "Nope, didn't hear a thing.", //farmer
+    "57876016.10": "Thanks", //Olly
+    "57876016.11": "See, the world's a dangerous place. We just don't want to see anyone hurt you.$2", //Olly
+    "57876016.12": "Really?!", //Olly
+    "57876016.13": "Oh, I suppose you're right. But I'm just worried, okay? I know what sort of things can happen.$2", //Olly
+    "57876016.14": "Cool", //Olly
+    "57876016.15": "Look, the world's a dangerous place. I just don't want to see you get hurt.$2", //Olly
+    "57876016.16": "I know this. And thank you Olly. I am grateful to have such a good friend.$1#$b#But also, maybe you ask first, next time, before you try to fight for me. Yes?$2", //Lexi
+    "57876016.17": "Fine. Okay, yes. I'll try.", //Olly
+    //Kataryna Heart Events
+    //Six Heart
+    "57876020.01": "Hey", //Shane
+    "57876020.02": "Oh, Kat got a call that there was some sort of creature rummaging through the trash cans. So, guess who had to drop everything and come running?$2", //Shane
+    "57876020.03": "I appreciate it!", //Kat
+    "57876020.04": "Course you do. And my bank balance had better appreciate it too.", //Shane
+    "57876020.05": "Shane!", //Kat
+    "57876020.06": "This better be good...$2", //Shane
+    "57876020.07": "You coming, @?", //Shane to farmer
+    "57876020.08": "Shane!", //Kat
+    "57876020.09": "Dammit, it's gone.", //Kat
+    "57876020.10": "I think it went this way...", //Kat
+    "57876020.11": "Nice bear... good bear...$2", //Kat
+    "57876020.12": "Back away slowly. Don't look away. But don't make eye contact.$2", //Shane
+    "57876020.13": "Since when were you a bear expert?$a", //Kat
+    "57876020.14": "I've watched Animal Planet... Um... can you do something, @?", //Shane
+    "57876020.15": "Did you catch all that Shane?", //Kat
+    "57876020.16": "Yep", //Shane
+    "57876020.17": "Let's sneak away while it's distracted... $2", //Kat
+    "57876020.18": "Best idea you've had all day.", //Shane
+    "57876020.19": "I hope Abyss is OK...", //Kat
+    //Four Heart part 1
+    "57876018.01": "Farmer", //Eloise
+    "57876018.02": "Farmer! I'm so glad I found you! It's Ms. Kataryna's egg! It's hatching!$1#$b#She sent me to get Shane, but you're better!", //Eloise
+    "57876018.03": "She says it's a cockatrice and that's a scary monster and it might turn all our animals into stone!$3#$b#You'll protect us, won't you farmer @!$3", //Eloise
+    "57876018.04": "YAY!", //Eloise
+    "57876018.05": "Come on! We've gotta hurry!$1", //Eloise
+    "57876018.06": "Dad said that cockatrice aren't real, and it was probably a chicken and even if it was a cockatrice, it would only be a baby one and be harmless, but !!!", //Eloise
+    "57876018.07": "You're just in time! It's about to hatch.$1", //Jacob
+    "57876018.08": "Where is it? I can't see anything. What hatched?$2", //Eloise
+    "57876018.09": "Shhhh!", //Kat
+    "57876018.10": "Do you want to be turned to stone, child?$a", //Kat
+    "57876018.11": "No...", //Eloise
+    "57876018.12": "It's a chicken.$a", //Kat
+    "57876018.13": "He's so cute!", //Eloise
+    "57876018.14": "Not what you were hoping for?$2", //Jacob
+    "57876018.15": "Not even remotely.$2", //Kat
+    "57876018.16": "Can we keep him, Dad? Please? Pretty please!$1", //Eloise
+    "57876018.17": "It's not me you need to ask, sweetheart. He's Ms. Kataryna's chick - if she'll have him.", //Jacob
+    "57876018.18": "Can we look after him for you? I'll take ever so good care of him!$2", //Eloise
+    "57876018.19": "Sure. Whatever.", //Kat
+    "57876018.20": "Don't worry, little one. I'll look after you.$1", //Eloise
+    "57876018.21": "Another new critter for the menagerie. I wonder what noble title she'll give this one.", //Jacob
+    "57876018.22": "I think I'll call you... Prince, um... Prince Shadow!$1", //Eloise
+    //Four heart part 2
+    "57876021.01": "Farmer", //Eloise
+    "57876021.02": "Farmer @! The chicken! He's gone! He ran away. Have you seen him? Please say you've seen him.$2", //Eloise
+    "57876021.03": "I haven't, but I'll keep an eye out for him.", //farmer
+    "57876021.04": "(lie) I've seen him!", //farmer
+    "57876021.05": "A rock crab probably ate him.", //farmer
+    "57876021.06": "Thanks @! You're the best!$1", //farmer
+    "57876021.07": "Really?", //Eloise
+    "57876021.08": "Absolutely truly, cross my heart and hope to cry, seen him?$2", //Eloise
+    "57876021.09": "Oh...", //Eloise
+    "57876021.10": "Why would you say something like that? That's so mean!", //Eloise
+    "57876021.11": "Let me know if you find him, okay?", //Eloise
+    "57876021.12": "Thanks! Dad and me are gonna be looking all day if we have to!$3", //Eloise
+    "57876021.13": "Won't we Dad?", //Eloise
+    "57876021.14": "I'm sure we'll find him soon. He can't have gone far!$2#$b#Thanks @. Please do call if you see something!", //Jacob
+    "57876021.15": "Ms. Marnie next?", //Eloise
+    //Four heart part 3 (they find the chick)
+    "57876022.01": "Oh, howdy @. Good timing! We've got ourselves a small mouse problem and I could do with a second pair of hands.$2",//Rosa
+    "57876022.02": "Great!",//Rosa
+    "57876022.03": "I'll scare it out, and you be ready to grab it. You're fast, right?",//Rosa
+    "57876022.04": "Ready?",//Rosa
+    "57876022.05": "Hi! You haven't seen Prince Shadow, have you? He's a very small chicken.",//Eloise
+    "57876022.06": "That's him!",//Eloise
+    "57876022.07": "Please don't be frighted! I'm sorry I scared you Prince Shadow...$2",//Eloise
+    "57876022.08": "A chicken?",//Rosa
+    "57876022.09": "What's all the kerfuffle about?$a",//Kat
+    "57876022.10": "Kerfuffle?",//Eloise
+    "57876022.11": "Sorry if our hijinks are disturbing you, Ms.Kataryna.",//Rosa
+    "57876022.12": "Have you got a chicken in here?$3",//Kat
+    "57876022.13": "Oh! Prince Shadow wasn't lost at all! He was looking for his mother!$3#$b#And now he's found her.#1",//Eloise
+    "57876022.14": "Me?",//Kat
+    "57876022.15": "Yes! It's called imprinting... it means...$3",//Eloise
+    "57876022.16": "I know what imprinting means, child.$2",//Kat
+    "57876022.17": "You do?!$3",//Eloise
+    "57876022.18": "Of course. Some of us were paying attention in zoology class.",//Kat
+    "57876022.19": "Zoology class?",//Eloise
+    "57876022.20": "Well, I suppose I'm stuck with you then.",//Kat
+    "57876022.21": "Although I'm not sure if this inn allows livestock.",//Kat
+    "57876022.22": "Well, normally we don't...$2",//Rosa
+    "57876022.23": "But I'll see what can be arranged.$1",//Rosa
+    "57876022.24": "So what are you going to call him? I called him Prince Shadow... but I'm not sure he liked it much.",//Eloise
+    //Mail
+    "JulietInvitationToSeance": "Hey @, the Kat's Away gang have a little surprise planned for our uninvited guest. You wanna come join the fun? Come to Scarp Inn after 8pm. Be there and experience a real taste of the supernatural.^^Love, Jules.^^PS: Not a literal taste, although there may be some spirits!",
+    "JulietInvitationToSeance.title": "Invitation to ???",
+    "Kataryna_Junkmail": "Is there something weird in your neighborhood? Cryptozoology Today seeks sightings of the mysterious, the magical, the supernatural.^^For reports, submissions, inquiries or subscriptions, call XXX-XXXX. No story is too strange.",
+    "Kataryna_Junkmail.title": "Cryptozoology Today Flyer",
+    "Kataryna_voidegg": "I've been talking chickens with Shane - absolutely droll, I know - and he mentioned he'd once found a strange black egg in the coop. He suggested that you might know about them. Do you? I'd pay decent coin for one!^^Ciao, Kataryna",
+    "Kataryna_voidegg.title": "Kataryna's Void Egg Request",
+    "kataryna_voidegghatching": "@!!!^^Ms. Kataryna has bought us the weirdest egg! Its black and red and we're incubating it for her. She thinks its a monster! I hope it isn't. Unless maybe its a dragon, that'd be wicked!^^Dad says its gonna hatch in about 5 days! Come see us then.^^Love, Eloise <",
+    "kataryna_voidegghatching.title": "Eloise About An Egg",
+    //Kataryna Quest
+    "quest.578760.kataryna.1": "Void Egg",
+    "quest.578760.kataryna.2": "Kataryna wants a 'strange black egg'.",
+    "quest.578760.kataryna.3": "Bring Kataryna a void egg",
+    "quest.578760.kataryna.4": "How remarkable! I wonder if it's a cockatrice. Only one way to find out!",
 }
