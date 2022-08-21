@@ -502,7 +502,14 @@
 			"FromFile": "assets/Dao.json",
 			"When": {
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
-				"PlayerName": "Isla, Beth"
+				"PlayerName": "Isla"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/VivienneLK.json",
+			"When": {
+				"PlayerName": "Isla"
 			}
 		},
 		{
@@ -512,14 +519,6 @@
 		/***************************
 		ANTISOCICAL NPCS
 		****************************/
-		/*{
-					"LogName": "AntiSocial Flags",
-					"Action": "EditData",
-					"Target": "Data/AntiSocialNPCs",
-					"Entries": {
-						"Rosa": true
-					}
-				},*/
 		{
 			"LogName": "NPC Exclusion NPCs to avoid Perfection issues",
 			"Action": "EditData",
@@ -531,7 +530,8 @@
 				"Leximonster": "PerfectFriend,IslandVisit,TownQuest,WinterStar",
 				"KatarynaLK": "All",
 				"LadySheba": "All",
-				"Rosa": "IslandVisit, WinterStar"
+				"Rosa": "IslandVisit, WinterStar",
+				"Abyssrooster": "All"
 			}
 		},
 		{
@@ -546,18 +546,6 @@
 				"JosephineK": "All",
 			}
 		},
-		/*{//Add when relevant
-			"LogName": "NPC Exclusion NPCs to avoid Perfection issues",
-			"Action": "EditData",
-			"Target": "Data/CustomNPCExclusions",
-			"When": {
-				"HasSeenEvent": "5787",
-				"HasSeenEvent |contains=5787": false
-			},
-			"Entries": {
-				"KatarynaLK": "PerfectFriend"
-			}
-		},*/
 		{
 			"LogName": "NPC Exclusion NPCs to avoid Perfection issues",
 			"Action": "EditData",
@@ -567,7 +555,7 @@
 			},
 			"Entries": {
 				"OliverK": "PerfectFriend",
-				"JosephineK": "PerfectFriend"
+				"JosephineK": "PerfectFriend,TownQuest"
 			}
 		},
 		{
@@ -589,8 +577,20 @@
 			"Target": "Data/AntiSocialNPCs",
 			"Entries": {
 				"RichieTheMacaw": true,
+				"Abyssrooster": true,
 				"KatarynaLK": true,
 				"LadySheba": true
+			}
+		},
+		{
+			"LogName": "AntiSocial Flags",
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"When": {
+				"HasFlag": "KatarynaBecomesSocial"
+			},
+			"Entries": {
+				"KatarynaLK": false
 			}
 		},
 		//Ducks
@@ -739,6 +739,13 @@
 			"FromFile": "assets/Festivals/LadySheba.json",
 			"When": {
 				"HasSeenEvent": "57879903"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Festivals/Antoine.json",
+			"When": {
+				"HasMod": "SheetCakeGhost.Antoine"
 			}
 		},
 		{
@@ -1089,5 +1096,41 @@
 				57874000+ = Rosa
 				57876000+ = Kataryna
 				*/
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex, Characters/Dialogue/Elliott, Characters/Dialogue/Harvey, Characters/Dialogue/Sam, Characters/Dialogue/Sebastian, Characters/Dialogue/Shane, Characters/Dialogue/Abigail, Characters/Dialogue/Emily, Characters/Dialogue/Haley, Characters/Dialogue/Leah, Characters/Dialogue/Maru, Characters/Dialogue/Penny, Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gus, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Krobus, Characters/Dialogue/Leo, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/Pam, Characters/Dialogue/Pierre, Characters/Dialogue/Robin, Characters/Dialogue/Sandy, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard, Characters/Dialogue/Lewis, Characters/Dialogue/Marlon, Characters/Dialogue/Gunther, Characters/Dialogue/Gil",
+			"Entries": {
+				"reject_534": "%You feel this isn't the right person, and slip the ring back in your pocket."
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sophia, Characters/Dialogue/Olivia, Characters/Dialogue/Victor, Characters/Dialogue/Andy, Characters/Dialogue/Susan, Characters/Dialogue/Morgan, Characters/Dialogue/Apples, Characters/Dialogue/MarlonFay, Characters/Dialogue/GuntherSilvian, Characters/Dialogue/Claire, Characters/Dialogue/Martin,  Characters/Dialogue/Lance, Characters/Dialogue/Scarlett, Characters/Dialogue/Denver, Characters/Dialogue/Cecilia, Characters/Dialogue/Herbert, Characters/Dialogue/Isla, Characters/Dialogue/Alecto, Characters/Dialogue/Blanche, Characters/Dialogue/Carnelian, Characters/Dialogue/Jade, Characters/Dialogue/John, Characters/Dialogue/Lyell, Characters/Dialogue/Lunna, Characters/Dialogue/Juna, Characters/Dialogue/Dianna, Characters/Dialogue/Bianka, Characters/Dialogue/Raphael, Characters/Dialogue/Esmeralda, Characters/Dialogue/Salvador, Characters/Dialogue/Witch, Characters/Dialogue/Eugene, Characters/Dialogue/Joel, Characters/Dialogue/Sheila, Characters/Dialogue/Gregory, Characters/Dialogue/Gabriel, Characters/Dialogue/Zinnia, Characters/Dialogue/Silly, Characters/Dialogue/Lucikiel, Characters/Dialogue/Aurelia, Characters/Dialogue/Si_MR_Morris, Characters/Dialogue/Shiko, Characters/Dialogue/Sorren, Characters/Dialogue/Alissa, Characters/Dialogue/Aguar, Characters/Dialogue/Bert, Characters/Dialogue/Corine, Characters/Dialogue/Ezekiel, Characters/Dialogue/Flor, Characters/Dialogue/Freddie,Characters/Dialogue/Ian, Characters/Dialogue/Jeric, Characters/Dialogue/Jio, Characters/Dialogue/Keahi, Characters/Dialogue/Kenneth, Characters/Dialogue/Kiwi, Characters/Dialogue/Lenny, Characters/Dialogue/Lola, Characters/Dialogue/Maddie, Characters/Dialogue/Olga, Characters/Dialogue/Philip, Characters/Dialogue/Pika, Characters/Dialogue/Richard, Characters/Dialogue/Shiro, Characters/Dialogue/Trinnie, Characters/Dialogue/Ysabelle, Characters/Dialogue/Yuuma, Characters/Dialogue/Undreya, Characters/Dialogue/Helen, Characters/Dialogue/Daia, Characters/Dialogue/Belinda, Characters/Dialogue/Bliss, Characters/Dialogue/Sari, Characters/Dialogue/Pipo, Characters/Dialogue/Acorn, Characters/Dialogue/Naomi, Characters/Dialogue/Malaya, Characters/Dialogue/Kimpoi, Characters/Dialogue/Anton, Characters/Dialogue/Ariah, Characters/Dialogue/Blair, Characters/Dialogue/Bryle, Characters/Dialogue/Carmen, Characters/Dialogue/Faye, Characters/Dialogue/Irene, Characters/Dialogue/Kiarra, Characters/Dialogue/Lorenzo, Characters/Dialogue/Louie, Characters/Dialogue/Maive, Characters/Dialogue/Paula, Characters/Dialogue/Raeriyala, Characters/Dialogue/Sean, Characters/Dialogue/Shanice, Characters/Dialogue/Sonny, Characters/Dialogue/Zayne, Characters/Dialogue/TreehouseGirl, Characters/Dialogue/RelicSpirit, Characters/Dialogue/Torts, Characters/Dialogue/Althea, Characters/Dialogue/Lorraine, Characters/Dialogue/Nadaline, Characters/Dialogue/Zachary",
+			"Entries": {
+				"reject_534": "%You feel maybe you're looking through the wrong group of people, and slip the ring back in your pocket."
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/DuckNPC, Characters/Dialogue/Duck2NPC, Characters/Dialogue/LadySheba, Characters/Dialogue/Marigold, Characters/Dialogue/JortsCat, Characters/Dialogue/JeanCat,",
+			"Entries": {
+				"reject_534": "%Why would you offer the ring to an animal? You have second thoughts and pocket it."
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Dao, Characters/Dialogue/Sterling, Characters/Dialogue/Mateo, Characters/Dialogue/RinnyAro, Characters/Dialogue/Diala,Characters/Dialogue/Derya, Characters/Dialogue/Moon, Characters/Dialogue/PlumForrest, Characters/Dialogue/Lavril, Characters/Dialogue/Jessie, Characters/Dialogue/Jasper, Characters/Dialogue/MisterGinger, Characters/Dialogue/Trace, Characters/Dialogue/Anew, Characters/Dialogue/SenS,Characters/Dialogue/Yri, Characters/Dialogue/Charles, Characters/Dialogue/Beatrice, Characters/Dialogue/Nagito, Characters/Dialogue/",
+			"Entries": {
+				"reject_534": "%You get the sense that you're looking in the right direction - but this isn't the right person to give this to. You pocket the ring."
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Juliet",
+			"Entries": {
+				"reject_534": "Oh no, don't go giving that to me! A woman may have died wearing that thing.$2#$b#And no matter how pretty it is, I ain't wearing a dead woman's ring. That's bad juju."
+			}
+		}
+		//Write an event if you carry it into the forge, where Clint sees it in your hands and compares it to the one his mother's wearing in the photograph - a photograph of her as a young woman.
 	]
 }
