@@ -1,0 +1,110 @@
+{
+    "Changes": [
+        //Repairing the House
+        //"63079050" - Event ID for Reducing Crab population
+        //"63078002" - Fixing the living room | room on top right still damaged
+        //"63078003" - Fixing the top right room | OrchardHouse fully repaired!
+        //"63078004" - code for friendly slimes w/ Lavril 
+        { //Turns the orchard slimes into kitty slimes
+            "Action": "EditImage",
+            "PatchMode": "Replace",
+            "Update": "OnLocationChange",
+            "Target": "Characters/Monsters/Green Slime",
+            "When": {
+                "LocationName": "Custom_ESOrchard",
+                "HasSeenEvent": "63078004"
+            },
+            "FromFile": "assets/kittyslime.png"
+        },
+        //"63078001" - Fixing the bedroom | living room and room on top right still damaged
+        {
+            "LogName": "Bedroom repair",
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESOrchardHouse",
+            "FromFile": "assets/Locations/Interiors/OrchardHouse-repaired.tmx",
+            "When": {
+                "HasSeenEvent": "63078001",
+                "HasSeenEvent |contains=63078003": false
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 10,
+                "Height": 14
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 10,
+                "Height": 14
+            },
+        },
+        {
+            "LogName": "Hallway Repair",
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESOrchardHouse",
+            "FromFile": "assets/Locations/Interiors/OrchardHouse-repaired.tmx",
+            "When": {
+                "HasSeenEvent": "63078001",
+                "HasSeenEvent |contains=63078003": false
+            },
+            "FromArea": {
+                "X": 10,
+                "Y": 9,
+                "Width": 9,
+                "Height": 5
+            },
+            "ToArea": {
+                "X": 10,
+                "Y": 9,
+                "Width": 9,
+                "Height": 5
+            },
+        },
+        //"63078002" - Fixing the living room | room on top right still damaged
+        {
+            "LogName": "1Living Room Repair",
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESOrchardHouse",
+            "FromFile": "assets/Locations/Interiors/OrchardHouse-repaired.tmx",
+            "When": {
+                "HasSeenEvent": "63078002",
+                "HasSeenEvent |contains=63078003": false
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 14,
+                "Width": 19,
+                "Height": 11
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 14,
+                "Width": 19,
+                "Height": 11
+            },
+        },
+        //"63078003" - Fixing the top right room | OrchardHouse fully repaired!
+        {
+            "LogName": "Entire Map Repair",
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESOrchardHouse",
+            "FromFile": "assets/Locations/Interiors/OrchardHouse-repaired.tmx",
+            "When": {
+                "HasSeenEvent": "63078003"
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 26,
+                "Height": 42
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 26,
+                "Height": 42
+            }
+        },
+    ]
+}

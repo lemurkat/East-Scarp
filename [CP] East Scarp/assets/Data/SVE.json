@@ -154,6 +154,19 @@
                 "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
             }
         },
+        //Fixes Charlie's schedule for Community Day
+        { //Charlie Community Day schedule
+            "Action": "EditData",
+            "Target": "characters/schedules/CharlieChicken",
+            "When": {
+                "HasSeenEvent |contains=191393": true,
+                "HasSeenEvent |contains=3900074": true,
+                "HasMod |contains=LemurKat.CommunityCenter.CP": false
+            },
+            "Entries": {
+                "22": "0 Custom_Charlie_WarpRoom 2 3 3/800 AnimalShop 23 15 1/1030 AnimalShop 16 14 2/1100 CommunityCenter 17 22 2 Charlie_Sleep/1800 CommunityCenter 9 26 3/1850 AnimalShop 26 6 2 Charlie_Sleep",
+            },
+        },
         // H E R B E R T
         /*{
             //Adds patch for Town East so you can access Herbert if they are both loaded
@@ -220,7 +233,23 @@
                 "Height": 14
             },
             "When": {
-                "HasMod |contains=tiger.herbmapss": true
+                "HasMod |contains=tiger.herbmapss": true,
+                "HasSeenEvent |contains=5553210": false
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/Town_Herbert_Joja.tmx",
+            "ToArea": {
+                "X": 112,
+                "Y": 91,
+                "Width": 16,
+                "Height": 14
+            },
+            "When": {
+                "HasMod |contains=tiger.herbmapss": true,
+                "HasSeenEvent": "5553210"
             }
         },
         {

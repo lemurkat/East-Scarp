@@ -10,7 +10,8 @@
                 "57870008": "T",
                 "57870015": "T",
 		"57879000": "T",
-		"69660010": "T"
+		"69660010": "T",
+		"57874011": "T"
             }
         },
         {
@@ -37,6 +38,7 @@
                 "Custom_ESShack": "{{i18n:EastScarp.Locations.Smuggler}}",
                 "Custom_ESSeaCave": "{{i18n:EastScarp.Locations.SeaCave}}",
                 "Custom_EastScarpeInn": "{{i18n:EastScarp.Locations.Inn}}",
+		"Custom_ESMeadowFarm": "{{i18n:EastScarp.Locations.MeadowFarm}}",
             }
         }
     ]

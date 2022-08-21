@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="30" height="42" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="12">
+ <properties>
+  <property name="DayTiles_asdf" value="Buildings 3 1 15 Buildings 3 2 27 Back 3 4 51 Back 3 5 63"/>
+  <property name="NightTiles_asdf" value="Buildings 3 1 144 Buildings 3 2 156 Back 3 4 53 Back 3 5 65"/>
+  <property name="ViewportFollowPlayer" type="bool" value="true"/>
+  <property name="Warp" value="9 12 Farm 64 15"/>
+  <property name="asdf" type="bool" value="false"/>
+ </properties>
+ <tileset firstgid="1" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2177" name="lemurfurniture" tilewidth="16" tileheight="16" tilecount="2624" columns="32">
+  <image source="lemurfurniture.png" width="512" height="1312"/>
+ </tileset>
+ <tileset firstgid="4801" name="indoor_dnextras" tilewidth="16" tileheight="16" tilecount="160" columns="10">
+  <image source="indoor_dnextras.png" width="160" height="256"/>
+ </tileset>
+ <tileset firstgid="4961" name="Craftables" tilewidth="16" tileheight="16" tilecount="448" columns="8">
+  <image source="Craftables.png" width="128" height="896"/>
+  <tile id="53">
+   <animation>
+    <frame tileid="53" duration="500"/>
+    <frame tileid="54" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="61">
+   <animation>
+    <frame tileid="61" duration="500"/>
+    <frame tileid="62" duration="500"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="5409" name="paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths" width="64" height="144"/>
+ </tileset>
+ <tileset firstgid="5445" name="lumi_towninterior" tilewidth="16" tileheight="16" tilecount="3050" columns="25">
+  <image source="lumi_towninterior.png" width="400" height="1952"/>
+ </tileset>
+ <layer id="1" name="Back" width="30" height="42">
+  <data encoding="base64" compression="zlib">
+   eJzlls1SFDEQxzO7m3FQ1IsXClCqfAVPqIB44xVAdmGegLPg8hh+oC/hxa+So/oGCndm9xlU4N+VdE0YksxkiHCwq37bs5ne/qcnmc4mQoikITGN8t3Exy0Ht5NSty4uxFaS+nyTYBRZl+vYEoqDtLz+IlU+mlum57cv1e/oHrEvy7hQ3W/gO/hh8YWOGTWIC9WlnGPDjy1jWXJ+rOpDdX056d6Evs/XLt+mXleucYO5tal3M/PnJO08i1/vck3OnUzVe19j3jfnFmpU73X87kaFCctYlUz7yRa6T4Rdl2qp0+WYi+jm4iz8PKvjtpg2uhvCv09HlvGL7mUyfkdc+5TW/05PQdc28iz8zKLYunVkXV/Mtgyvt073QU/hi9mDbidQd8sBnzmLSLgEnmb2+0yIHXXPU4BRt9TL9Rryd5cPsaLrZoBcv1HHH/AXHIMTqgtndN+YD8WF7mmf7i7yTUNjBsyCu+AemAPDjtIjKK7NecQ6L7F3XoHXPfWdanoIjUfgMVgAi2ApVXXuak26DrUjo74P0PsIPmldqmkVGmvgGVin5wsGqaqT9Ghu/cC1FeLsc/0JvV/gwKiX18/0XCt5mtuwxfomlZpNhrqWgX6HSGsqVSxrTRqbT9udhT7j3DajHnYVdtm6z6Xqx6S7Le3saP9Chvdul72Rqh9Tz96Tdt5q/077GPbZ6Nvkbb2ax7626N0uW+iU+83Xr9nT+xLDWJM9v2t9Y2xgjBeRdOf0n4smnoilazs7fcTSrfa13HOmFZF1m2j9C91Q/ifd+WtXo3uYxtF9nyou+znHsFNA6Tes
+  </data>
+ </layer>
+ <layer id="12" name="Back2" width="30" height="42">
+  <data encoding="base64" compression="zlib">
+   eJztzcEJwCAQRNE1MTUIJrEM7b+zTAOKiBIP/8GcZtkxA9ZzwexQzlC/8equRj8i6t+tPI2/r7o0ebdH1mb5YRcAAAAAAOztA01VAh0=
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Buildings" width="30" height="42">
+  <data encoding="base64" compression="zlib">
+   eJzdWEtPFEEQLpYdsgkhkrDZJVFJMPFC4KR/QM2eZT3p0USPPuACSiTxlXgkLA8TuHDjAImeRY2iJnryrQlwACMXPHuRRL/KdDs9PdOz3eOwZvmSL9tTXVPfdk9Nde22EFGLBXW0CqYFx5zxiGqef13zwpz2At0ZLzof52erOwhWDTxDQTzVTyLOz1b3Kq+lh2gWHML4dTfRm25/PKzEY78hwV85ot1ccK362epOgP15ooG8b9uC5jfwFSYnKXjG7LdTIvoBHsTDPQSeAn8XAz8XXcYm1rrVE55bLRO9KJtzyxTLRTcO69DcUHRrGE+Vwz5PsPanYGc5ne4K7n0MVpW4vcjRI16gu4S5ZU33C+75Wqq/hjhd1vqEez+X4n1uJ8TsVL5HVvv8nIL6YKol/Jkn+xyQ6AX7wLfi+iT2dV6M58Q146ewPYzx6QePOuoy9LqxIuyPyFxPVB+uGZUUumo9YK4L+5pmN/kMp9SdcPTXwTUjKffigFL3N3dMlEjykbllixN15ueV8VyCn+s+s64pd9T8YSTlWRpdxjvc9B78AH4EzxXC+cPgHLqAB7MAXsyF8yyN7uF2ohHEGQWvgdfBMXCg3T9vJO7hId6B/Rl4N+fbBvEuV73067XFAy14H77b2QbomtBI3a4OomJH43WPQfM4ONLaPPu8kJGua52s16+f1+JKyn2qWMRwPS9MMfjVXRU+43iHThei9VraXOu2CdwnjGnn/pVC1E/aZE/wr+D95T7BpjeQvyMqGelyn6Ce+5cL0b5A2mRPkIUu9wn3DwS2S9B42ea/x7Jes43r52SGuje1H6Cs9x26221Rf1m7s9B1RbPr3uiKkrFU9KmPm13XhP263v+le8vwB9Je6vJ5LWuSSV/HYga6Nmetzfn7B2FvpxI=
+  </data>
+ </layer>
+ <objectgroup id="4" name="Buildings"/>
+ <layer id="5" name="Front" width="30" height="42">
+  <data encoding="base64" compression="zlib">
+   eJzlV7tKxEAUvYlmlVURfGSxESxEEAstFFEbYbe19dX5BTYWKgp+gmypjW58oIXba6Ouoq1WorW9KGwleMJOyGQySTZxk/Vx4DAzd87MmRmSOwkRkQq2cGzg2Eg2eN0OGruq3eZ11aAPHASbdaK8RpRC2aRX+t66iYZQ9nM6C+fwvFDttqWrFtOs3Ogl2ux19qWZf47TWXiG54vqjOUi+J7Bsyj4ZjW37wPW8qg7deWu6L538LwXfE8yRKcZ+X5liOIbNJ+pW8Ma1jPOvgPs/RAs69F8CxhnCOen4JxVzX+/2z1Ey4q9vrC+A3gR8opc4+db1p26sL4yGOANq++B++AhY4HTmO0j8DiErznfJTefyZJEZ+URK09cs/gVVXKGwpgkhhL2+60o+bDA6QwWM5+1W6EeFumA/muufuWja43gbeG1Ud4276m8Jh/TjbtBV+V91SLF5p7APJOq3eaRRXwLzDGvUZRjEX0/cdizGDsHzoML4CLY1hI8dhhrG/E4iziRxtrG6+BbD7zjIf74zoMcEU9teM86kvf9CQhz91rg71WR4j3rFY8DN8GSxOGXs5PCVIN/uxaYb7frM83uflmsFlhtl8f5fF3r/LkkOb8iPupuU+74f8ndcWCl000TRleFYv23+3rhr+63Xr6y9zcJXysnefnHAfE/OIhh/4vjxheosH0U
+  </data>
+ </layer>
+ <objectgroup id="6" name="Front"/>
+ <layer id="11" name="Paths" width="30" height="42">
+  <data encoding="base64" compression="zlib">
+   eJztzyERAAAIADFKEIL+BZFoJNzmXn4EAADAH5W7vuzTCwCjAWSOAPk=
+  </data>
+ </layer>
+ <layer id="9" name="AlwaysFront" width="30" height="42">
+  <data encoding="base64" compression="zlib">
+   eJztyjEOgDAMA8BEKvyM//+i7+hYhBgiFjLcTbbliP/N8Z6//iqujDiP3e/5qfoDAIAusrgBAP0sMjEEHQ==
+  </data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>

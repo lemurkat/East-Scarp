@@ -43,7 +43,7 @@
                 "Height": 14
             },
             "When": {
-                "HasMod |contains=ricehit.SDSMAPS": true
+                "HasMod |contains=ricehit.SDSMPAS,ricehit.SDSMAPS": true
             }
         },
 
@@ -206,6 +206,21 @@
             ],
             "When": {
                 "HasMod": "SEnhanced.Shortcuts"
+            }
+        },
+           //if set to "vanilla" will over-ride every other option.
+           {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_rev_core.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "TownMap": "vanilla"
             }
         }
     ]

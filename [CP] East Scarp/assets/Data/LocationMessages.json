@@ -26,6 +26,7 @@
 				"EastScarpe.17": "{{i18n:Strings.EastScarpe.17}}",
 				"EastScarpe.18": "{{i18n:Strings.EastScarpe.18}}",
 				"EastScarpe.19": "{{i18n:Strings.EastScarpe.19}}",
+				"EastScarpe.20": "{{i18n:Strings.EastScarpe.20}}",
 				"EloiseFall.1": "{{i18n:Strings.EloiseFall.1}}",
 				"EloiseFall.2": "{{i18n:Strings.EloiseFall.2}}",
 				"EloiseFall.3": "{{i18n:Strings.EloiseFall.3}}",
@@ -55,11 +56,14 @@
 				"VetHouse.15": "{{i18n:Strings.VetHouse.15}}",
 				"VetHouse.16": "{{i18n:Strings.VetHouse.16}}",
 				"VetHouse.17": "{{i18n:Strings.VetHouse.17}}",
+				"VetHouse.18": "{{i18n:Strings.VetHouse.18}}",
+				"VetHouse.19": "{{i18n:Strings.VetHouse.19}}",
+				"VetHouse.20": "{{i18n:Strings.VetHouse.20}}",
 				"JacobBarn.1": "{{i18n:Strings.JacobBarn.1}}",
 				"JacobBarn.2": "{{i18n:Strings.JacobBarn.2}}",
 				"JacobBarn.3": "{{i18n:Strings.JacobBarn.3}}",
-				"JacobBarn.4": "{{i18n:Strings.JacobBarn.4}}",
 				"JacobBarn.5": "{{i18n:Strings.JacobBarn.5}}",
+				"JacobBarn.4": "{{i18n:Strings.JacobBarn.4}}",
 				"JacobBarn.6": "{{i18n:Strings.JacobBarn.6}}",
 				"DeepDark.0": "{{i18n:Strings.DeepDark.0}}",
 				"DeepDark.1": "{{i18n:Strings.DeepDark.1}}",
@@ -143,6 +147,7 @@
 				"ESSmugglerDen.2": "{{i18n:Strings.ESSmugglersDen.2}}",
 				"ESSmugglerDen.3": "{{i18n:Strings.ESSmugglersDen.3}}",
 				"ESSmugglerDen.4": "{{i18n:Strings.ESSmugglersDen.4}}",
+				"ESSmugglersDen.5":"{{i18n:Strings.ESSmugglersDen.5}}",
 				"OrchardHouse.letter1": "{{i18n:Strings.OrchardHouse.letter1}}",
 				"OrchardHouse.letter2": "{{i18n:Strings.OrchardHouse.letter2}}",
 				"OrchardHouse.letter3": "{{i18n:Strings.OrchardHouse.letter3}}",
@@ -152,7 +157,30 @@
 				"OrchardHouse.letter7": "{{i18n:Strings.OrchardHouse.letter7}}",
 				"OrchardHouse.letter8": "{{i18n:Strings.OrchardHouse.letter8}}",
 				"OrchardHouse.letter9": "{{i18n:Strings.OrchardHouse.letter9}}",
-				"OrchardHouse.Book10": "{{i18n:Strings.OrchardHouse.Book10}}"
+				"OrchardHouse.Book10": "{{i18n:Strings.OrchardHouse.Book10}}",
+				"ES.trapdoorLocked.1": "{{i18n:Strings.trapdoorLocked.1}}",
+				"ESShack.1": "{{i18n:Strings.ESShack.1}}",
+				"ESInnBoilerRoom.1": "{{i18n:Strings.ESInnBoilerRoom.1}}",
+				"ESLighthouse.1": "{{i18n:Strings.ESLighthouse.1}}",
+				"ESLanternRoom.1": "{{i18n:Strings.ESLanternRoom.1}}",
+				"ESLanternRoom.2": "{{i18n:Strings.ESLanternRoom.2}}",
+				"ESLanternRoom.3": "{{i18n:Strings.ESLanternRoom.3}}",
+				"ESLanternRoom.4": "{{i18n:Strings.ESLanternRoom.4}}",
+				"ESLanternRoom.5": "{{i18n:Strings.ESLanternRoom.5}}",
+				"ESLanternRoom.6": "{{i18n:Strings.ESLanternRoom.6}}",
+				"ESWilderness.1": "{{i18n:Strings.ESWilderness.1}}",
+				"ESWilderness.2": "{{i18n:Strings.ESWilderness.2}}",
+				"ESWilderness.3": "{{i18n:Strings.ESWilderness.3}}",
+				"ESWilderness.4": "{{i18n:Strings.ESWilderness.3}}",
+				"ESWilderness.5": "{{i18n:Strings.ESWilderness.4}}",
+				"ESInn.Kat.1": "{{i18n:Strings.ESInn.Kat.1}}",
+				"ESInn.Kat.2": "{{i18n:Strings.ESInn.Kat.2}}",
+				"ESInn.Kat.3": "{{i18n:Strings.ESInn.Kat.3}}",
+				"ESInn.Kat.4": "{{i18n:Strings.ESInn.Kat.4}}",
+				"ESInn.Kat.5": "{{i18n:Strings.ESInn.Kat.5}}",
+				"ESInn.Kat.6": "{{i18n:Strings.ESInn.Kat.6}}",
+				"ESMineRuins.01": "{{i18n:Strings.ESMineRuins.1}}",
+				"EastScarpe.mailbox.1":"{{i18n:EastScarpe.mailbox.1}}"
 			}
 		},
 		{
@@ -160,7 +188,7 @@
 			"Action": "EditData",
 			"Target": "Strings/Locations",
 			"Entries": {
-				"ESSeaCave_StrongCurrent": "The strong current pushes you back"
+				"ESSeaCave_StrongCurrent": "{{i18n:Strings.SeaCave.14}}"
 			}
 		}
 	]

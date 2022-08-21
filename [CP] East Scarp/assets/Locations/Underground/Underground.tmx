@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="50" height="70" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="13">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="50" height="70" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="15">
  <properties>
-  <property name="@LoadWater" type="bool" value="true"/>
   <property name="AmbientLight" value="200 120 120"/>
+  <property name="indoorWater" type="bool" value="true"/>
   <property name="Music" value="EarthMine"/>
   <property name="Warp" value="21 15 Custom_EastScarpe 35 38"/>
  </properties>
  <tileset firstgid="1" name="mine_desert" tilewidth="16" tileheight="16" tilecount="384" columns="16">
-  <image source="z_mine_desert.png" width="256" height="384"/>
+  <image source="ES_mine_desert.png" width="256" height="384"/>
   <tile id="137">
    <properties>
     <property name="Type" value="Dirt"/>
@@ -891,7 +891,12 @@
  <objectgroup id="2" name="Back">
   <object id="11" name="TileData" x="224" y="1104" width="16" height="16">
    <properties>
-    <property name="TouchAction" value="LoadMap Custom_EastScarpe 44 86"/>
+    <property name="TouchAction" value="Warp Custom_EastScarpe 44 86"/>
+   </properties>
+  </object>
+  <object id="14" name="TileData" x="752" y="944" width="16" height="16">
+   <properties>
+    <property name="TouchAction" value="Warp Custom_ESSeaCave 1 9"/>
    </properties>
   </object>
  </objectgroup>
@@ -1073,9 +1078,9 @@
     <property name="Action" value="Message &quot;DeepDark.0&quot;"/>
    </properties>
   </object>
-  <object id="12" name="TileData" x="752" y="944" width="16" height="16">
+  <object id="13" name="TileData" x="752" y="560" width="16" height="16">
    <properties>
-    <property name="Action" value="Warp Custom_ESSeaCave 1 9"/>
+    <property name="Action" value="Message &quot;ES.trapdoorLocked.1&quot;"/>
    </properties>
   </object>
  </objectgroup>
@@ -1303,5 +1308,5 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="10" name="AlwaysFront" visible="0"/>
+ <objectgroup id="10" name="AlwaysFront"/>
 </map>
