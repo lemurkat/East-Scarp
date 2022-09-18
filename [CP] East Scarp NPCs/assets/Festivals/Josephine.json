@@ -26,7 +26,7 @@
                     "JosephineK": "{{i18n:festivals.josephine.winter8}}"
                 }
             },
-            {//attends annually even after leaving the Valley
+            { //attends annually even after leaving the Valley
                 "Action": "EditData",
                 "Target": "Data/Festivals/winter25",
                 "TextOperations": [
@@ -41,7 +41,7 @@
                     }
                 ]
             },
-            {   
+            {
                 "LogName": "Winter Star Dialogue",
                 "Action": "EditData",
                 "Target": "data/Festivals/winter25",
@@ -114,7 +114,7 @@
                             "Entries",
                             "Set-Up_additionalCharacters"
                         ],
-                        "Value": "JosephineK 97 39 2",
+                        "Value": "JosephineK 25 67 2",
                         "Delimiter": "/"
                     }
                 ]
@@ -131,7 +131,8 @@
                 "Action": "EditData",
                 "Target": "Data/Festivals/fall16",
                 "When": {
-                    "HasSeenEvent |contains=57873005": false
+                    "HasSeenEvent |contains=57873005": false,
+                    "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
                 },
                 "TextOperations": [
                     {
@@ -144,6 +145,25 @@
                         "Delimiter": "/"
                     }
                 ]
+            },
+            {
+                "Action": "EditData",
+                "Target": "Data/Festivals/fall16",
+                "When": {
+                    "HasSeenEvent |contains=57873005": false,
+                    "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+                },
+                "TextOperations": [
+                    {
+                        "Operation": "Append",
+                        "Target": [
+                            "Entries",
+                            "Set-Up_additionalCharacters"
+                        ],
+                        "Value": "JosephineK 26 53 2",
+                        "Delimiter": "/"
+                    }
+                ],
             },
             {
                 "LogName": "Stardew Fair Dialogue",

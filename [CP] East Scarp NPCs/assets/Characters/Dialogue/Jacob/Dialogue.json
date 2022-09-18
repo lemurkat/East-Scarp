@@ -19,8 +19,8 @@
 	"Mon10": "Ellie worries that I'm lonely - as if anyone could be lonely with her around!#$b#Honestly though, you're welcome over anytime. I enjoy your company.$4",
 	"Tue2": "I'm limping? Oh, yes. A llama stepped on my foot. I should've been wearing sturdier boots.",
 	"Fri2": "Oh, hello @. Yes, I'm a bit tired today. Late night emergency call-out.#$b#Bit of difficulty with a calving over on the ranch.",
-	"spring_Sat6": "Shane asked me if Eloise wanted to come visit the chicks once they're hatched. She's delighted, of course - she and Jas have decided to throw a birthday party for them.#$b#I'm not sure what that entails, but if it involves silly hats... oh, who am I kidding? I'm in!",
-	"Thu10": "I try to be a good father - better than my own pa.#$b#He wasn't a good man. I think he left me that parrot in his will as a final joke.$2",
+	"spring_Sat6": "Shane asked if Eloise wanted to come visit the chicks they've hatched. She's delighted, of course - she and Jas have decided to throw a birthday party for them.#$b#I'm not sure what that entails, but if it involves silly hats...$2#$b#oh, who am I kidding? I'm in!$1",
+	"Thu10": "I try to be a good father - better than my own pa.#$b#He isn't a good man. Bequeathing me that parrot was him getting the last laugh.$2",
 	"Fri6": "Do you have any siblings, @?#$b#Me? Oh, a brother. We were close once - but now we don't talk anymore.$2",
 	"Tue": "Hey, did you need me for something? You're lucky to have caught me. Usually on Tuesday I'm off around the valley.",
 	"Tue4": "I'm glad Ellie has some friends her own age, but she seems to enjoy spending most of her time in her bird hide.#$b#I do wonder what she's doing in there all day. Maybe plotting world domination?$1",
@@ -114,6 +114,6 @@
 	"Jacob_KidsRight":"Hah, yes. Where do they get these ideas from?$1",
 	"reject_534":"That's a beautiful ring. There's something oddly familiar about it too, but I'm not sure what.",
 	//"Talk about something other than being a vet or Eloise? Uh..... {{random: Have you read any good books lately?, Have you seen the latest Livin' Off the Land?, nice weather today, isn't it?}}",
-	
+	"AbyssRoosterGrow":"Don't tell Eloise, but I'm relieved that chick's gone.#$b#I'm pretty sure it's a rooster - and they can be quite aggressive.$2#$b#Not to mention there's something strange about the breed. Have you seen any chickens like it, @?"
 
 }

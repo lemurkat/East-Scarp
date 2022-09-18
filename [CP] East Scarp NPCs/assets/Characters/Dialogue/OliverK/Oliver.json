@@ -58,5 +58,7 @@
     //Conversation Topics ....................................................
     "TalkOllyLexi": "No, not here! We'll talk at the Inn. Okay?$2",
     "election":"So Mom tells me Morris is Mayor now. That's gotta be a shock for May- err Mr. Lewis. Poor ol' duffer.$2#$b#Change is good... but trading in the lord of the manor for a corporate bigwig? Feels kinda like we're charging headlong into a dystopic future, right?$1",
-    "reject_534":"What would I want a ring for? I'm not into bling! Looks more like something Mom would wear."
+    "reject_534":"What would I want a ring for? I'm not into bling! Looks more like something Mom would wear.",
+    "KatarynaStillHere":"I see Ms. Kataryna didn't leave town after all.$a#$b#She'd better stay away from Lexi.#$b#You'll keep her occupied, won't you, @?$1",
+    "AbyssRoosterGrow":"I hope Ms. Kataryna looks after that chicken. It's a weird-looking bird.#$b#The other chickens didn't seem to like it too much either.$2"
 }

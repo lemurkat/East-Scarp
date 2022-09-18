@@ -38,7 +38,7 @@
 						"Entries",
 						"Set-Up_additionalCharacters"
 					],
-					"Value": "Jacob 9 64 3",
+					"Value": "Jacob 10 64 3",
 					"Delimiter": "/"
 				},
 				{
@@ -291,7 +291,27 @@
 				}
 			],
 			"When": {
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent |contains=5553210":false
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 58 28 1/Jacob 59 27 2",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent |contains=5553210":true
 			}
 		},
 		

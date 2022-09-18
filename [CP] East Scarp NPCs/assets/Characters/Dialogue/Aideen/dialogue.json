@@ -110,7 +110,8 @@
   "GiftReaction_Ancient_Flower": "Oh! This is a most stunning flower. Wherever did you find it?$4",
   "GiftReactionCatergory_-80": "Thank you! This will look splendid in a bouquet!$1",
   "GiftReaction_Blue_Jazz": "I love this! It adds a most unique touch to any bouquet.$4",
-  "reject_534": "Oh no, this is beautiful, but you shouldn't give it to me. It's an antique! And look, an inscription.#$b#You need to find the rightful owner. I'm sure they'll be missing it!$1"
+  "reject_534": "Oh no, this is beautiful, but you shouldn't give it to me. It's an antique! And look, an inscription.#$b#You need to find the rightful owner. I'm sure they'll be missing it!$1",
+  "MateoAideenScene1":"Oh... I cannot believe it, but I am still thinking about my encounter earlier...$2#$b#Uncouth indeed, but their speech was surprisingly eloquent.#$b#Oh, if only they would look where they were going!$a"
 }
 /*“I don’t believe we have been introduced. I am…”
 Or “Do I have the pleasure of addressing..?”

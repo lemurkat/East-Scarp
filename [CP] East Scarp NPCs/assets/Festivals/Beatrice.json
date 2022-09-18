@@ -1,8 +1,9 @@
 {
     "Changes": [
+        // E G G   F E S T I V A L
         {
             "Action": "EditData",
-            "Target": "Data/Festivals/winter8",
+            "Target": "Data/Festivals/spring13",
             "TextOperations": [
                 {
                     "Operation": "Append",
@@ -10,51 +11,21 @@
                         "Entries",
                         "Set-Up_additionalCharacters"
                     ],
-                    "Value": "Rosa 33 25 2",
+                    "Value": "Beatrice 39 69 3",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Beatrice 39 69 3",
                     "Delimiter": "/"
                 }
             ]
         },
-        {
-            "LogName": "Ice Festival Dialogue",
-            "Action": "EditData",
-            "Target": "data/festivals/winter8",
-            "Entries": {
-                "Rosa": "{{i18n:festivals.rosa.winter8}}"
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/Festivals/winter25",
-            "When":{"HasMod |contains=FlashShifter.StardewValleyExpandedCP":false},
-            "TextOperations": [
-                {
-                    "Operation": "Append",
-                    "Target": [
-                        "Entries",
-                        "Set-Up_additionalCharacters"
-                    ],
-                    "Value": "Rosa 22 63 1",
-                    "Delimiter": "/"
-                }
-            ]
-        }, /*
-{
-            "Action": "EditData",
-            "Target": "Data/Festivals/winter25",
-	    "When":{"HasMod |contains=Rafseazz.RSVCP":true},
-            "TextOperations": [
-                {
-                    "Operation": "Append",
-                    "Target": [
-                        "Entries",
-                        "Set-Up_additionalCharacters"
-                    ],
-                    "Value": "Rosa 22 63 1",
-                    "Delimiter": "/"
-                }
-            ]
-        },*/
+        // F L O W E R   D A N C E
         {
             "Action": "EditData",
             "Target": "Data/Festivals/spring24",
@@ -65,27 +36,74 @@
                         "Entries",
                         "Set-Up_additionalCharacters"
                     ],
-                    "Value": "Rosa 30 41 2",
+                    "Value": "Beatrice 4 22 1",
                     "Delimiter": "/"
-                },
+                }
+            ],
+        },
+        // L U A
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer11",
+            "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "MainEvent_additionalCharacters"
+                        "Set-Up_additionalCharacters"
                     ],
-                    "Value": "Rosa 23 32 3",
+                    "Value": "Beatrice 49 19 2",
                     "Delimiter": "/"
                 }
             ]
         },
+        // S T A R D E W   F A I R
         {
-            "LogName": "Flower Festival Dialogue",
             "Action": "EditData",
-            "Target": "data/festivals/spring24",
-            "Entries": {
-                "Rosa": "{{i18n:festivals.rosa.spring24}}"
-            }
+            "Target": "Data/Festivals/fall16",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Beatrice 27 61 1",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        // I C E   F E S T I V A L
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter8",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Beatrice 59 33 1",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        // W I N T E R   S T A R
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Beatrice 33 65 1",
+                    "Delimiter": "/"
+                }
+            ]
         }
     ]
 }

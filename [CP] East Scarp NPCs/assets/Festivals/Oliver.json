@@ -1,5 +1,6 @@
 {
     "Changes": [
+        //When Stefan is added, he and Oliver can hang out together
         {
             "Action": "EditData",
             "Target": "Data/Festivals/winter8",
@@ -14,9 +15,7 @@
                     "Delimiter": "/"
                 }
             ],
-            "When": {
-                "HasSeenEvent |contains=57873005": false
-            }
+         
         },
         {
             "LogName": "Ice Festival Dialogue",
@@ -29,6 +28,7 @@
                 "HasSeenEvent |contains=57873005": false
             }
         },
+
         {
             "LogName": "Ice Festival Dialogue",
             "Action": "EditData",
@@ -74,7 +74,7 @@
                         "Entries",
                         "Set-Up_additionalCharacters"
                     ],
-                    "Value": "OliverK 29 92 0",
+                    "Value": "OliverK 32 89 3",
                     "Delimiter": "/"
                 }
             ]
@@ -84,7 +84,7 @@
             "Action": "EditData",
             "Target": "data/festivals/spring13",
             "Entries": {
-                "OliverK": "{{i18n:festivals.oliver.spring13}}"
+                "OliverK": "{{i18n:festivals.oliver.spring13.{{LexiOllyFriend}}}}"
             }
         },
         {
