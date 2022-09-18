@@ -1,5 +1,5 @@
 {
-	"Format": "1.22",
+	"Format": "1.26",
 	"CustomLocations": [
 		/*********
 ** Load InnRoomRosa
@@ -9,22 +9,34 @@
 			"FromMapFile": "assets/Maps/DaoHouse.tmx"
 		},
 		{
-			"Name": "Custom_ES_TNPCWaitingRoomWarp",
-			"FromMapFile": "assets/Maps/TNPCWaitingRoom.tmx"
+			"Name": "Custom_ES_TNPCWaitingWarpRoom",
+			"FromMapFile": "assets/Maps/TNPCWaitingRoom.tmx",
+			"MigrateLegacyNames": [
+				"Custom_ES_TNPCWaitingRoom"
+			]
 		},
 		{
-			"Name": "Custom_ES_VetAwayWarp",
+			"Name": "Custom_ES_VetAwayWarpRoom",
 			"FromMapFile": "assets/Maps/VetAwayWarp.tmx"
 		},
 		{
 			"Name": "Custom_ES_CatWarpRoom",
 			"FromMapFile": "assets/Maps/CatWarpRoom.tmx"
-		}
+		},
+		{
+			"Name": "Custom_ESAbyssCoop",
+			"FromMapFile": "assets/Maps/AbyssCoop.tmx"
+		},
 	],
 	"ConfigSchema": {
 		"EnableSpecialOrders": {
 			"AllowValues": "true,false",
 			"Description": "Enable East Scarp Special Orders",
+			"Default": "true"
+		},
+		"KatarynaDatability": {
+			"AllowValues": "true,false",
+			"Description": "Do you want Kataryna to be datable? Change this option to false, if you don't want her suggesting you date. (Will unlock 10 hearts once you hit 8 hearts with her).",
 			"Default": "true"
 		},
 		"AllowNagito": {
@@ -69,6 +81,20 @@
 			"Value": "k 63070010",
 			"When": {
 				"HasMod |contains=Arknir27.Lavril": true
+			}
+		},
+		{
+			"Name": "LexiOllyFriend",
+			"Value": "false",
+			"When": {
+				"HasSeenEvent |contains=57872012": false
+			}
+		},
+		{
+			"Name": "LexiOllyFriend",
+			"Value": "true",
+			"When": {
+				"HasSeenEvent |contains=57872012": true
 			}
 		},
 		//Sheba schedule
@@ -326,6 +352,72 @@
 				"HasMod": "LemurKat.Mr.Ginger.NPC",
 				"HasSeenEvent": "50706121"
 			}
+		},
+		//Kat's 10-heart with its Dynamic additions:
+		{
+			"Name": "57876033.addNPC",
+			"Value": " OliverK -100 -100 3"
+		},
+		{
+			"Name": "57876033.addNPC",
+			"Value": "{{57876033.addNPC}} Juliet -100 -100 3",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC"
+			}
+		},
+		{
+			"Name": "57876033.addNPC",
+			"Value": "{{57876033.addNPC}} Jasper -100 -100 3",
+			"When": {
+				"HasMod": "Lemurkat.NPCJasper"
+			}
+		},
+		{
+			"Name": "57876033.action1",
+			"Value": "warp OliverK 25 25 true"
+		},
+		{
+			"Name": "57876033.action1",
+			"Value": "{{57876033.action1}}/warp Juliet 30 22 true",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC"
+			}
+		},
+		{
+			"Name": "57876033.action1",
+			"Value": "{{57876033.action1}}/warp Jasper 26 22",
+			"When": {
+				"HasMod": "Lemurkat.NPCJasper"
+			}
+		},
+		{
+			"Name": "57876033.action2",
+			"Value": "move OliverK -13 0 0 true"
+		},
+		{
+			"Name": "57876033.action2",
+			"Value": "{{57876033.action2}}/move Juliet -13 0 0 true",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC"
+			}
+		},
+		{
+			"Name": "57876033.action2",
+			"Value": "{{57876033.action2}}/move Jasper -13 0 0 true",
+			"When": {
+				"HasMod": "Lemurkat.NPCJasper"
+			}
+		},
+		{
+			"Name": "57876033.action3",
+			"Value": "pause 50"
+		},
+		{
+			"Name": "57876033.action3",
+			"Value": "pause 500/speak Juliet \"{{i18n:57876033.12}}\"/faceDirection Rosa 1/textAboveHead Rosa \"{{i18n:57876033.13}}\"/pause 50/faceDirection Rosa 2/",
+			"When": {
+				"HasMod": "LemurKat.JulietHouse.NPC"
+			}
 		}
 	],
 	"Changes": [
@@ -353,8 +445,8 @@
 			"Action": "EditData",
 			"Target": "Data/NPCDispositions",
 			"Entries": {
-				"OliverK": "teen/polite/shy/neutral/male/not-datable//Other//JosephineK 'mother'/Custom_ES_TNPCWaitingRoomWarp 6 5/{{i18n:Name.Oliver}}",
-				"JosephineK": "adult/polite/neutral/positive/female/not-datable/GovernorK/Other//OliverK '{{i18n:Relationship.Josephine.Oliver}}'/Custom_ES_TNPCWaitingRoomWarp 7 5/{{i18n:Name.Josephine}}",
+				"OliverK": "teen/polite/shy/neutral/male/not-datable//Other//JosephineK '{{i18n:Relationship.Oliver.Josephine}}'/Custom_ES_TNPCWaitingWarpRoom 6 5/{{i18n:Name.Oliver}}",
+				"JosephineK": "adult/polite/neutral/positive/female/not-datable/GovernorK/Other//OliverK '{{i18n:Relationship.Josephine.Oliver}}'/Custom_ES_TNPCWaitingWarpRoom 7 5/{{i18n:Name.Josephine}}",
 				"RichieTheMacaw": "adult/rude/outgoing/negative/male/not-datable//other///Custom_ESVetHouse 8 21/{{i18n:Name.Richie}}",
 				"LadySheba": "teen/rude/shy/negative/female/not-datable//other///Custom_ES_CatWarpRoom 2 3/{{i18n:Name.Sheba}}"
 			}
@@ -1077,6 +1169,11 @@
 				"Width": 6,
 				"Height": 6
 			}
+		},
+		{
+			"Action": "Load",
+			"Target": "Characters/Gunther_walking",
+			"FromFile": "assets/Images/Gunther_walking.png"
 		},
 		{
 			"Action": "Load",
