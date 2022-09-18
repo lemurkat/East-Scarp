@@ -1,19 +1,21 @@
 {
-	"AmbientSounds":
-	[
+	"AmbientSounds": [
 		{
-			"Conditions":
-			[
+			"Conditions": [
 				"t 600 1900"
 			],
 			"Location": "Custom_EastScarpe",
-			"Area": { "X": 0, "Y": 85, "Width": -1, "Height": -1 },
+			"Area": {
+				"X": 0,
+				"Y": 85,
+				"Width": -1,
+				"Height": -1
+			},
 			"Chance": 0.003,
 			"Sound": "seagulls"
 		}
 	],
-	"CrabPotCatches":
-	[
+	"CrabPotCatches": [
 		{
 			"Location": "Custom_EastScarpe",
 			"FishingArea": 1, // tidepools
@@ -28,14 +30,22 @@
 			"Location": "Custom_ESCastlePoint",
 			"FishingArea": 1, // ocean
 			"OceanCatches": true
+		},
+		{
+			"Location": "Custom_ESOrchard",
+			"FishingArea": 2, // ocean
+			"OceanCatches": true
 		}
-		
 	],
-	"CritterSpawns":
-	[
+	"CritterSpawns": [
 		{
 			"Location": "Custom_EastScarpe",
-			"Area": { "X": 0, "Y": 85, "Width": -1, "Height": -1 },
+			"Area": {
+				"X": 0,
+				"Y": 85,
+				"Width": -1,
+				"Height": -1
+			},
 			"ChanceOnEntry": 1,
 			"MinPerCluster": 0,
 			"MaxPerCluster": 3,
@@ -43,16 +53,25 @@
 			"Type": "Seagull"
 		}
 	],
-	"FishingAreas":
-	[
+	"FishingAreas": [
 		{
 			"Location": "Custom_EastScarpe",
-			"Area": { "X": 0, "Y": 0, "Width": -1, "Height": 85 },
+			"Area": {
+				"X": 0,
+				"Y": 0,
+				"Width": -1,
+				"Height": 85
+			},
 			"Index": 0 // pond
 		},
 		{
 			"Location": "Custom_EastScarpe",
-			"Area": { "X": 41, "Y": 88, "Width": 22, "Height": 24 },
+			"Area": {
+				"X": 41,
+				"Y": 88,
+				"Width": 22,
+				"Height": 24
+			},
 			"Index": 1 // tidepools
 		},
 		{
@@ -61,62 +80,107 @@
 		},
 		{
 			"Location": "Custom_ESCastlePoint",
-			"Area": { "X": 0, "Y": 0, "Width": 24, "Height": 25 },
+			"Area": {
+				"X": 0,
+				"Y": 0,
+				"Width": 24,
+				"Height": 25
+			},
 			"Index": 0 // pond
 		},
-	
 		{
 			"Location": "Custom_ESCastlePoint",
 			"Index": 1 // ocean
-		}
+		},
+		{
+			"Location": "Custom_ESOrchard",
+			"Area": {
+				"X": 5,
+				"Y": 0,
+				"Width": 51,
+				"Height": 48
+			},
+			"Index": 0 // pond + river
+		},
+		{
+			"Location": "Custom_ESOrchard",
+			"Index": 1 // ocean
+		},
+		{
+			"Location": "Custom_ESDeepMountains",
+			"Area": {
+				"X": 98,
+				"Y": 50,
+				"Width": 10,
+				"Height": 7
+			},
+			"Index": 0 // Deep Pool
+		},
 	],
-	"FruitTreeLocations":
-	[
+	"FruitTreeLocations": [
 		"Custom_ESOrchard"
 	],
-	"ObeliskWarp":
-	{
+	"ObeliskWarp": {
 		"Name": "Scarp Obelisk",
 		"Location": "Custom_EastScarpe",
 		"X": 24,
 		"Y": 97
 	},
-	"RainWatering":
-	[
-		{ "Location": "Custom_ESMeadowFarm" }
+	"RainWatering": [
+		{
+			"Location": "Custom_ESMeadowFarm"
+		}
 	],
-	"SeaMonsterSpawns":
-	[
+	"SeaMonsterSpawns": [
 		{
 			"Location": "Custom_EastScarpe",
-			"Area": { "X": 40, "Y": 121, "Width": 14, "Height": 9 },
+			"Area": {
+				"X": 40,
+				"Y": 121,
+				"Width": 14,
+				"Height": 9
+			},
 			"Chance": 1E-05
 		}
 	],
-	"WaterColors":
-	[
+	"WaterColors": [
 		{
-			"Conditions":
-			[
+			"Conditions": [
 				"z spring/z fall/z winter/u 12 13 14"
 			],
 			"Location": "Custom_EastScarpe",
-			"Color": { "R": 0, "G": 102, "B": 0, "A": 102 }
+			"Color": {
+				"R": 0,
+				"G": 102,
+				"B": 0,
+				"A": 102
+			}
 		}
 	],
-	"WaterEffects":
-	[
+	"WaterEffects": [
 		{
 			"Location": "Custom_EastScarpe",
-			"Area": { "X": 41, "Y": 88, "Width": 22, "Height": 24 },
+			"Area": {
+				"X": 41,
+				"Y": 88,
+				"Width": 22,
+				"Height": 24
+			},
 			"Apply": false
 		}
 	],
-	"WinterGrasses":
-	[
-		{ "Location": "Custom_EastScarpe" },
-		{ "Location": "Custom_ESOrchard" },
-		{ "Location": "Custom_ESVineyard" },
-		{ "Location": "Custom_ESClearingHouse" }
+	"WinterGrasses": [
+		{
+			"Location": "Custom_EastScarpe"
+		},
+		{
+			"Location": "Custom_ESOrchard"
+		},
+		{
+			"Location": "Custom_ESVineyard"
+		},
+		{
+			"Location": "Custom_ESClearingHouse"
+		}
 	]
 }
