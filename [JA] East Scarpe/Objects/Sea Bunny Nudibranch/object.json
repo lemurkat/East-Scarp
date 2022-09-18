@@ -2,16 +2,18 @@
 	"Name": "Sea Bunny Nudibranch",
 	"Description": "It looks like a cute bunny rabbit. But it's really a sea slug.",
 	"Category": "Fish",
-	"Edibility": 20,
+	"Edibility": -1,
 	"EdibleIsDrink": false,
 	"EdibleBuffs": null,
-	"Price": 250,
+	"Price": 130,
 	"IsColored": false,
 	"GiftTastes":
 	{
 		"Love": ["Demetrius", "Vincent", "Wizard", "Jas"],
 		"Like": ["Maru"]
 	},
+	"TranslationKey": "object.seabunnynudibranch-fish",
+   
 	"NameLocalization":
 	{
 		/*to be added in*/
