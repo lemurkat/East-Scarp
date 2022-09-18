@@ -1,8 +1,8 @@
 {
-    "Changes": [ 
+    "Changes": [
         // T O W N   >   V I N E Y A R D
         /***************************/
-        {//Karmylla's Immersive Maps, but not Stardew Reimagined2
+        { //Karmylla's Immersive Maps, but not Stardew Reimagined2
             "Action": "EditMap",
             "Target": "Maps/Town",
             "FromFile": "assets/Patches/ES_rev_karm.tmx",
@@ -32,6 +32,21 @@
                 "HasMod |contains=DaisyNiko.SVR2": true
             }
         },
+        //Stardew Reimagined3
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_Town_Reimagined3.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR3": true
+            }
+        },
         { // Seven Deadly Sins
             "Action": "EditMap",
             "Target": "Maps/Town",
@@ -46,7 +61,39 @@
                 "HasMod |contains=ricehit.SDSMPAS,ricehit.SDSMAPS": true
             }
         },
-
+        //Reimagined
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_REV_Reimagined.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.StardewValleyReimagined": true,
+                "TownMap": "default"
+            }
+        },
+        //Reimagined2 AND Karmylla's maps, Karmylla option selected
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_rev_karm.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": true,
+                "HasMod |contains=Karmylla.ImmersiveMaps": true,
+                "TownMap": "karmylla"
+            }
+        },
         //M O U N T A I N   >   D E E P   M O U N T A I N S
         /************************************************/
         { //Mountain > Deep Mountains
@@ -79,7 +126,22 @@
                 "HasMod |contains=DaisyNiko.StardewValleyReimagined": true
             }
         },
-           //M O U N T A I N   >   E A S T   S C A R P
+        { //Mountain > Deep Mountains
+        "Action": "EditMap",
+        "Target": "Maps/Mountain",
+        "FromFile": "assets/Patches/MountainPatchDeepMountainsSVR3.tmx",
+        "ToArea": {
+            "X": 84,
+            "Y": 0,
+            "Width": 8,
+            "Height": 15
+        },
+        "When": {
+            "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+            "HasMod |contains=DaisyNiko.SVR3": true
+        }
+    },
+        //M O U N T A I N   >   E A S T   S C A R P
         /************************************************/
         { // Mountain > East Scarp
             "Action": "EditMap",
@@ -95,43 +157,34 @@
                 "HasMod |contains=DaisyNiko.SVR2": true
             }
         },
-        //Reimagined2 AND Karmylla's maps, Karmylla option selected
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Town",
-            "FromFile": "assets/Patches/ES_rev_karm.tmx",
-            "ToArea": {
-                "X": 109,
-                "Y": 63,
-                "Width": 11,
-                "Height": 14
-            },
-            "When": {
-                "HasMod |contains=DaisyNiko.SVR2": true,
-                "HasMod |contains=Karmylla.ImmersiveMaps": true,
-                "TownMap": "karmylla"
-            }
+        { // Mountain > East Scarp
+        "Action": "EditMap",
+        "Target": "Maps/Mountain",
+        "FromFile": "assets/Patches/MountainEastScarpeSDR3.tmx",
+        "ToArea": {
+            "X": 85,
+            "Y": 35,
+            "Width": 10,
+            "Height": 6
         },
-        // T O W N   >   V I N E Y A R D   (continued)
-        /***************************/
-        //Reimagined
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Town",
-            "FromFile": "assets/Patches/ES_REV_Reimagined.tmx",
-            "ToArea": {
-                "X": 109,
-                "Y": 63,
-                "Width": 11,
-                "Height": 14
-            },
-            "When": {
-                "HasMod |contains=DaisyNiko.StardewValleyReimagined": true,
-                "TownMap": "default"
-            }
+        "When": {
+            "HasMod |contains=DaisyNiko.SVR3": true
+        }
+    },
+        { // Mountain > East Scarp
+        "Action": "EditMap",
+        "Target": "Maps/Mountain",
+        "FromFile": "assets/Patches/MountainEastScarpeSDR2.tmx",
+        "ToArea": {
+            "X": 85,
+            "Y": 35,
+            "Width": 10,
+            "Height": 6
         },
-          //M O U N T A I N   >   E A S T   S C A R P
-        /************************************************/
+        "When": {
+            "HasMod |contains=DaisyNiko.SVR2": true
+        }
+    },
         { // Expanded/Water Filled Gorge
             "Action": "EditMap",
             "Target": "Maps/Mountain",
@@ -208,8 +261,8 @@
                 "HasMod": "SEnhanced.Shortcuts"
             }
         },
-           //if set to "vanilla" will over-ride every other option.
-           {
+        //if set to "vanilla" will over-ride every other option.
+        {
             "Action": "EditMap",
             "Target": "Maps/Town",
             "FromFile": "assets/Patches/ES_rev_core.tmx",

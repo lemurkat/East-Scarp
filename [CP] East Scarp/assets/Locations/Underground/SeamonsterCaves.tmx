@@ -15,7 +15,7 @@
   <image source="z_mine_desert1.png" width="256" height="288"/>
  </tileset>
  <tileset firstgid="325" name="spring_beach" tilewidth="16" tileheight="16" tilecount="527" columns="17">
-  <image source="fall_beach.png" width="272" height="496"/>
+  <image source="cave_beach.png" width="272" height="496"/>
   <tile id="7">
    <properties>
     <property name="Water" value="T"/>

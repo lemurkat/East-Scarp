@@ -2,7 +2,7 @@
 <map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="40" height="33" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="11">
  <properties>
   <property name="Outdoors" value="T"/>
-  <property name="Warp" value="-1 22 Custom_EastScarpe 79 20 -1 21 Custom_EastScarpe 79 19 -1 20 Custom_EastScarpe 79 19"/>
+  <property name="Warp" value="-1 22 Custom_EastScarpe 79 20 -1 21 Custom_EastScarpe 79 20 -1 20 Custom_EastScarpe 79 20"/>
  </properties>
  <tileset firstgid="1" name="paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths.png" width="64" height="144"/>
