@@ -1,17 +1,17 @@
 {
-  "Name": "Fairy_Penguin_Chick",
+  "Name": "VoidChick",
   "Type": "Walking",
   "TravelSpeed": 2,
   "FrameSizeWidth": 16,
   "FrameSizeHeight": 16,
-  "TileSheetPath": "", // Optional parameter, but needed if creating a companion with an existing in-game sprite (e.g. Animals\\Rabbit)
+  "TileSheetPath": "Animals\\BabyVoid Chicken", // Optional parameter, but needed if creating a companion with an existing in-game sprite (e.g. Animals\\Rabbit)
   "IdleBehavior": "Wander",
   "MaxIdleDistance": "128",
   "MaxDistanceBeforeTeleport": "-1",
   "EnableFarmerCollision": true,
   "EnableShadow": true,
   "EnableBreathing": false,
-  "InspectionDialogue": "FairyPenguinChick.Inspection.1",
+  "InspectionDialogue": "VoidChick.Inspection.1",
 
   // This plays when the companion travels upwards
   "UpAnimation": {

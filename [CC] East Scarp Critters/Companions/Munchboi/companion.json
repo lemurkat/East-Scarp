@@ -7,6 +7,7 @@
   "TileSheetPath": "", // Optional parameter, but needed if creating a companion with an existing in-game sprite (e.g. Animals\\Rabbit)
   "IdleBehavior": "Wander",
   "MaxIdleDistance": "-1",
+  "TileSheetPath": "Characters\\Munchboi",
   "MaxDistanceBeforeTeleport": "-1",
   "EnableFarmerCollision": true,
   "EnableShadow": true,

@@ -10,6 +10,11 @@
   "MaxIdleDistance": -1,
   "MaxDistanceBeforeTeleport": -1,
   "InspectionDialogue": "LittleGruff.Inspection.1",
+  "Portrait": {
+    "PortraitDisplayName": "Little Gruff",
+    "FrameSizeWidth": 64,
+    "FrameSizeHeight": 64,
+  },
   "IdleBehavior": "Wander",
   "Sounds": [
     {

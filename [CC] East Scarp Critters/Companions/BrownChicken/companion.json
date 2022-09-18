@@ -1,17 +1,27 @@
 {
-  "Name": "Fairy_Penguin_Chick",
+  "Name": "BrownChicken",
   "Type": "Walking",
+  "EnableCharacterCollision": true,
+  "EnableFarmerCollision": true,
+  "EnableEventAppearance":false,
+  "EnableShadow": true,
+  "Shadow": {
+    "OffsetX": 0,
+    "OffsetY": 0,
+    "Scale": 1,
+    "Alpha": 255
+  },
   "TravelSpeed": 2,
+  "SpawnOffsetX": 0,
+  "SpawnOffsetY": 0,
+  "MaxIdleDistance": -1,
+  "MaxDistanceBeforeTeleport": -1,
+  "IdleBehavior": "Wander",
+  "IsPrismatic": false,
+  "AppearUnderwater": false,
   "FrameSizeWidth": 16,
   "FrameSizeHeight": 16,
-  "TileSheetPath": "", // Optional parameter, but needed if creating a companion with an existing in-game sprite (e.g. Animals\\Rabbit)
-  "IdleBehavior": "Wander",
-  "MaxIdleDistance": "128",
-  "MaxDistanceBeforeTeleport": "-1",
-  "EnableFarmerCollision": true,
-  "EnableShadow": true,
-  "EnableBreathing": false,
-  "InspectionDialogue": "FairyPenguinChick.Inspection.1",
+  "TileSheetPath": "Animals\\Brown Chicken",
 
   // This plays when the companion travels upwards
   "UpAnimation": {
@@ -43,7 +53,7 @@
   "LeftAnimation": {
     "StartingFrame": 12,
     "NumberOfFrames": 4,
-    "Duration": 100,
+    "Duration": 150,
 
     "IdleAnimation": {
       "StartingFrame": 12,
@@ -56,13 +66,21 @@
   "RightAnimation": {
     "StartingFrame": 4,
     "NumberOfFrames": 4,
-    "Duration": 100,
+    "Duration": 150,
 
     "IdleAnimation": {
       "StartingFrame": 4,
       "NumberOfFrames": 1,
       "Duration": 500
     }
+  },
+
+"Sounds": [
+  {
+    "SoundName": "cluck",
+    "WhenToPlay": "Idle",
+    "TimeBetweenSound": 5000,
+    "ChanceOfPlaying": 0.3
   }
-  
+]  
 }

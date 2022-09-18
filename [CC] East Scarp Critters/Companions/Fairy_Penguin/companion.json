@@ -4,7 +4,7 @@
   "TravelSpeed": 2,
   "FrameSizeWidth": 16,
   "FrameSizeHeight": 16,
-  "TileSheetPath": "", // Optional parameter, but needed if creating a companion with an existing in-game sprite (e.g. Animals\\Rabbit)
+  "TileSheetPath": "Animals\\FairyPenguin", // Optional parameter, but needed if creating a companion with an existing in-game sprite (e.g. Animals\\Rabbit)
   "IdleBehavior": "Wander",
   "MaxIdleDistance": "128",
   "MaxDistanceBeforeTeleport": "-1",
