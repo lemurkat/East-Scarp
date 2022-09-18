@@ -19,7 +19,8 @@
                         "Action": "EditData",
                         "Target": "Data/SpousePatios",
                         "Entries": {
-                            "Aideen": "Lemurkat_EastScarp_OutsideArea/0/32 32 32 32 32 33 33 33 33 33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+                            "Aideen": "Lemurkat_EastScarp_OutsideArea/0/32 32 32 32 32 33 33 33 33 33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0",
+                            "KatarynaLK":"Lemurkat_EastScarp_OutsideArea/1"
                         }
                     },
                     // load spouse map

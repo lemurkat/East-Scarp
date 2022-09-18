@@ -109,10 +109,10 @@
       "Action": "EditData",
       "Target": "Characters/schedules/Rosa",
       "Entries": {
-        "spring": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
-        "summer": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
-        "fall": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
-        "winter": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
+        "spring": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 21 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
+        "summer": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 21 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
+        "fall": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 21 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
+        "winter": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 21 100 2/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
         "rain": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpeInn 33 28 0/1500 Custom_EastScarpeInn 28 13 3 square_1_2_1/1800 Custom_EastScarpe 17 121 2/2000 Custom_EastScarpeInn 45 10 0/2200 Custom_ES_InnRoomRosa 5 5 1",
       },
       "When": {
@@ -124,7 +124,7 @@
       "Action": "EditData",
       "Target": "Characters/schedules/Rosa",
       "Entries": {
-        "Sat": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 22 100 2/1700 Saloon 36 20 1/2400 Custom_EastScarpeInn 66 8 1",
+        "Sat": "750 Custom_EastScarpeInn 43 10 0 square_5_1_0/0930 Custom_EastScarpe 21 100 2/1700 Saloon 36 20 1/2400 Custom_EastScarpeInn 66 8 1",
       },
       "When": {
         "HasSeenEvent": "57874005"
@@ -412,7 +412,7 @@
     //With Juliet
     {
       "Action": "Include",
-      "FromFile": "assets/RivalHearts/julietRosa.json",
+      "FromFile": "assets/RivalHearts/JulietRosa.json",
       "When": {
         "HasMod": "LemurKat.JulietHouse.NPC"
       }

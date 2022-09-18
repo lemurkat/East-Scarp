@@ -52,5 +52,19 @@
             "Target": "Characters/schedules/VivienneLK",
             "FromFile": "assets/{{Target}}/Schedule.json"
         },
+  {
+            "LogName": "Festivals",
+            "Action": "Include",
+            "FromFile": "assets/Festivals/VivienneLK.json"
+        },
+        {
+            "LogName": "Subtly tweaks Clint's strings",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "Entries": {
+                "Blacksmith.2": "{{i18n:strings.es.blacksmith}}",
+                "Blacksmith.3": "{{i18n:strings.es.blacksmith}}",
+            }
+        }
     ]
 }

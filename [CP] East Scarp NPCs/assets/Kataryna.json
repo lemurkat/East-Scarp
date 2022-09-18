@@ -5,8 +5,8 @@
             "Action": "EditData",
             "Target": "Data/NPCDispositions",
             "Entries": {
-                "KatarynaLK": "adult/rude/outgoing/positive/female/not-datable//Other///Custom_ES_TNPCWaitingRoomWarp 2 5/{{i18n:Name.Kataryna}}",
-                "Abyssrooster": "teen/rude/outgoing/negative/male/not-datable//Other///Custom_ES_TNPCWaitingRoomWarp 3 5/{{i18n:Name.Abyss}}"
+                "KatarynaLK": "adult/rude/outgoing/positive/female/datable//Other///Custom_ES_TNPCWaitingWarpRoom 2 5/{{i18n:Name.Kataryna}}",
+                "Abyssrooster": "teen/rude/outgoing/negative/male/not-datable//Other///Custom_ES_TNPCWaitingWarpRoom 3 5/{{i18n:Name.Abyss}}"
             }
         },
         {
@@ -20,6 +20,36 @@
             },
             "When": {
                 "HasFlag": "KatarynaBecomesSocial"
+            }
+        },
+        {
+            "LogName": "NPC Manifestation - gives Kat a birthday",
+            "Action": "EditData",
+            "Target": "Data/NPCDispositions",
+            "Fields": {
+                "KatarynaLK": {
+                    "5": "not-datable"
+                }
+            },
+            "When": {
+                "HasFlag": " NoDateKataryna",
+                "Relationship:KatarynaLK |contains=Dating, Engaged, Married": false
+            }
+        },
+        {
+            "LogName": "NPC Manifestation - gives Kat a birthday",
+            "Action": "EditData",
+            "Target": "Data/NPCDispositions",
+            "Update": "OnLocationChange",
+            "Fields": {
+                "KatarynaLK": {
+                    "5": "not-datable"
+                }
+            },
+            "When": {
+                "HasFlag": "NoDateKataryna",
+                "Relationship:KatarynaLK |contains=Dating, Engaged, Married": false,
+                "HasConversationTopic": "Kataryna_NoDate"
             }
         },
         {
@@ -45,7 +75,6 @@
             }
         },
         {
-            "LogName": "NPC Exclusion NPCs to avoid Perfection issues",
             "Action": "EditData",
             "Target": "Characters/Dialogue/Rosa",
             "When": {
@@ -65,13 +94,17 @@
                 "katarynalk_sleep": "19/19/19",
                 "katarynalk_write": "24/24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 25 25 26 25 26 25 26 25 26 25 26 25 26 25 26 25 26 24 24 24 24 24 24 24 24 25 26 25 26 25 26 25 26 25 26/24",
                 "katarynalk_coffee": "16/16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 18 18 18 18 18 17 16 16 16 16 16 16 16 16 16 16 16 16/16",
-                "abyss_sleep":"12/18 18 18 18 18 18 18 18 18 18 19 19 19 19 19 19 19 19 19 19/12",
-                "abyss_perch":"16/16/16"
+                "abyss_sleep": "12/18 18 18 18 18 18 18 18 18 18 19 19 19 19 19 19 19 19 19 19/12",
+                "abyss_perch": "16/16/16"
             }
         }, //
         {
             "Action": "Include",
-            "FromFile": "assets/Festivals/KatarynaLK.json"
+            "FromFile": "assets/Festivals/KatarynaLK.json",
+            "When": {
+                "HasSeenEvent": "57876015"
+
+            }
         },
         { //Kataryna
             "LogName": "Kataryna",
@@ -109,13 +142,13 @@
             "Target": "Portraits/KatarynaLK_wetHair",
             "FromFile": "assets/Portraits/KatarynaLK/Kataryna_wetHair.png"
         },
-        { //Kataryna
+        { //K A T   D I A L O G U E
             "LogName": "Kataryna",
             "Action": "Load",
             "Target": "Characters/Dialogue/KatarynaLK",
             "FromFile": "assets/{{Target}}/Kataryna.json"
         },
-        { //Kataryna
+        {
             "LogName": "Kataryna",
             "Action": "EditData",
             "Target": "Characters/Dialogue/KatarynaLK",
@@ -128,19 +161,31 @@
                 "winter_Sun": "Oliver doesn't seem too happy I'm still around. Ah well, at least he's staying quiet about it.#$b#I can deal with the odd death stare.$2",
             }
         },
-        { //Kataryna
+        {
+            "LogName": "Kataryna",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/KatarynaLK",
+            "Entries": {
+                "{{season}}_{{day}}": "$1 KatarynaFirstMet#{{i18n:dialogue.katarynafirstmet}}",
+                "{{season}}_{{day}}_2": "$1 KatarynaFirstMet#{{i18n:dialogue.katarynafirstmet}}"
+            },
+            "When": {
+                "HasFlag |contains=KatarynaFirstMet": false
+            }
+        },
+        { // K A T   S C H E D U L E S
             "LogName": "Kataryna",
             "Action": "Load",
             "Target": "Characters/schedules/KatarynaLK",
             "FromFile": "assets/blank.json"
         },
-        { //Kataryna
+        {
             "LogName": "Kataryna",
             "Action": "Load",
             "Target": "Strings/schedules/KatarynaLK",
             "FromFile": "assets/Characters/Dialogue/KatarynaStrings.json"
         },
-        {
+        { //To make her scheduling easier! And I hated that damned chair.
             "LogName": "removes chair from Archaeology House if SVE installed",
             "Action": "EditMap",
             "Target": "Maps/ArchaeologyHouse",
@@ -159,7 +204,7 @@
                 },
             ]
         },
-        { //Kataryna
+        { //Kataryna before she moves to town
             "LogName": "Kataryna",
             "Action": "EditData",
             "Target": "Characters/schedules/KatarynaLK",
@@ -171,19 +216,7 @@
             },
             "When": {
                 "HasSeenEvent |contains=57873005": false,
-                "DaysPlayed": "58"
-            }
-        },
-        { //Kataryna
-            "LogName": "Kataryna",
-            "Action": "EditData",
-            "Target": "Characters/Dialogue/KatarynaLK",
-            "Entries": {
-                "{{season}}_{{day}}": "$1 KatarynaFirstMet#{{i18n:dialogue.katarynafirstmet}}",
-                "{{season}}_{{day}}_2": "$1 KatarynaFirstMet#{{i18n:dialogue.katarynafirstmet}}"
-            },
-            "When": {
-                "HasFlag |contains=KatarynaFirstMet": false
+                "DaysPlayed": "58",
             }
         },
         { //Kataryna
@@ -193,12 +226,13 @@
             "Entries": {
                 "spring": "0 Custom_EastScarpeInn 17 9 0/900 Custom_EastScarpeInn 35 32 1 katarynalk_coffee/1100 Custom_EastScarpe 45 88 3/1500 Custom_ESOrchard 3 16 1 katarynalk_write/1800 Custom_EastScarpeInn 17 9 0/2200 Custom_EastScarpeInn 19 11 2",
                 //"summer": "GOTO spring",
-                //"winter": "900 Custom_ES_TNPCWaitingRoomWarp 4 5/1800 Custom_ES_TNPCWaitingRoomWarp 2 5",
-                //"fall": "900 Custom_ES_TNPCWaitingRoomWarp 4 5/1800 Custom_ES_TNPCWaitingRoomWarp 2 5"
+                //"winter": "900 Custom_ES_TNPCWaitingWarpRoom 4 5/1800 Custom_ES_TNPCWaitingWarpRoom 2 5",
+                //"fall": "900 Custom_ES_TNPCWaitingWarpRoom 4 5/1800 Custom_ES_TNPCWaitingWarpRoom 2 5"
             },
             "When": {
                 "HasSeenEvent": "57873005",
-                "HasConversationTopic |contains=JosephineLeavesTown": false
+                "HasConversationTopic |contains=JosephineLeavesTown": false,
+                "HasSeenEvent |contains=57876012": false
             }
         },
         { //Kataryna
@@ -211,13 +245,77 @@
                 "Tue": "0 Custom_EastScarpeInn 17 9 0/700 Custom_EastScarpeInn 35 32 1 katarynalk_coffee/900 Town 41 57 0/1200 SeedShop 12 28 1/1400 Beach 42 36 2/1730 Beach 26 36 2/2000 Custom_EastScarpeInn 19 11 2 katarynalk_sleep",
                 "Wed": "0 Custom_EastScarpeInn 17 9 0/700 Custom_EastScarpeInn 35 32 1 katarynalk_coffee/830 Forest 6 37 0/1300 Forest 94 94 2/1600 Saloon 12 20 0/2000 Custom_EastScarpeInn 19 11 2 katarynalk_sleep",
                 "winter_15": "0 Custom_EastScarpeInn 17 9 0/a900 ArchaeologyHouse 4 10 0 \"Strings\\schedules\\KatarynaLK:Museum_GuntherD\"/1230 Saloon 12 20 0 \"Strings\\schedules\\KatarynaLK:Saloon_Gus\"/1600 Beach 38 36 2 \"Strings\\schedules\\KatarynaLK:Winter_Market\"/2000 Custom_EastScarpeInn 19 11 2 katarynalk_sleep",
-             
-               
+                "marriage_Mon": "830 ArchaeologyHouse 5 10 0/1200 Blacksmith 5 13 3/1600 Saloon 14 20 0/1900 BusStop -1 23 3",
+                "marriage_Fri": "900 Town 41 57 0/1200 SeedShop 12 28 1/1400 Beach 42 36 2/1730 Beach 26 36 2/2000 BusStop -1 23 3",
+                "marriage_Wed": "830 Forest 6 37 0/1300 Forest 94 94 2/1600 Saloon 12 20 0/2000 BusStop -1 23 3",
             },
             "When": {
-                "HasSeenEvent": "57876001"
+                "HasSeenEvent": "57876001",
+                "HasSeenEvent |contains=57876012": false
             }
         },
+        { //If you skip the event, Kataryna will just leave town/remain antisocial
+            "LogName": "Kataryna",
+            "Action": "EditData",
+            "Target": "Characters/schedules/KatarynaLK",
+            "When": {
+                "HasFlag | contains=KatarynaBecomesSocial": false,
+                "HasSeenEvent": "57876012"
+            },
+            "Entries": {
+                "spring": "900 Custom_ES_TNPCWaitingWarpRoom 4 5/1800 Custom_ES_TNPCWaitingWarpRoom 2 5"
+            }
+        },
+        { //Kataryna
+            "LogName": "Kataryna",
+            "Action": "EditData",
+            "Target": "Characters/schedules/KatarynaLK",
+            "Entries": {
+                "spring": "0 Custom_EastScarpeInn 17 9 0/900 Custom_EastScarpeInn 35 32 1 katarynalk_coffee/1100 Custom_EastScarpe 45 88 3/1500 Custom_ESOrchard 3 16 1 katarynalk_write/1800 Custom_EastScarpeInn 17 9 0/2200 Custom_EastScarpeInn 19 11 2",
+                "rain": "0 Custom_EastScarpeInn 17 9 0/700 Custom_EastScarpeInn 19 11 0 katarynalk_nap/900 Custom_EastScarpeInn 35 32 1 katarynalk_coffee/1000 Saloon 14 20 0/1400 Custom_EastScarpe 73 121 2/1900 Custom_EastScarpeInn 17 9 0/2200 Custom_EastScarpeInn 19 11 2 katarynalk_sleep",
+                "Mon": "0 Custom_EastScarpeInn 17 9 0/700 Custom_EastScarpeInn 35 32 1 katarynalk_coffee/830 ArchaeologyHouse 5 10 0/1200 Blacksmith 5 13 3/1600 Saloon 14 20 0/1900 Custom_EastScarpeInn 17 9 2/2200 Custom_EastScarpeInn 19 11 2 katarynalk_sleep",
+                "Tue": "0 Custom_EastScarpeInn 17 9 0/700 Custom_EastScarpeInn 35 32 1 katarynalk_coffee/900 Town 41 57 0/1200 SeedShop 12 28 1/1400 Beach 42 36 2/1730 Beach 26 36 2/2000 Custom_EastScarpeInn 19 11 2 katarynalk_sleep",
+                "Wed": "0 Custom_EastScarpeInn 17 9 0/700 Custom_EastScarpeInn 35 32 1 katarynalk_coffee/830 Forest 6 37 0/1300 Forest 94 94 2/1600 Saloon 12 20 0/2000 Custom_EastScarpeInn 19 11 2 katarynalk_sleep",
+                "winter_15": "0 Custom_EastScarpeInn 17 9 0/a900 ArchaeologyHouse 4 10 0 \"Strings\\schedules\\KatarynaLK:Museum_GuntherD\"/1230 Saloon 12 20 0 \"Strings\\schedules\\KatarynaLK:Saloon_Gus\"/1600 Beach 38 36 2 \"Strings\\schedules\\KatarynaLK:Winter_Market\"/2000 Custom_EastScarpeInn 19 11 2 katarynalk_sleep",
+            },
+            "When": {
+                "HasFlag": "KatarynaBecomesSocial",
+                "HasSeenEvent |contains=57876033": false
+            }
+        },
+        { //Kataryna after she leaves town
+            "LogName": "Kataryna",
+            "Action": "EditData",
+            "Target": "Characters/schedules/KatarynaLK",
+            "Entries": {
+                "spring": "900 Custom_ES_TNPCWaitingWarpRoom 4 5/1800 Custom_ES_TNPCWaitingWarpRoom 2 5",
+                "15": "a900 ArcheologyHouse 3 10 0 \"Strings\\schedules\\KatarynaLK:Museum_GuntherE\"/1130 Forest 74 50 2 \"Strings\\schedules\\KatarynaLK:Forest_Jasper\"/1730 Saloon 12 20 0 \"Strings\\schedules\\KatarynaLK:Saloon_Gus\"/2100 Club 17 5 3",
+                "summer_15": "a900 ArchaeologyHouse 4 10 0 \"Strings\\schedules\\KatarynaLK:Museum_GuntherC\"/1130 Beach 83 40 2 \"Strings\\schedules\\KatarynaLK:Beach\"/1800 Saloon 12 20 0 \"Strings\\schedules\\KatarynaLK:Saloon_Gus\"/2100 Club 17 5 3",
+                "fall_15": "a900 ArchaeologyHouse 4 10 0 \"Strings\\schedules\\KatarynaLK:Museum_GuntherB\"/1030 Mountain 54 7 0 \"Strings\\schedules\\KatarynaLK:MinesEntrance\"/1400 Mountain 77 9 3 \"Strings\\schedules\\KatarynaLK:AdvGuild\"/1800 Saloon 12 20 0 \"Strings\\schedules\\KatarynaLK:Saloon_Gus\"/2100 Club 17 5 3",
+                "winter_15": "a900 ArchaeologyHouse 4 10 0 \"Strings\\schedules\\KatarynaLK:Museum_GuntherD\"/1230 Saloon 12 20 0 \"Strings\\schedules\\KatarynaLK:Saloon_Gus\"/1600 Beach 38 36 2 \"Strings\\schedules\\KatarynaLK:Winter_Market\"/2000 Club 17 5 3"
+            },
+            "When": {
+                "HasSeenEvent |contains=57876033": true,
+                "Spouse: AnyPlayer |contains=KatarynaLK": false
+            }
+        },
+        { //Abyss after Kat leaves town
+            "LogName": "Kataryna",
+            "Action": "EditData",
+            "Target": "Characters/schedules/Abyssrooster",
+            "Entries": {
+                "spring": "900 Custom_ES_TNPCWaitingWarpRoom 4 6/1800 Custom_ES_TNPCWaitingWarpRoom 2 6",
+                "15": "a900 ArcheologyHouse 4 12 0 square_5_3/1130 Forest 73 50 2/1730 Saloon 13 20 0 abyss_perch/2100 Club 18 5 2",
+                "summer_15": "a900 ArchaeologyHouse 4 12 0 square_5_3/1130 Beach 83 40 2/1800 Saloon 13 20 2 abyss_perch/2100 Club 18 5 2",
+                "fall_15": "a900 ArchaeologyHouse 4 12 0 square_5_3/1030 Mountain 54 7 0/1400 Mountain 77 9 3/1800 Saloon 13 20 2 abyss_perch/2100 Club 18 5 2",
+                "winter_15": "a900 ArchaeologyHouse 4 12 0 square_5_3/1230 Saloon 13 20 2 abyss_perch/1600 Beach 25 14 2 square_5_5/2000 Club 18 5 2"
+            },
+            "When": {
+                "HasSeenEvent |contains=57876033": true,
+                "Spouse: AnyPlayer |contains=KatarynaLK": false
+            }
+        },
+        // K A T A R Y N A   E V E N T S
         {
             "Action": "EditData",
             "Target": "Data/Events/Farm",
@@ -227,6 +325,8 @@
             "Entries": {
                 "57876001/e 57873005/A JosephineLeavesTown": "continue/64 15/farmer 64 16 2 KatarynaLK 64 18 0/addConversationTopic Kataryna_Arrives 7/addConversationTopic Kataryna_Visits 1/pause 1500/textAboveHead KatarynaLK \"{{i18n:57876001.01}}\"/pause 500/speak KatarynaLK \"{{i18n:57876001.02}}\"/faceDirection KatarynaLK 2/pause 1000/faceDirection KatarynaLK 0/speak KatarynaLK \"{{i18n:57876001.03}}\"/emote farmer 40/pause 1000/speak KatarynaLK \"{{i18n:57876001.04}}\"/quickQuestion #{{i18n:57876001.05}}#{{i18n:57876001.06}}(break)speak KatarynaLK \"{{i18n:57876001.07}}\"(break)speak KatarynaLK \"{{i18n:57876001.08}}\"\\pause 500\\emote farmer 32\\pause 500\\textAboveHead KatarynaLK \"{{i18n:57876001.09}}\"/pause 1000/speak KatarynaLK \"{{i18n:57876001.10}}\"/emote farmer 16/pause 1000/speak KatarynaLK \"{{i18n:57876001.11}}\"/pause 1000/emote farmer 40/pause 500/jump KatarynaLK 3/pause 500/speak KatarynaLK \"{{i18n:57876001.12}}\"/playSound newRecipe/pause 1000/emote farmer 32/pause 500/faceDirection KatarynaLK 2/pause 1000/emote KatarynaLK 40/pause 1000/faceDirection KatarynaLK 0/speak KatarynaLK \"{{i18n:57876001.13}}\"/pause 1000/textAboveHead KatarynaLK \"{{i18n:57876001.14}}\"/emote farmer 12/pause 1000/end",
                 "57876004/e 57876001/A Kataryna_Visits/t 600 1000": "continue/64 15/farmer 64 16 2 OliverK 64 18 0/skippable/pause 1000/speak OliverK \"{{i18n:57876004.01}}\"/pause 500/faceDirection OliverK 2/pause 500/faceDirection OliverK 0/emote farmer 8/pause 1000/speak OliverK \"{{i18n:57876004.02}}\"/emote farmer 56/pause 500/jump OliverK 5/pause 1000/textAboveHead OliverK \"{{i18n:57876004.03}}\"/pause 500/speak OliverK \"{{i18n:57876004.04}}\"/pause 1000/quickQuestion #{{i18n:57876004.05}}#{{i18n:57876004.06}}#{{i18n:57876004.07}}(break)emote OliverK 12\\speak OliverK \"{{i18n:57876004.08}}\"(break)emote OliverK 8\\pause 1000\\speak OliverK \"{{i18n:57876004.09}}\"\\emote farmer 40\\pause 1000\\speak OliverK \"{{i18n:57876004.10}}\"(break)emote OliverK 32\\pause 1000\\speak OliverK \"{{i18n:57876004.11}}\"/pause 1000/faceDirection OliverK 1/pause 1000/faceDirection OliverK 3/pause 1000/faceDirection OliverK 0/pause 1000/speak OliverK \"{{i18n:57876004.12}}\"/pause 1000/emote OliverK 28/pause 1000/speak OliverK \"{{i18n:57876004.13}}\"/pause 1000/quickQuestion #{{i18n:57876004.14}}#{{i18n:57876004.15}}#{{i18n:57876004.16}}#{{i18n:57876004.17}}(break)speak OliverK \"{{i18n:57876004.18}}\"(break)speak OliverK \"{{i18n:57876004.19}}\"(break)speak OliverK \"{{i18n:57876004.20}}\"(break)emote OliverK 12\\friendship OliverK -50\\speak OliverK \"{{i18n:57876004.21}}\"/pause 1000/speak OliverK \"{{i18n:57876004.22}}\"/pause 1000/faceDirection OliverK 2/pause 1000/end",
+                //Dating KatarynaLK
+                "57876035/D KatarynaLK/f KatarynaLK 2500/t 600 1200/w sunny": "continue/64 15/farmer 64 16 2 KatarynaLK 64 18 0/skippable/pause 1000/speak KatarynaLK \"{{i18n:57876035.01}}\"/pause 500/emote farmer 8/pause 500/speak KatarynaLK \"{{i18n:57876035.02}}\"/quickQuestion #{{i18n:57876035.03}}#{{i18n:57876035.04}}#{{i18n:57876035.05}}(break)speak KatarynaLK \"{{i18n:57876035.06}}\"(break)speak KatarynaLK \"{{i18n:57876035.07}}\"(break)speak KatarynaLK \"{{i18n:57876035.08}}\"/pause 500/speak KatarynaLK \"{{i18n:57876035.09}}\"/pause 500/emote farmer 32/pause 500/speak KatarynaLK \"{{i18n:57876035.10}}\"/pause 1000/end",
             }
         },
         {
@@ -265,7 +365,7 @@
                 "JulietInvitationToSeance": "{{i18n:JulietInvitationToSeance}}[#]{{i18n:JulietInvitationToSeance.title}}",
                 "Kataryna_JunkMail": "{{i18n:Kataryna_Junkmail}}[#]{{i18n:Kataryna_Junkmail.title}}",
                 "Kataryna_voidegg": "{{i18n:Kataryna_voidegg}} %item quest 578760 %% [#]{{i18n:Kataryna_voidegg.title}}",
-                "Kataryna_VoidEggHatching": "{{i18n:kataryna_voidegghatching}}  %item conversationTopic VoidEggHatching 5 %% [letterbg Mods/LemurKat.EastScarpe.CP/LetterBackgrounds 0][textcolor black][#]{{i18n:kataryna_voidegghatching.title}}"
+                "Kataryna_VoidEggHatching": "{{i18n:kataryna_voidegghatching}}%item conversationTopic VoidEggHatching 5 %% [letterbg Mods/LemurKat.EastScarpe.CP/LetterBackgrounds 0][textcolor black][#]{{i18n:kataryna_voidegghatching.title}}"
             }
         },
         {
@@ -288,7 +388,8 @@
             "Target": "Data/Events/Saloon",
             "Entries": {
                 "57876003/p Clint/p Willy/p KatarynaLK": "Saloon1/16 20/Shane 21 17 2 Clint 19 23 3 Willy 18 22 2 Gus 11 18 2 farmer 11 20 0 KatarynaLK -50 -50 0 Emily 16 17 0/skippable/animate Shane false true 120 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 24 24 24 23 22 21/pause 1000/speak Willy \"{{i18n:57876003.01}}\"/warp KatarynaLK 14 24/emote Clint 12/move Emily -3 0 0 true/move KatarynaLK 0 -3 0 true/pause 1000/speak Clint \"{{i18n:57876003.02}}\"/pause 500/faceDirection KatarynaLK 1/emote KatarynaLK 8/pause 100/move KatarynaLK 3 0 2 true/move Emily 3 0 0 true/pause 1000/textAboveHead KatarynaLK \"{{i18n:57876003.03}}\"/pause 100/jump Clint 3/faceDirection Clint 0/faceDirection Willy 0/speak KatarynaLK \"{{i18n:57876003.04}}\"/emote Clint 28/pause 500/speak Willy \"{{i18n:57876003.05}}\"/speak KatarynaLK \"{{i18n:57876003.06}}\"/faceDirection farmer 1/move KatarynaLK 0 1 2/faceDirection Willy 3/faceDirection Clint 3/emote farmer 8/pause 1000/faceDirection KatarynaLK 1/speak KatarynaLK \"{{i18n:57876003.07}}\"/speak Willy \"{{i18n:57876003.08}}\"/pause 1000/faceDirection KatarynaLK 2/textAboveHead KatarynaLK \"{{i18n:57876003.09}}\"/pause 1000/speak Clint \"{{i18n:57876003.10}}\"/faceDirection KatarynaLK 0/textAboveHead KatarynaLK \"{{i18n:57876003.11}}\"/pause 2000/textAboveHead Clint \"{{i18n:57876003.12}}\"/pause 1000/faceDirection KatarynaLK 2/textAboveHead KatarynaLK \"{{i18n:57876003.13}}\"/speak Clint \"{{i18n:57876003.14}}\"/jump KatarynaLK 3/emote KatarynaLK 28/speak KatarynaLK \"{{i18n:57876003.15}}\"/pause 1000/move KatarynaLK 0 -2 0/faceDirection Clint 0/faceDirection Willy 0/speak KatarynaLK \"{{i18n:57876003.16}}\"/pause 500/faceDirection Emily 2/pause 500/move Emily 0 1 2/textAboveHead Emily \"{{i18n:57876003.17}}\"/pause 500/speak KatarynaLK \"{{i18n:57876003.18}}\"/emote Emily 32/emote Clint 60/pause 1000/end",
-                "57876005/e 57876003/e 57876001/t 1200 1700": "Saloon1/14 18/Emily 14 17 0 KatarynaLK 14 23 0 Gus 10 18 2 farmer -100 -100 0/skippable/addConversationTopic Kataryna_CameraMan 14/animate Gus false true 120 18 18 18 19 19 20 20 19 19/move KatarynaLK 0 -3 0/speak KatarynaLK \"{{i18n:57876005.01}}\"/move Emily 0 1 2/emote Emily 8/pause 500/speak KatarynaLK \"{{i18n:57876005.02}}\"/stopAnimation Gus 0/jump Emily 3/speak Emily \"{{i18n:57876005.03}}\"/speak KatarynaLK \"{{i18n:57876005.04}}\"/emote Emily 8/pause 500/speak KatarynaLK \"{{i18n:57876005.05}}\"/jump Emily 5/emote Emily 16/speak Emily \"{{i18n:57876005.06}}\"/speak KatarynaLK \"{{i18n:57876005.07}}\"/emote Emily 12/speak KatarynaLK \"{{i18n:57876005.08}}\"/pause 1000/speak Emily \"{{i18n:57876005.09}}\"/pause 1000/faceDirection Emily 0/move Emily 0 -1 0/playSound objectiveComplete/pause 1000/move Emily 0 1 2/speak Emily \"{{i18n:57876005.10}}\"/addObject 14 18 903 1/playSound thudStep/speak Emily \"{{i18n:57876005.11}}\"/pause 1000/move Emily 0 -1 0/pause 500/emote KatarynaLK 28/playSound doorOpen/warp farmer 14 24/move farmer 0 -2 0/stopAnimation Gus 0/faceDirection KatarynaLK 2/textAboveHead KatarnaLK \"{{i18n:57876005.12}}\"/speak KatarynaLK \"{{i18n:57876005.13}}\"/move KatarynaLK 0 1 2/emote farmer 8/speak KatarynaLK \"{{i18n:57876005.14}}\"/quickQuestion #{{i18n:57876005.15}}#{{i18n:57876005.16}}#{{i18n:57876005.17}}#{{i18n:57876005.18}}(break)emote KatarynaLK 32\\pause 500\\speak KatarynaLK \"{{i18n:57876005.19}}\"(break)emote KatarynaLK 32\\faceDirection Emily 2\\emote Emily 12\\pause 500\\speak KatarynaLK \"{{i18n:57876005.20}}\"(break)emote KatarynaLK 12\\pause 500\\speak KatarynaLK \"{{i18n:57876005.21}}\"(break)emote KatarynaLK 12\\pause 500\\speak KatarynaLK \"{{i18n:57876005.22}}\"/pause 1000/move KatarynaLK 0 -1 0/removeSprite 14 18/playSound coin/pause 1000/faceDirection KatarynaLK 2/speak KatarynaLK \"{{i18n:57876005.23}}\"/move farmer -1 0 1/move KatarynaLK 0 4 2/faceDirection farmer 2/warp KatarynaLK -100 -100/move farmer 1 0 0 true/move Emily 0 1 2 true/move farmer 0 -2 0/emote farmer 8/pause 1000/end",
+                "57876005/e 57876003/e 57876001/e 97/e 3910974/t 1200 1700": "Saloon1/14 18/Emily 14 17 0 KatarynaLK 14 23 0 Gus 10 18 2 farmer -100 -100 0/skippable/addConversationTopic Kataryna_CameraMan 14/animate Gus false true 120 18 18 18 19 19 20 20 19 19/move KatarynaLK 0 -3 0/speak KatarynaLK \"{{i18n:57876005.01}}\"/move Emily 0 1 2/emote Emily 8/pause 500/speak KatarynaLK \"{{i18n:57876005.02}}\"/stopAnimation Gus 0/jump Emily 3/speak Emily \"{{i18n:57876005.03}}\"/speak KatarynaLK \"{{i18n:57876005.04}}\"/emote Emily 8/pause 500/speak KatarynaLK \"{{i18n:57876005.05}}\"/jump Emily 5/emote Emily 16/speak Emily \"{{i18n:57876005.06}}\"/speak KatarynaLK \"{{i18n:57876005.07}}\"/emote Emily 12/speak KatarynaLK \"{{i18n:57876005.08}}\"/pause 1000/speak Emily \"{{i18n:57876005.09}}\"/pause 1000/faceDirection Emily 0/move Emily 0 -1 0/playSound objectiveComplete/pause 1000/move Emily 0 1 2/speak Emily \"{{i18n:57876005.10}}\"/addObject 14 18 903 1/playSound thudStep/speak Emily \"{{i18n:57876005.11}}\"/pause 1000/move Emily 0 -1 0/pause 500/emote KatarynaLK 28/playSound doorOpen/warp farmer 14 24/move farmer 0 -2 0/stopAnimation Gus 0/faceDirection KatarynaLK 2/textAboveHead KatarnaLK \"{{i18n:57876005.12}}\"/speak KatarynaLK \"{{i18n:57876005.13}}\"/move KatarynaLK 0 1 2/emote farmer 8/speak KatarynaLK \"{{i18n:57876005.14}}\"/quickQuestion #{{i18n:57876005.15}}#{{i18n:57876005.16}}#{{i18n:57876005.17}}#{{i18n:57876005.18}}(break)emote KatarynaLK 32\\pause 500\\speak KatarynaLK \"{{i18n:57876005.19}}\"(break)emote KatarynaLK 32\\faceDirection Emily 2\\emote Emily 12\\pause 500\\speak KatarynaLK \"{{i18n:57876005.20}}\"(break)emote KatarynaLK 12\\pause 500\\speak KatarynaLK \"{{i18n:57876005.21}}\"(break)emote KatarynaLK 12\\pause 500\\speak KatarynaLK \"{{i18n:57876005.22}}\"/pause 1000/move KatarynaLK 0 -1 0/removeSprite 14 18/playSound coin/pause 1000/faceDirection KatarynaLK 2/speak KatarynaLK \"{{i18n:57876005.23}}\"/move farmer -1 0 1/move KatarynaLK 0 4 2/faceDirection farmer 2/warp KatarynaLK -100 -100/move farmer 1 0 0 true/move Emily 0 1 2 true/move farmer 0 -2 0/emote farmer 8/pause 1000/end", //
+                "57876024/e 57876020/f KatarynaLK 2249": "Saloon1/20 19/farmer 22 18 3 Shane 21 18 1 Gus 14 18 2 Emily 13 17 0 Pam 7 18 1 Lewis 14 20 0 Clint 19 23 3 KatarynaLK -100 -100 0 Abyssrooster -100 -100 0/skippable/advancedMove Emily true 3 0 4 10000 -3 0 4 10000 -3 0 4 10000 3 0 4 10000/textAboveHead Shane \"{{i18n:57876024.01}} {{playerName}}\"/emote Lewis 60/pause 1000/speak Shane \"{{i18n:57876024.02}}\"/emote farmer 16/speak Shane \"{{i18n:57876024.03}}\"/emote farmer 8/speak Shane \"{{i18n:57876024.04}}\"/quickQuestion {{i18n:57876024.26}}#{{i18n:57876024.27}}#{{i18n:57876024.28}}(break)speak Shane \"{{i18n:57876024.29}}\"(break)speak Shane \"{{i18n:57876024.30}}\"/pause 500/playSound doorOpen/warp KatarynaLK 14 24/move KatarynaLK 0 -1 0/warp Abyssrooster 14 24/advancedMove KatarynaLK false 0 -2 6 0 0 -1 1 1000/advancedMove Abyssrooster false 0 -2 6 0 3 1000/pause 500/faceDirection Lewis 2/emote KatarynaLK 12/pause 3000/faceDirection Lewis 0/textAboveHead KatarynaLK \"{{i18n:57876024.05}}\"/pause 500/speak Shane \"{{i18n:57876024.06}}\"/emote farmer 56/faceDirection Clint 1/move Shane 0 2 3/faceDirection farmer 2/showFrame farmer 90/pause 1000/speak KatarynaLK \"{{i18n:57876024.07}}\"/pause 50/jump Shane 5/pause 500/emote Shane 16/speak Shane \"{{i18n:57876024.08}}\"/pause 500/speak Shane \"{{i18n:57876024.09}}\"/textAboveHead KatarynaLK \"{{i18n:57876024.10}}\"/advancedMove Abyssrooster false 0 -1 -1 0 4 4000/pause 1000/speak KatarynaLK \"{{i18n:57876024.11}}\"/pause 1000/playSound cluck/jump Abyssrooster 5/warp Abyssrooster 19 20/showFrame Abyssrooster 16/emote Shane 28/pause 1000/speak KatarynaLK \"{{i18n:57876024.12}}\"/pause 500/speak KatarynaLK \"{{i18n:57876024.13}}\"/pause 500/emote Shane 16/speak Shane \"{{i18n:57876024.14}}\"/speak KatarynaLK \"{{i18n:57876024.15}}\"/advancedMove KatarynaLK false 0 -1 3 1000/textAboveHead KatarynaLK \"{{i18n:57876024.16}}\"/faceDirection Gus 1/pause 500/emote Gus 56/pause 500/faceDirection Gus 2/pause 500/move Gus 4 0 1 true/facedirection KatarynaLK 1/speak KatarynaLK \"{{i18n:57876024.17}}\"/emote Shane 28/pause 500/speak Shane \"{{i18n:57876024.18}}\"/jump KatarynaLK 3/emote KatarynaLK 28/pause 500/speak KatarynaLK \"{{i18n:57876024.19}}\"/pause 500/speak Shane \"{{i18n:57876024.20}}\"/emote KatarynaLK 60/faceDirection KatarynaLK 3/pause 1000/emote KatarynaLK 40/pause 100/emote Gus 56/pause 1000/advancedMove Gus false -1 0 0 -1 4 2000 0 1 1 0/faceDirection KatarynaLK 1/speak KatarynaLK \"{{i18n:57876024.21}}\"/textAboveHead Shane \"{{i18n:57876024.22}}\"/speak KatarynaLK \"{{i18n:57876024.23}}\"/faceDirection farmer 2/emote farmer 16/speak KatarynaLK \"{{i18n:57876024.24}}\"/jump farmer 5/move farmer -1 0 2/move farmer 0 1 2/move Shane 1 0 3/move Abyssrooster 2 0 0/speak KatarynaLK \"{{i18n:57876024.25}}\"/playSound cluck/pause 500/playSound cluck/pause 500/fade/viewport -1000 -1000/end"
             }
         },
         {
@@ -296,7 +397,7 @@
             "Target": "Data/Events/Custom_EastScarpe",
             "Entries": {
                 "57876006/e 57876005/d Mon Tue Wed Thu Fri/w sunny/t 1600 1900": "ocean/33 116/KatarynaLK 33 116 2 Shane 31 117 1 farmer 28 110 2/addConversationTopic KatarynaResearch 14/skippable/addTemporaryActor LexiFriendGull 16 16 39 111 1 false/advancedMove LexiFriendGull true -6 0 2 3000 6 0 2 3000/showFrame Shane 16/move farmer 0 5 1/speak KatarynaLK \"{{i18n:57876006.01}}\"/speak Shane \"{{i18n:57876006.02}}\"/pause 500/faceDirection KatarynaLK 0/textAboveHead LexiFriendGull \"{{i18n:57876006.03}}\"/pause 1000/faceDirection KatarynaLK 2/speak Shane \"{{i18n:57876006.04}}\"/speak KatarynaLK \"{{i18n:57876006.05}}\"/emote Shane 12/pause 500/emote farmer 8/pause 500/move farmer 4 0 2/faceDirection KatarynaLK 3/quickQuestion #{{i18n:57876006.06}}#{{i18n:57876006.07}}#{{i18n:57876006.08}}(break)textAboveHead Shane \"{{i18n:57876006.09}}\"\\pause 500\\speak KatarynaLK \"{{i18n:57876006.10}}\"(break)textAboveHead Shane \"{{i18n:57876006.11}}\"\\pause 500\\speak KatarynaLK \"{{i18n:57876006.12}}\"(break)emote KatarynaLK 12\\speak KatarynaLK \"{{i18n:57876006.13}}\"\\pause 500\\textAboveHead Shane \"{{i18n:57876006.14}}\"\\speak Shane \"{{i18n:57876006.15}}\"/pause 1000/emote farmer 40/pause 500/emote KatarynaLK 28/pause 1000/speak KatarynaLK \"{{i18n:57876006.16}}\"/pause 500/textAboveHead Shane \"{{i18n:57876006.17}}\"/pause 500/faceDirection Shane 0/pause 150/faceDirection Shane 1/pause 150/speak Shane \"{{i18n:57876006.18}}\"/faceDirection Shane 0/speak Shane \"{{i18n:57876006.19}}\"/pause 500/move Shane -3 0 3/textAboveHead KatarynaLK \"{{i18n:57876006.20}}\"/jump Shane 3/faceDirection Shane 1/textAboveHead Shane \"{{i18n:57876006.21}}\"/pause 100/speak KatarynaLK \"{{i18n:57876006.22}}\"/pause 1000/emote Shane 12/speak Shane \"{{i18n:57876006.23}}\"/pause 1000/advancedMove Shane false 0 -13 -11 0 0 -13/pause 500/move farmer 0 1 1/speak KatarynaLK \"{{i18n:57876006.24}}\"/emote farmer 40/pause 1000/end",
-                "57876015/f KatarynaLK 500/t 900 1600/w sunny": "none/34 39/Shane 29 39 1 KatarynaLK 33 39 1 farmer 40 44 0/showFrame Shane 16/pause 500/playSound leafrustle/pause 1500/playSound leafrustle/pause 500/faceDirection KatarynaLK 3/speak KatarynaLK \"{{i18n:57876015.01}}\"/faceDirection KatarynaLK 1/pause 500/speak KatarynaLK \"{{i18n:57876015.02}}\"/textAboveHead Shane \"{{i18n:57876015.03}}\"/faceDirection KatarynaLK 3/pause 1000/textAboveHead KatarynaLK \"{{i18n:57876015.04}}\"/speak KatarynaLK \"{{i18n:57876015.05}}\"/move farmer 0 -7 3/emote farmer 8/pause 500/faceDirection KatarynaLK 1/jump KatarynaLK 3/speed KatarynaLK 5/move KatarynaLK 0 -2 1/move farmer -3 0 3/textAboveHead KatarynaLK \"{{i18n:57876015.06}}\"/faceDirection KatarynaLK 2/speak KatarnyaLK \"{{i18n:57876015.07}}\"/pause 500/faceDirection KatarynaLK 1/speak KatarynaLK \"{{i18n:57876015.08}}\"/quickQuestion #{{i18n:57876015.09}}#{{i18n:57876015.10}}#{{i18n:57876015.11}}(break)speak KatarynaLK \"{{i18n:57876015.12}}\"\\emote Shane 12(break)emote KatarynaLK 12\\speak KatarynaLK \"{{i18n:57876015.13}}\"(break)speak KatarynaLK \"{{i18n:57876015.14}}\"\\textAboveHead Shane \"{{i18n:57876015.15}}\"/speak KatarynaLK \"{{i18n:57876015.16}}\"/emote farmer 56/move farmer 0 2 3/faceDirection KatarynaLK 3/textAboveHead KatarynaLK \"{{i18n:57876015.17}}\"/pause 500/faceDirection KatarynaLK 2/pause 1000/animate farmer true true 250 89 101/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/addTemporaryActor Rabbit 16 16 33 39 3 false Animal Bunny1/stopAnimation farmer/pause 250/emote Bunny1 16/pause 100/speed Bunny1 7/advancedMove Bunny1 true -2 0 0 -2/textAboveHead Shane \"{{i18n:57876015.18}}\"/emote KatarynaLK 12/animate farmer false true 200 102 103 102 103/pause 2000/end",
+                "57876015/f KatarynaLK 500/t 900 1600/w sunny": "none/34 39/Shane 29 39 1 KatarynaLK 33 39 1 farmer 40 44 0/skippable/showFrame Shane 16/pause 500/playSound leafrustle/pause 1500/playSound leafrustle/pause 500/faceDirection KatarynaLK 3/speak KatarynaLK \"{{i18n:57876015.01}}\"/faceDirection KatarynaLK 1/pause 500/speak KatarynaLK \"{{i18n:57876015.02}}\"/textAboveHead Shane \"{{i18n:57876015.03}}\"/faceDirection KatarynaLK 3/pause 1000/textAboveHead KatarynaLK \"{{i18n:57876015.04}}\"/speak KatarynaLK \"{{i18n:57876015.05}}\"/move farmer 0 -7 3/emote farmer 8/pause 500/faceDirection KatarynaLK 1/jump KatarynaLK 3/speed KatarynaLK 5/move KatarynaLK 0 -2 1/move farmer -3 0 3/textAboveHead KatarynaLK \"{{i18n:57876015.06}}\"/faceDirection KatarynaLK 2/speak KatarynaLK \"{{i18n:57876015.07}}\"/pause 500/faceDirection KatarynaLK 1/speak KatarynaLK \"{{i18n:57876015.08}}\"/quickQuestion #{{i18n:57876015.09}}#{{i18n:57876015.10}}#{{i18n:57876015.11}}(break)speak KatarynaLK \"{{i18n:57876015.12}}\"\\emote Shane 12(break)emote KatarynaLK 12\\speak KatarynaLK \"{{i18n:57876015.13}}\"(break)speak KatarynaLK \"{{i18n:57876015.14}}\"\\textAboveHead Shane \"{{i18n:57876015.15}}\"/speak KatarynaLK \"{{i18n:57876015.16}}\"/emote farmer 56/move farmer 0 2 3/faceDirection KatarynaLK 3/textAboveHead KatarynaLK \"{{i18n:57876015.17}}\"/pause 500/faceDirection KatarynaLK 2/pause 1000/animate farmer true true 250 89 101/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/pause 250/addTemporaryActor Rabbit 16 16 33 39 3 false Animal Bunny1/stopAnimation farmer/pause 250/emote Bunny1 16/pause 100/speed Bunny1 7/advancedMove Bunny1 true -2 0 0 -2/textAboveHead Shane \"{{i18n:57876015.18}}\"/emote KatarynaLK 12/animate farmer false true 200 102 103 102 103/pause 2000/end",
                 //
                 "57876018/e 57876013/A VoidEggHatching/n Kataryna_VoidEggHatching/t 900 1500": "{{season}}_day_ambient/-1000 -1000/Eloise 12 71 3 farmer 1 71 1 KatarynaLK -100 -100 0 Jacob -100 -100 0 Shane -100 -100 0/skippable/IgnoreCollisions farmer/viewport 7 71 clamp true/pause 500/speed Eloise 7/move Eloise -9 0 3/textAboveHead Eloise \"{{i18n:57876018.01}} {{playerName}}!\"/emote farmer 8/speak Eloise \"{{i18n:57876018.02}}\"/emote farmer 16/speak Eloise \"{{i18n:57876018.03}}\"/pause 500/emote farmer 56/textAboveHead Eloise \"{{i18n:57876018.04}}\"/speak Eloise \"{{i18n:57876018.05}}\"/faceDirection Eloise 1/pause 500/fade/viewport -1000 -1000/speak Eloise \"{{i18n:57876018.06}}\"/stopMusic/changeToTemporaryMap ESJacobBarn/viewport -1000 -1000/warp KatarynaLK 14 7/warp Jacob 13 7/playMusic distantBanjo/viewport 14 7 clamp true/addTemporaryActor VoidEggCracking 16 16 14 4 2 false character/shake VoidEggCracking 1000/emote KatarynaLK 28/warp Eloise 11 13/move Eloise 0 -1 2/warp farmer 11 13/move farmer 0 -5 1 true/move Eloise 0 -5 1 true/pause 500/faceDirection Jacob 3/faceDirection KatarynaLK 2/emote KatarynaLK 12/move Jacob 0 1 3/faceDirection KatarynaLK 0/speak Jacob \"{{i18n:57876018.07}}\"/move Eloise 2 0 0/faceDirection Jacob 0/move farmer 1 0 0/move farmer 0 -1 0/pause 1000/animate VoidEggCracking false false 120 0 0 0 1 2 3 4 5 6 7 7 7 7 7/pause 480/playSound stonecrack/pause 1000/stopAnimation VoidEggCracking 7/speak Eloise \"{{i18n:57876018.08}}\"/textAboveHead KatarynaLK \"{{i18n:57876018.09}}\"/faceDirection KatarynaLK 3/faceDirection Eloise 1/speak KatarynaLK \"{{i18n:57876018.10}}\"/textAboveHead Eloise \"{{i18n:57876018.11}}\"/shake Eloise 300/pause 1000/faceDirection KatarynaLK 0/faceDirection Eloise 0/pause 1000/playSound cluck/jump Eloise 3 true/jump KatarynaLK 3 true/addTemporaryActor BabyVoid_Chicken 16 16 14 4 2 false Animal BabyAbyss/jump BabyAbyss 3/playSound cluck/move BabyAbyss 0 1 2/pause 1000/emote Eloise 20/pause 500/speak KatarynaLK \"{{i18n:57876018.12}}\"/textAboveHead Eloise \"{{i18n:57876018.13}}\"/jump BabyAbyss 3/playSound cluck/pause 500/faceDirection Jacob 1/move KatarynaLK 0 1 3/speak Jacob \"{{i18n:57876018.14}}\"/faceDirection KatarynaLK 0/speak KatarynaLK \"{{i18n:57876018.15}}\"/jump BabyAbyss 3/playSound cluck/playSound doorOpen/warp Shane 11 13/emote Shane 40/pause 500/advancedMove Shane false 10 0 4 1000/faceDirection Eloise 2/speak Eloise \"{{i18n:57876018.16}}\"/faceDirection Jacob 0/pause 500/speak Jacob \"{{i18n:57876018.17}}\"/faceDirection Eloise 1/faceDirection KatarynaLK 2/pause 500/faceDirection farmer 1/speak Eloise \"{{i18n:57876018.18}}\"/faceDirection KatarynaLK 3/pause 1000/textAboveHead KatarynaLK \"{{i18n:57876018.19}}\"/faceDirection KatarynaLK 2/pause 500/advancedMove KatarynaLK false 7 0 0 4 2 1000/pause 500/move BabyAbyss 0 2 1/move BabyAbyss 2 0 1/jump BabyAbyss 3/playSound cluck/pause 500/jump BabyAbyss 3/playSound cluck/move Eloise 2 0 1/speak Eloise \"{{i18n:57876018.20}}\"/faceDirection BabyAbyss 3/pause 500/faceDirection BabyAbyss 1/playSound cluck/pause 50/playSound cluck/move Jacob 0 -1 3/speak Jacob \"{{i18n:57876018.21}}\"/faceDirection BabyAbyss 3/playSound cluck/speak Eloise \"{{i18n:57876018.22}}\"/emote KatarynaLK 12/pause 500/emote Shane 36/pause 500/move BabyAbyss 5 0 2/playSound cluck/jump BabyAbyss 3/pause 500/playSound cluck/emote BabyAbyss 28/pause 1000/end",
             }
@@ -304,9 +405,8 @@
         {
             "Action": "EditData",
             "Target": "Data/Events/Custom_EastScarpeInn",
-            "Entries": 	
-            {
-              "57876022/e 57876021/t 1400 1900": "playful/43 32/Rosa 28 27 3 Eloise -100 -100 0 KatarynaLK 18 18 0 farmer 44 36 0/addConversationTopic AbyssRoosterGrow 5/skippable/showFrame Rosa 29/move farmer 0 -2 0/emote farmer 8/pause 500/faceDirection farmer 3/pause 500/move farmer -4 0 0 true/viewport move -2 0 2000 true/pause 2000/emote farmer 40/faceDirection farmer 1/pause 1000/faceDirection farmer 3/move farmer -12 0 0 true/viewport move -2 0 6000 true/pause 6500/emote farmer 56/move farmer 0 -5 0 true/viewport move 0 -2 3000 true/pause 2500/warp Eloise 44 34/emote farmer 8/faceDirection Rosa 2/pause 500/speak Rosa \"{{i18n:57876022.01}}\"/advancedMove Eloise false -15 0 0 -4 4 1000/emote farmer 56/textAboveHead Rosa \"{{i18n:57876022.02}}\"/speak Rosa \"{{i18n:57876022.03}}\"/emote farmer 32/pause 500/move farmer 1 0 3/move farmer 1 0 0/move farmer 0 -1 3/textAboveHead Rosa \"{{i18n:57876022.04}}\"/pause 500/animate farmer true true 100 58/emote farmer 32/pause 500/showFrame Rosa 29/shake Rosa 1000/speak Eloise \"{{i18n:57876022.05}}\"/pause 500/playSound cluck/addTemporaryActor BabyVoid_Chicken 16 16 29 28 2 false Animal BabyAbyss/stopAnimation farmer 0/faceDirection farmer 2/pause 100/showFrame farmer 94 true/emote farmer 16 true/jump farmer 5 true/showFrame Rosa 19 true/jump Rosa 5 true/pause 500/textAboveHead Eloise \"{{i18n:57876022.06}}\"/pause 500/showFrame Rosa 0/showFrame farmer 0/faceDirection farmer 3/faceDirection BabyAbyss 3/pause 500/faceDirection BabyAbyss 0/pause 500/faceDirection BabyAbyss 2/jump BabyAbyss 5/speed BabyAbyss 8/move BabyAbyss -4 0 3 true/faceDirection Rosa 3/warp BabyAbyss -100 -100/speed Eloise 5/advancedMove Eloise false 0 -2 -4 0 3 1000/pause 2000/move Rosa -3 0 2 true/move farmer -3 0 3 true/viewport move -2 0 1500/advancedMove KatarynaLK false 0 10 1 1000/speak Eloise \"{{i18n:57876022.07}}\"/pause 500/textAboveHead Rosa \"{{i18n:57876022.08}}\"/move farmer 0 1 3/move farmer -3 0 0/speak KatarynaLK \"{{i18n:57876022.09}}\"/pause 500/textAboveHead Eloise \"{{i18n:57876022.10}}\"/pause 500/faceDirection farmer 3/faceDirection Rosa 3/speak Rosa \"{{i18n:57876022.11}}\"/playSound cluck/pause 500/playSound cluck/speak KatarynaLK \"{{i18n:57876022.12}}\"/pause 500/warp BabyAbyss 21 28/playSound cluck/emote BabyAbyss 20/jump BabyAbyss 3/jump KatarynaLK 3/speed BabyAbyss 5/move BabyAbyss -2 0 3/jump BabyAbyss 3/playSound cluck/advancedMove Eloise false 0 2 -4 0 0 -2 3 1000/pause 1000/speak Eloise \"{{i18n:57876022.13}}\"/pause 500/emote farmer 8 true/emote Rosa 8 true/pause 500/textAboveHead KatarynaLK \"{{i18n:57876022.14}}\"/pause 500/speak Eloise \"{{i18n:57876022.15}}\"/jump BabyAbyss 3/playSound cluck/pause 500/speak KatarynaLK \"{{i18n:57876022.16}}\"/pause 500/speak Eloise \"{{i18n:57876022.17}}\"/pause 500/speak KatarynaLK \"{{i18n:57876022.18}}\"/pause 500/advancedMove Eloise false -1 0 3 1000/textAboveHead Eloise \"{{i18n:57876022.19}}\"/showFrame KatarynaLK 29/speak KatarynaLK \"{{i18n:57876022.20}}\"/playSound cluck/jump BabyAbyss 5/move farmer -2 0 3 true/move Rosa 0 2 3 true/pause 2000/showFrame KatarynaLK 4/speak KatarynaLK \"{{i18n:57876022.21}}\"/jump Rosa 5/speak Rosa \"{{i18n:57876022.22}}\"/faceDirection Eloise 1/emote Eloise 12/pause 500/speak Rosa \"{{i18n:57876022.23}}\"/move Rosa -2 0 3/pause 1000/emote Eloise 20/pause 500/faceDirection Eloise 3/speak Eloise \"{{i18n:57876022.24}}\"/faceDirection farmer 1/emote farmer 40/pause 1000/end"
+            "Entries": {
+                "57876022/e 57876021/t 1400 1900": "playful/43 32/Rosa 28 27 3 Eloise -100 -100 0 KatarynaLK 18 18 0 farmer 44 36 0/addConversationTopic AbyssRoosterGrow 5/skippable/showFrame Rosa 29/move farmer 0 -2 0/emote farmer 8/pause 500/faceDirection farmer 3/pause 500/move farmer -4 0 0 true/viewport move -2 0 2000 true/pause 2000/emote farmer 40/faceDirection farmer 1/pause 1000/faceDirection farmer 3/move farmer -12 0 0 true/viewport move -2 0 6000 true/pause 6500/emote farmer 56/move farmer 0 -5 0 true/viewport move 0 -2 3000 true/pause 2500/warp Eloise 44 34/emote farmer 8/faceDirection Rosa 2/pause 500/speak Rosa \"{{i18n:57876022.01}}\"/advancedMove Eloise false -15 0 0 -4 4 1000/emote farmer 56/textAboveHead Rosa \"{{i18n:57876022.02}}\"/speak Rosa \"{{i18n:57876022.03}}\"/emote farmer 32/pause 500/move farmer 1 0 3/move farmer 1 0 0/move farmer 0 -1 3/textAboveHead Rosa \"{{i18n:57876022.04}}\"/pause 500/animate farmer true true 100 58/emote farmer 32/pause 500/showFrame Rosa 29/shake Rosa 1000/speak Eloise \"{{i18n:57876022.05}}\"/pause 500/playSound cluck/addTemporaryActor BabyVoid_Chicken 16 16 29 28 2 false Animal BabyAbyss/stopAnimation farmer 0/faceDirection farmer 2/pause 100/showFrame farmer 94 true/emote farmer 16 true/jump farmer 5 true/showFrame Rosa 19 true/jump Rosa 5 true/pause 500/textAboveHead Eloise \"{{i18n:57876022.06}}\"/pause 500/showFrame Rosa 0/showFrame farmer 0/faceDirection farmer 3/faceDirection BabyAbyss 3/pause 500/faceDirection BabyAbyss 0/pause 500/faceDirection BabyAbyss 2/jump BabyAbyss 5/speed BabyAbyss 8/move BabyAbyss -4 0 3 true/faceDirection Rosa 3/warp BabyAbyss -100 -100/speed Eloise 5/advancedMove Eloise false 0 -2 -4 0 3 1000/pause 2000/move Rosa -3 0 2 true/move farmer -3 0 3 true/viewport move -2 0 1500/advancedMove KatarynaLK false 0 10 1 1000/speak Eloise \"{{i18n:57876022.07}}\"/pause 500/textAboveHead Rosa \"{{i18n:57876022.08}}\"/move farmer 0 1 3/move farmer -3 0 0/speak KatarynaLK \"{{i18n:57876022.09}}\"/pause 500/textAboveHead Eloise \"{{i18n:57876022.10}}\"/pause 500/faceDirection farmer 3/faceDirection Rosa 3/speak Rosa \"{{i18n:57876022.11}}\"/playSound cluck/pause 500/playSound cluck/speak KatarynaLK \"{{i18n:57876022.12}}\"/pause 500/warp BabyAbyss 21 28/playSound cluck/emote BabyAbyss 20/jump BabyAbyss 3/jump KatarynaLK 3/speed BabyAbyss 5/move BabyAbyss -2 0 3/jump BabyAbyss 3/playSound cluck/advancedMove Eloise false 0 2 -4 0 0 -2 3 1000/pause 1000/speak Eloise \"{{i18n:57876022.13}}\"/pause 500/emote farmer 8 true/emote Rosa 8 true/pause 500/textAboveHead KatarynaLK \"{{i18n:57876022.14}}\"/pause 500/speak Eloise \"{{i18n:57876022.15}}\"/jump BabyAbyss 3/playSound cluck/pause 500/speak KatarynaLK \"{{i18n:57876022.16}}\"/pause 500/speak Eloise \"{{i18n:57876022.17}}\"/pause 500/speak KatarynaLK \"{{i18n:57876022.18}}\"/pause 500/advancedMove Eloise false -1 0 3 1000/textAboveHead Eloise \"{{i18n:57876022.19}}\"/showFrame KatarynaLK 29/speak KatarynaLK \"{{i18n:57876022.20}}\"/playSound cluck/jump BabyAbyss 5/move farmer -2 0 3 true/move Rosa 0 2 3 true/pause 2000/showFrame KatarynaLK 4/speak KatarynaLK \"{{i18n:57876022.21}}\"/jump Rosa 5/speak Rosa \"{{i18n:57876022.22}}\"/faceDirection Eloise 1/emote Eloise 12/pause 500/speak Rosa \"{{i18n:57876022.23}}\"/move Rosa -2 0 3/pause 1000/emote Eloise 20/pause 500/faceDirection Eloise 3/speak Eloise \"{{i18n:57876022.24}}\"/faceDirection farmer 1/emote farmer 40/pause 1000/end"
             }
         },
         {
@@ -316,7 +416,8 @@
                 "57876012/e 57876011/H/t 800 1600": "{{season}}_day_ambient/13 20/KatarynaLK 12 17 0 farmer 5 23 1/ignoreCollisions farmer/addTemporaryActor JosephineLuggage 32 32 13 17 2 false/advancedMove KatarynaLK false -2 0 4 1000 2 0 4 1000 -2 0 4 1000 2 0 4 1000/move farmer 8 0 0/emote farmer 8/pause 2000/pause 500/faceDirection KatarynaLK 2/pause 1000/speak KatarynaLK \"{{i18n:57876012.01}}\"/pause 1000/emote KatarynaLK 40/pause 1000/faceDirection KatarynaLK 0/move farmer 0 -3 0/pause 500/question fork0 \"{{i18n:57876012.02}}#{{i18n:57876012.03}}#{{i18n:57876012.04}}#\"/fork KatarynaDeparts/speak KatarynaLK \"{{i18n:57876012.05}}\"/faceDirection KatarynaLK 0/pause 100/emote KatarynaLK 28/pause 1000/faceDirection KatarynaLK 2/speak KatarynaLK \"{{i18n:57876012.06}}\"/emote farmer 60/pause 1000/speak KatarynaLK \"{{i18n:57876012.07}}\"/emote farmer 8/playMusic echos/pause 1000/speak KatarynaLK \"{{i18n:57876012.08}}\"/pause 1000/textAboveHead KatarynaLK \"{{i18n:57876012.09}}\"/speak KatarynaLK \"{{i18n:57876012.10}}\"/pause 1000/speak KatarynaLK \"{{i18n:57876012.11}}\"/pause 1000/speak KatarynaLK \"{{i18n:57876012.12}}\"/pause 500/faceDirection KatarynaLK 0/question fork1 \"{{i18n:57876012.13}}#{{i18n:57876012.14}}#{{i18n:57876012.15}}#\"/fork KatarynaDeparts2/stopMusic/pause 500/emote farmer 16/jump KatarynaLK 3/pause 500/faceDirection KatarynaLK 2/playMusic SettlingIn/speak KatarynaLK \"{{i18n:57876012.16}}\"/emote farmer 32/pause 1000/speak KatarynaLK \"{{i18n:57876012.17}}\"/pause 1000/fade/viewport -1000 -1000/addMailReceived KatarynaBecomesSocial/addConversationTopic KatarynaStillHere/playSound getNewSpecialItem/message \"{{i18n:57876012.18}}\"/pause 500/end invisible KatarynaLK",
                 "KatarynaDeparts": "pause 500/addMailReceived KatarynaLeavesTown/speak KatarynaLK \"{{i18n:57876012.KatarynaDeparts.01}}\"/faceDirection KatarynaLK 0/textAboveHead KatarynaLK \"{{i18n:57876012.KatarynaDeparts.02}}\"/switchEvent KatarynaDeparts2",
                 "KatarynaDeparts2": "pause 500/stopMusic/addConversationTopic KatarynaLeftTown/advancedMove KatarynaLK false 0 -3 2 1000/speak KatarynaLK \"{{i18n:57876012.KatarynaDeparts2.01}}\"/faceDirection KatarynaLK 0/pause 500/advancedMove KatarynaLK false 0 -5 4 1000/emote farmer 28/pause 500/playSound busDoorOpen/fade/viewport -1000 1000/pause 1500/playSound busDriveOff/pause 2000/message \"{{i18n:57876012.KatarynaDeparts2.02}}\"/pause 500/end invisible KatarynaLK",
-                "57876021/e 57876018/t 600 900": "continue/-1000 -1000/farmer 0 23 1 Jacob 15 23 3 Eloise 14 23 3/skippable/viewport 6 23 clamp true/move farmer 3 0 1 true/move Jacob -3 0 3 true/move Eloise -3 0 3 true/pause 1000/textAboveHead Eloise \"{{i18n:57876021.01}} {{playerName}}!\"/jump Eloise 3/pause 500/speed Eloise 5/move Eloise -7 0 3/pause 500/emote farmer 8/speak Eloise \"{{i18n:57876021.02}}\"/advancedMove Jacob false -4 0 3 1000/pause 500/emote farmer 40/quickQuestion #{{i18n:57876021.03}}#{{i18n:57876021.04}}#{{i18n:57876021.05}}(break)pause 500\\emote Eloise 20\\speak Eloise \"{{i18n:57876021.06}}\"(break)pause 500\\textAboveHead Eloise \"{{i18n:57876021.07}}\"\\pause 500\\speak Eloise \"{{i18n:57876021.08}}\"\\pause 500\\emote farmer 36\\pause 500\\textAboveHead Eloise \"{{i18n:57876021.09}}\"(break)pause 500\\emote Eloise 12\\speak Eloise \"{{i18n:57876021.10}}\"/pause 500/speak Eloise \"{{i18n:57876021.11}}\"/emote farmer 56/pause 500/speak Eloise \"{{i18n:57876021.12}}\"/faceDirection Eloise 1/textAboveHead Eloise \"{{i18n:57876021.13}}\"/emote Jacob 28/pause 500/speak Jacob \"{{i18n:57876021.14}}\"/move Eloise 3 0 3/emote Eloise 20/emote farmer 32/pause 1000/faceDirection Eloise 1/textAboveHead Eloise \"{{i18n:57876021.15}}\"/emote Jacob 60/pause 1000/end"
+                "57876021/e 57876018/t 600 900": "continue/-1000 -1000/farmer 0 23 1 Jacob 15 23 3 Eloise 14 23 3/skippable/viewport 6 23 clamp true/move farmer 3 0 1 true/move Jacob -3 0 3 true/move Eloise -3 0 3 true/pause 1000/textAboveHead Eloise \"{{i18n:57876021.01}} {{playerName}}!\"/jump Eloise 3/pause 500/speed Eloise 5/move Eloise -7 0 3/pause 500/emote farmer 8/speak Eloise \"{{i18n:57876021.02}}\"/advancedMove Jacob false -4 0 3 1000/pause 500/emote farmer 40/quickQuestion #{{i18n:57876021.03}}#{{i18n:57876021.04}}#{{i18n:57876021.05}}(break)pause 500\\emote Eloise 20\\speak Eloise \"{{i18n:57876021.06}}\"(break)pause 500\\textAboveHead Eloise \"{{i18n:57876021.07}}\"\\pause 500\\speak Eloise \"{{i18n:57876021.08}}\"\\pause 500\\emote farmer 36\\pause 500\\textAboveHead Eloise \"{{i18n:57876021.09}}\"(break)pause 500\\emote Eloise 12\\speak Eloise \"{{i18n:57876021.10}}\"/pause 500/speak Eloise \"{{i18n:57876021.11}}\"/emote farmer 56/pause 500/speak Eloise \"{{i18n:57876021.12}}\"/faceDirection Eloise 1/textAboveHead Eloise \"{{i18n:57876021.13}}\"/emote Jacob 28/pause 500/speak Jacob \"{{i18n:57876021.14}}\"/move Eloise 3 0 3/emote Eloise 20/emote farmer 32/pause 1000/faceDirection Eloise 1/textAboveHead Eloise \"{{i18n:57876021.15}}\"/emote Jacob 60/pause 1000/end",
+                "57876033/e 57876025/o KatarynaLK/t 800 1300": "{{season}}_day_ambient/14 18/Pam 11 11 2 KatarynaLK 12 14 1 Abyssrooster 13 14 3 farmer 9 23 1 Shane -100 -100 3 Lewis -100 -100 3 Emily -100 -100 3 Gus -100 -100 3 Clint -100 -100 3 Gunther -100 -100 3 Jacob -100 -100 3 Eloise -100 -100 3 Rosa -100 -100 3 {{57876033.addNPC}}/changeSprite Gunther walking/move farmer 4 0 0/speak KatarynaLK \"{{i18n:57876033.01}}\"/playSound cluck/pause 500/playSound cluck/move farmer 0 -5 0/pause 500/faceDirection Abyssrooster 2/jump Abyssrooster 3/playSound cluck/pause 500/playSound cluck/emote farmer 60/move KatarynaLK 0 2 1 true/move farmer 0 -2 3 true/textAboveHead KatarynaLK \"{{i18n:57876033.02}}\"/quickQuestion #{{i18n:57876033.03}}#{{i18n:57876033.04}}(break)speak KatarynaLK \"{{i18n:57876033.05}}\"(break)speak KatarynaLK \"{{i18n:57876033.06}}\"/speak KatarynaLK \"{{i18n:57876033.07}}\"/emote farmer 20/pause 500/faceDirection KatarynaLK 2/pause 500/faceDirection farmer 2/speak KatarynaLK \"{{i18n:57876033.08}}\"/faceDirection KatarynaLK 1/faceDirection farmer 3/speak KatarynaLK \"{{i18n:57876033.09}}\"/warp Shane 22 23/speed Shane 5/move Shane -8 0 0/textAboveHead Shane \"{{i18n:57876033.10}}\"/faceDirection farmer 2 true/faceDirection KatarynaLK 2 true/jump KatarynaLK 5/emote KatarynaLK 16/pause 500/move Shane 0 -3 2/pause 500/warp Lewis 25 22 true/warp Emily 27 22 true/warp Clint 27 23 true/warp Gus 24 23 true/warp Gunther 23 22 true/warp Jacob 29 23 true/warp Eloise 28 23 true/warp Rosa 29 22 true/{{57876033.action1}}/move Lewis -13 0 0 true/move Emily -13 0 0 true/move Clint -13 0 0 true/move Gus -13 0 0 true/move Gunther -13 0 0 true/move Jacob -13 0 0 true/move Eloise -13 0 0 true/move Rosa -13 0 0 true/{{57876033.action2}}/pause 1000/emote KatarynaLK 32/pause 5000/advancedMove KatarynaLK false 0 4 1 0 2 500/pause 500/speak KatarynaLK \"{{i18n:57876033.11}}\"/{{57876033.action3}}/pause 500/textAboveHead Eloise \"{{i18n:57876033.14}}\"/playSound cluck/pause 50/playSound cluck/pause 500/textAboveHead Gunther \"{{i18n:57876033.15}}\"/pause 500/faceDirection KatarynaLK 1/faceDirection Shane 3/textAboveHead KatarynaLK \"{{i18n:57876033.16}}\"/pause 10000/end invisible KatarynaLK"
             }
         },
         {
@@ -325,10 +426,78 @@
             "FromFile": "assets/Images/VoidEggCracking.png"
         },
         {
+            "Action": "Load",
+            "Target": "Characters/ESTent",
+            "FromFile": "assets/Images/tent.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/ESFirepit",
+            "FromFile": "assets/Images/fire.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/TempEyvindr",
+            "FromFile": "assets/Images/Eyvinder.png"
+        },
+        {
             "Action": "EditData",
             "Target": "Data/Events/Town",
             "Entries": {
-                "57876020/e 57876019/f KatarynaLK 1000/t 2000 2400": "nightTime/39 74/Shane 39 74 1 KatarynaLK 41 74 3 farmer 35 72 1/ignoreCollisions farmer/skippable/addTemporaryActor Bear 32 32 54 85 1 true character/addTemporaryActor Abyssrooster 16 32 47 71 3 false character/move farmer 5 0 2/showFrame Shane 16/textAboveHead Shane \"{{i18n:57876020.01}} {{playerName}}!\"/pause 500/emote farmer 8/speak Shane \"{{i18n:57876020.02}}\"/textAboveHead KatarynaLK \"{{i18n:57876020.03}}\"/speak Shane \"{{i18n:57876020.04}}\"/pause 500/playSound trashcan/move Abyssrooster 0 1 2/pause 1000/playSound trashcan/textAboveHead KatarynaLK \"{{i18n:57876020.05}}\"/move KatarynaLK 5 0 3 true/move Abyssrooster 5 0 2 true/jump Shane 5/speak Shane \"{{i18n:57876020.06}}\"/faceDirection Shane 0/speak Shane \"{{i18n:57876020.07}}\"/emote farmer 56/textAboveHead KatarynaLK \"{{i18n:57876020.08}}\"/pause 500/fade/viewport -100 -100/warp Bear 57 93/faceDirection Bear 3/addObject 57 87 183 1/Warp Shane 54 86/showFrame Shane 16/warp farmer 55 85 true/warp KatarynaLK 56 87 true/warp Abyssrooster 68 86 true/faceDirection KatarynaLK 0/viewport 57 87/pause 500/speak KatarynaLK \"{{i18n:57876020.09}}\"/faceDirection KatarynaLK 2/emote KatarynaLK 12/speak KatarynaLK \"{{i18n:57876020.10}}\"/move Shane 0 1 2/jump Abyssrooster 3/move Abyssrooster 0 7 0 true/move KatarynaLK 0 7 1 true/move Shane 0 7 2 true/move farmer 0 7 2 true/viewport move 0 4 2000/pause 3000/playSound pig/faceDirection Bear 2/pause 10/jump KatarynaLK 5 true/jump Shane 5 true/move Shane -1 0 1/emote farmer 16/showFrame Shane 16/emote KatarynaLK 28/move Bear 0 1 2/animate Bear true true 500 16 17/shake KatarynaLK 500/playSound rabbit/pause 1000/playSound rabbit/pause 500/stopAnimation Bear/speak KatarynaLK \"{{i18n:57876020.11}}\"/shake KatarynaLK 500/speak Shane \"{{i18n:57876020.12}}\"/animate KatarynaLK false true 100 4/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 5/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 4/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 5/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 4/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/speak KatarynaLK \"{{i18n:57876020.13}}\"/animate KatarynaLK false true 100 5/pause 100/positionOffset KatarynaLK -2 0/animate KatarynaLK false true 100 5/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 4/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/stopAnimation KatarynaLK 4/speak Shane \"{{i18n:57876020.14}}\"/emote farmer 40/move Abyssrooster 0 1 3/pause 500/playSound rooster/pause 500/faceDirection Bear 1/speed Abyssrooster 8/move Abyssrooster -9 0 3/jump Bear 2/emote Bear 8/pause 500/jump Abyssrooster 3/emote Abyssrooster 16/pause 500/advancedMove KatarynaLK false 0 1 -3 0 1 1000/move Abyssrooster 2 0 3/emote Abyssrooster 12/move Bear 1 0 1/pause 1000/move Abyssrooster 2 0 3 true/move farmer 0 2 1 true/faceDirection KatarynaLK 1/pause 1000/emote Abyssrooster 12/move Bear 1 0 1/speak KatarynaLK \"{{i18n:57876020.15}}\"/move Abyssrooster 2 0 3/emote Abyssrooster 12/move Bear 3 0 1/move Abyssrooster 2 0 3/emote Abyssrooster 12/move Bear 2 0 1/pause 1000/textAboveHead Shane \"{{i18n:57876020.16}}\"/speak KatarynaLK \"{{i18n:57876020.17}}\"/move Abyssrooster 2 0 3/emote Abyssrooster 12/move Bear 1 0 1/pause 1000/speak Shane \"{{i18n:57876020.18}}\"/textAboveHead KatarynaLK \"{{i18n:57876020.19}}\"/pause 1000/end",
+                "57876020/e 57876023/f KatarynaLK 1500/t 2000 2400": "nightTime/39 74/Shane 39 74 1 KatarynaLK 41 74 3 farmer 35 72 1/ignoreCollisions farmer/skippable/addTemporaryActor Bear 32 32 54 85 1 true character/addTemporaryActor Abyssrooster 16 32 47 71 3 false character/move farmer 5 0 2/showFrame Shane 16/textAboveHead Shane \"{{i18n:57876020.01}} {{playerName}}!\"/pause 500/emote farmer 8/speak Shane \"{{i18n:57876020.02}}\"/textAboveHead KatarynaLK \"{{i18n:57876020.03}}\"/speak Shane \"{{i18n:57876020.04}}\"/pause 500/playSound trashcan/move Abyssrooster 0 1 2/pause 1000/playSound trashcan/textAboveHead KatarynaLK \"{{i18n:57876020.05}}\"/move KatarynaLK 5 0 3 true/move Abyssrooster 5 0 2 true/jump Shane 5/speak Shane \"{{i18n:57876020.06}}\"/faceDirection Shane 0/speak Shane \"{{i18n:57876020.07}}\"/emote farmer 56/textAboveHead KatarynaLK \"{{i18n:57876020.08}}\"/pause 500/fade/viewport -100 -100/warp Bear 57 93/faceDirection Bear 3/addObject 57 87 183 1/Warp Shane 54 86/showFrame Shane 16/warp farmer 55 85 true/warp KatarynaLK 56 87 true/warp Abyssrooster 68 86 true/faceDirection KatarynaLK 0/viewport 57 87/pause 500/speak KatarynaLK \"{{i18n:57876020.09}}\"/faceDirection KatarynaLK 2/emote KatarynaLK 12/speak KatarynaLK \"{{i18n:57876020.10}}\"/move Shane 0 1 2/jump Abyssrooster 3/move Abyssrooster 0 7 0 true/move KatarynaLK 0 7 1 true/move Shane 0 7 2 true/move farmer 0 7 2 true/viewport move 0 4 2000/pause 3000/playSound pig/faceDirection Bear 2/pause 10/jump KatarynaLK 5 true/jump Shane 5 true/move Shane -1 0 1/emote farmer 16/showFrame Shane 16/emote KatarynaLK 28/move Bear 0 1 2/animate Bear true true 500 16 17/shake KatarynaLK 500/playSound rabbit/pause 1000/playSound rabbit/pause 500/stopAnimation Bear/speak KatarynaLK \"{{i18n:57876020.11}}\"/shake KatarynaLK 500/speak Shane \"{{i18n:57876020.12}}\"/animate KatarynaLK false true 100 4/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 5/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 4/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 5/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 4/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/speak KatarynaLK \"{{i18n:57876020.13}}\"/animate KatarynaLK false true 100 5/pause 100/positionOffset KatarynaLK -2 0/animate KatarynaLK false true 100 5/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/animate KatarynaLK false true 100 4/pause 100/positionOffset KatarynaLK -2 0/playSound dwop/stopAnimation KatarynaLK 4/speak Shane \"{{i18n:57876020.14}}\"/emote farmer 40/move Abyssrooster 0 1 3/pause 500/playSound rooster/pause 500/faceDirection Bear 1/speed Abyssrooster 8/move Abyssrooster -9 0 3/jump Bear 2/emote Bear 8/pause 500/jump Abyssrooster 3/emote Abyssrooster 16/pause 500/advancedMove KatarynaLK false 0 1 -3 0 1 1000/move Abyssrooster 2 0 3/emote Abyssrooster 12/move Bear 1 0 1/pause 1000/move Abyssrooster 2 0 3 true/move farmer 0 2 1 true/faceDirection KatarynaLK 1/pause 1000/emote Abyssrooster 12/move Bear 1 0 1/speak KatarynaLK \"{{i18n:57876020.15}}\"/move Abyssrooster 2 0 3/emote Abyssrooster 12/move Bear 3 0 1/move Abyssrooster 2 0 3/emote Abyssrooster 12/move Bear 2 0 1/pause 1000/textAboveHead Shane \"{{i18n:57876020.16}}\"/speak KatarynaLK \"{{i18n:57876020.17}}\"/move Abyssrooster 2 0 3/emote Abyssrooster 12/move Bear 1 0 1/pause 1000/speak Shane \"{{i18n:57876020.18}}\"/textAboveHead KatarynaLK \"{{i18n:57876020.19}}\"/pause 1000/end",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/ArchaeologyHouse",
+            "Entries": {
+                "57876023/e 57876022/f KatarynaLK 1750/A AbyssRoosterGrow/t 900 1800": "libraryTheme/-1000 -1000/Gunther 4 10 2 farmer 5 10 3 KatarynaLK -100 -100 0 Abyssrooster -100 -100 0 Penny 18 9 2 Jas 19 10 3 Vincent 16 10 1 Eloise 18 12 0/changeSprite Gunther walking/addConversationTopic GuntherKatarynaCoverse 7/skippable/showFrame Penny 18/showFrame Jas 22/showFrame Eloise 16/showFrame Vincent 24/viewport 5 10 clamp true/faceDirection Gunther 1/pause 1000/speak Gunther \"{{i18n:57876023.01}}\"/emote farmer 40/playSound doorOpen/warp KatarynaLK 3 14/move KatarynaLK 0 -2 0/warp Abyssrooster 3 14/speed Abyssrooster 7/advancedMove Abyssrooster false 0 -1 1 0 0 -2 -2 0 0 2 2 0 0 -1 4 1000/pause 500/playSound cluck/faceDirection Gunther 2/faceDirection farmer 2/pause 1000/emote Gunther 16/pause 1000/speak Gunther \"{{i18n:57876023.02}}\"/speak KatarynaLK \"{{i18n:57876023.03}}\"/speak Gunther \"{{i18n:57876023.04}}\"/playSound cluck/pause 50/playSound cluck/faceDirection farmer 3/emote farmer 40/pause 500/faceDirection Gunther 1/emote Gunther 40/pause 500/emote farmer 56/pause 500/faceDirection Gunther 2/pause 500/speak KatarynaLK \"{{i18n:57876023.05}}\"/pause 500/speak Gunther \"{{i18n:57876023.06}}\"/faceDirection KatarynaLK 1/faceDirection Abyssrooster 3/pause 500/playSound cluck/pause 500/faceDirection KatarynaLK 0/textAboveHead KatarynaLK \"{{i18n:57876023.07}}\"/pause 500/move KatarynaLK 0 -1 1/speak KatarynaLK \"{{i18n:57876023.08}}\"/move farmer 3 0 1/advancedMove Abyssrooster false 3 0 -2 0/pause 500/faceDirection farmer 3/move Gunther 0 1 3/emote Abyssrooster 12/advancedMove Abyssrooster false -1 0 4 1000/speak Gunther \"{{i18n:57876023.09}}\"/jump KatarynaLK 3/speak KatarynaLK \"{{i18n:57876023.10}}\"/speak Gunther \"{{i18n:57876023.11}}\"/emote farmer 28/speak KatarynaLK \"{{i18n:57876023.12}}\"/speak Gunther \"{{i18n:57876023.13}}\"/emote KatarynaLK 16/speak KatarynaLK \"{{i18n:57876023.14}}\"/textAboveHead Gunther \"{{i18n:57876023.15}}\"/pause 1000/faceDirection Gunther 2/pause 500/speak Gunther \"{{i18n:57876023.16}}\"/playSound cluck/pause 1000/end",
+                "57876034/f KatarynaLK 2500/D KatarynaLK/t 900 1800": "libraryTheme/-1000 -1000/KatarynaLK 16 9 3 Gunther 15 9 1 farmer 3 14 0/skippable/changeSprite Gunther walking/viewport 5 10 clamp true/advancedMove farmer false 0 -3 4 1000 5 0 0 3 4 0 0 -1 3 0 4 2000/pause 500/emote farmer 8/viewport move 2 0 2000 true/speak KatarynaLK \"{{i18n:57876034.01}}\"/pause 500/speak Gunther \"{{i18n:57876034.02}}\"/speak KatarynaLK \"{{i18n:57876034.03}}\"/speak Gunther \"{{i18n:57876034.04}}\"/pause 500/faceDirection Gunther 2/pause 500/speak Gunther \"{{i18n:57876034.05}}\"/pause 500/faceDirection KatarynaLK 2/jump KatarynaLK 5/pause 500/speak KatarynaLK \"{{i18n:57876034.06}}\"/pause 500/emote KatarynaLK 28/emote farmer 32/advancedMove farmer false 0 -3 4 1000/faceDirection Gunther 1/speak Gunther \"{{i18n:57876034.07}}\"/faceDirection Gunther 2/speak Gunther \"{{i18n:57876034.08}}\"/speed Gunther 3/advancedMove Gunther false -1 0 0 -3 -4 0 2 1000/pause 1000/advancedMove farmer false 0 -1 1 1000/faceDirection KatarynaLK 3/pause 1000/speak KatarynaLK \"{{i18n:57876034.09}}\"/emote farmer 56/pause 500/speak KatarynaLK \"{{i18n:57876034.10}}\"/pause 500/emote farmer 60/pause 1000/end",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Gunther,Characters/Dialogue/GuntherSilvian",
+            "Entries": {
+                "GuntherKatarynaConverse": "{{i18n:gunther.GuntherKatarynaConverse}}"
+            },
+            "When": {
+                "HasSeenEvent": "57876023"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/KatarynaLK",
+            "Entries": {
+                "GuntherKatarynaConverse": "{{i18n:kataryna.GuntherKatarynaConverse}}"
+            },
+            "When": {
+                "HasSeenEvent": "57876023"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Custom_ESOrchard",
+            "Entries": {
+                "57876032/f KatarynaLK 2250/o KatarynaLK/t 1800 2200": "nightTime/-1000 -1000/KatarynaLK 3 17 2 farmer 0 18 1 Lewis 3 18 0 Abyssrooster 4 18 1/skippable/viewport 5 18 clamp true/move farmer 2 0 1/faceDirection Lewis 3/pause 500/speak Lewis \"{{i18n:57876032.01}}\"/faceDirection Lewis 0/speak Lewis \"{{i18n:57876032.02}}\"/jump farmer 5/jump Abyssrooster 5/move Lewis 0 1 0/speed Abyssrooster 7/move Abyssrooster 7 0 0/speak KatarynaLK \"{{i18n:57876032.03}}\"/pause 1000/fade/viewport -100 -100/playSound slimedead/warp farmer 31 17/warp KatarynaLK 33 14/warp Lewis 32 15/playsound slimedead/playSound cluck/faceDirection KatarynaLK 0/warp Abyssrooster 32 18/pause 500/playSound slimedead/faceDirection farmer 2/advancedMove Abyssrooster true 6 0 0 3 2 4000 -5 0 0 -3 4 4000 -4 0 0 3 2 0 0 -3 1 0 3 4000/viewport 33 14/pause 500/move KatarynaLK 2 0 0/pause 1000/emote KatarynaLK 40/pause 2000/move KatarynaLK -5 0 0/pause 1000/textAboveHead KatarynaLK \"{{i18n:57876032.04}}\"/speak Lewis \"{{i18n:57876032.05}}\"/move KatarynaLK 2 0 2/textAboveHead KatarynaLK \"{{i18n:57876032.06}}\"/speak KatarynaLK \"{{i18n:57876032.07}}\"/jump Lewis 5/emote Lewis 28/speak Lewis \"{{i18n:57876032.08}}\"/speak KatarynaLK \"{{i18n:57876032.09}}\"/speak Lewis \"{{i18n:57876032.10}}\"/pause 500/faceDirection KatarynaLK 0/pause 1000/faceDirection KatarynaLK 2/speak KatarynaLK \"{{i18n:57876032.11}}\"/speak Lewis \"{{i18n:57876032.12}}\"/textAboveHead KatarynaLK \"{{i18n:57876032.13}}\"/end",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Spouse: AnyPlayer |contains=KatarynaLK": false
+            },
+            "Entries": {
+                "57876025/o KatarynaLK/f KatarynaLK 2500/n NoDateKataryna/e 57876024/t 0500 1200/H": "continue/64 15/farmer 64 15 2 KatarynaLK 65 16 0 Abyssrooster 63 16 1/pause 500/move Abyssrooster -1 0 1/speak KatarynaLK \"{{i18n:57876025.01}}\"/emote farmer 16/pause 500/speak KatarynaLK \"{{i18n:57876025.02}}\"/pause 500/emote farmer 8/pause 500/speak KatarynaLK \"{{i18n:57876025.03}}\"/pause 500/speak KatarynaLK \"{{i18n:57876025.04}}\"/faceDirection KatarynaLK 3/faceDirection Abyssrooster 1/playSound cluck/pause 500/playSound cluck/faceDirection KatarynaLK 0/speak KatarynaLK \"{{i18n:57876025.05}}\"/playSound cluck/speak KatarynaLK \"{{i18n:57876025.06}}\"/pause 500/emote farmer 32/speak KatarynaLK \"{{i18n:57876025.07}}\"/playSound cluck/playSound cluck/speak KatarynaLK \"{{i18n:57876025.08}}\"/quickQuestion #{{i18n:57876025.09}}#{{i18n:57876025.10}}#{{i18n:57876025.11}}#{{i18n:57876025.12}}(break)speak KatarynaLK \"{{i18n:57876025.13}}\"(break)speak KatarynaLK \"{{i18n:57876025.14}}\"(break)speak KatarynaLK \"{{i18n:57876025.15}}\"(break)speak KatarynaLK \"{{i18n:57876025.16}}\"/pause 500/speak KatarynaLK \"{{i18n:57876025.17}}\"/pause 500/faceDirection KatarynaLK 2/faceDirection Abyssrooster 2/pause 1000/end"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Custom_ESDeepMountains",
+            "Entries": {
+                "57876036/e 57876035/D KatarynaLK/t 2200 2600/w sunny": "spring_night_ambient/-100 -100/KatarynaLK 10 54 2 farmer 7 61 0 Abyssrooster 8 55 2/addTemporaryActor ESTent 48 80 57 45 2 false/addTemporaryActor ESFirepit 16 32 58 47 2 false/animate ESFirepit false true 400 0 1 2 3/viewport 10 55 clamp true/move farmer 0 -3 1/move farmer 3 0 0/jump Abyssrooster 3/playSound cluck/move farmer 0 -2 0/advancedMove Abyssrooster false 3 0 0 3 -3 0 0 -3 3 0 0 -3 3 0 2 1000/speak KatarynaLK \"{{i18n:57876036.01}}\"/pause 500/emote farmer 56/faceDirection KatarynaLK 1/faceDirection farmer 1/playSound cluck/pause 500/fade/viewport -100 -100/playSound cluck/stopAdvancedMoves/warp farmer 59 46/faceDirection farmer 2/warp KatarynaLK 58 46/warp Abyssrooster 57 47/showFrame KatarynaLK 30/showFrame farmer 4/positionOffset farmer 0 12/showFrame Abyssrooster 22/playSound cracklingFire/viewport 58 47/pause 500/speak KatarynaLK \"{{i18n:57876036.02}}\"/shake KatarynaLK 500/positionOffset KatarynaLK 4 0/pause 100/positionOffset KatarynaLK 4 0/pause 500/playSound crickets/pause 500/emote Abyssrooster 24/pause 500/emote KatarynaLK 40/pause 500/playSound crickets/pause 1000/speak KatarynaLK \"{{i18n:57876036.03}}\"/showFrame KatarynaLK 31/pause 500/speak KatarynaLK \"{{i18n:57876036.04}}\"/emote farmer 16/pause 500/showFrame KatarynaLK 30/pause 500/speak KatarynaLK \"{{i18n:57876036.05}}\"/pause 500/emote KatarynaLK 28/pause 500/quickQuestion #{{i18n:57876036.06}}#{{i18n:57876036.07}}(break)speak KatarynaLK \"{{i18n:57876036.08}}\"(break)speak KatarynaLK \"{{i18n:57876036.09}}\"/pause 500/stopMusic/playMusic echos/pause 500/faceDirection KatarynaLK 1/faceDirection farmer 3/pause 500/speak KatarynaLK \"{{i18n:57876036.10}}\"/faceDirection KatarynaLK 2/emote Abyssrooster 24/faceDirection KatarynaLK 1/speak KatarynaLK \"{{i18n:57876036.11}}\"/pause 500/emote KatarynaLK 28/pause 500/speak KatarynaLK \"{{i18n:57876036.12}}\"/jump farmer 5/emote farmer 16/pause 500/speak KatarynaLK \"{{i18n:57876036.13}}\"/question fork0 \"{{i18n:57876036.14}}#{{i18n:57876036.15}}#{{i18n:57876036.16}}#\"/fork Kiss_Kataryna/pause 500/emote farmer 36/pause 500/emote KatarynaLK 28/pause 500/speak KatarynaLK \"{{i18n:57876036.17}}\"/faceDirection KatarynaLK 0/warp KatarynaLK -1000 -1000/pause 500/playSound cluck/showFrame Abyssrooster 4/advancedMove Abyssrooster false 0 -1 1 0 1 1000/pause 1000/emote Abyssrooster 12/pause 1000/faceDirection Abyssrooster 0/warp Abyssrooster -1000 -1000/faceDirection farmer 2/showFrame farmer 4/pause 5000/playSound crickets/fade/viewport -100 -100/end",
+                "Kiss_Kataryna": "pause 500/animate KatarynaLK false false 4500 28/animate farmer true false 4500 101/positionOffset farmer -6 0/positionOffset KatarynaLK 6 0/textAboveHead KatarynaLK \"{{i18n:57876036.Kiss_Kataryna.01}}\"/pause 3000/stopAnimation KatarynaLK/stopAnimation farmer/positionOffset KatarynaLK -20 0/faceDirection KatarynaLK 1/speak KatarynaLK \"{{i18n:57876036.Kiss_Kataryna.02}}\"/stopAnimation ESFirepit 4/pause 500/faceDirection KatarynaLK 0/warp KatarynaLK -1000 -1000/faceDirection farmer 2/pause 500/advancedMove farmer false -1 0 4 1000/pause 1000/warp farmer -1000 -1000/pause 1000/speak KatarynaLK \"{{i18n:57876036.Kiss_Kataryna.03}}\"/pause 1000/playSound cluck/showFrame Abyssrooster 0/jump Abyssrooster 5/pause 1000/advancedMove Abyssrooster false 0 -1 1 0 2 1000/emote Abyssrooster 12/addTemporaryActor TempEyvindr 16 32 58 54 2 true/move TempEyvindr 0 -4 0/pause 500/emote TempEyvindr 40/pause 2000/end"
             }
         },
         //********** ADDITIONAL CONTENT IF JULIET INSTALLED **********
@@ -412,6 +581,91 @@
                 "Wed": "0 Custom_EastScarpeInn 17 11 0/700 Custom_EastScarpeInn 34 32 2/830 Forest 6 37 0/1300 Forest 93 94 2/1600 Saloon 13 20 2 abyss_perch/2000 Custom_EastScarpeInn 17 11 2 abyss_sleep",
                 "winter_15": "0 Custom_EastScarpeInn 17 11 0/a900 ArchaeologyHouse 4 12 0 square_5_3/1230 Saloon 13 20 2 abyss_perch/1600 Beach 25 14 2 square_5_5/2000 Custom_EastScarpeInn 17 11 2 abyss_sleep",
                 "spring": "0 Custom_EastScarpeInn 17 11 0/900 Custom_EastScarpeInn 34 32 1/1100 Custom_EastScarpe 44 90 3 square_3_3/1500 Custom_ESOrchard 2 16 3/1800 Custom_EastScarpeInn 15 11 2 square_5_3/2200 Custom_EastScarpeInn 17 11 2 abyss_sleep",
+            }
+        },
+        //*********** Dating Stuff ********************
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                //"HasValue:{{spouse}}": "false",
+                "Relationship:KatarynaLK |contains=Dating,Engaged,Married": false,
+                "HasSeenEvent |contains=57876030": false
+            },
+            "Entries": {
+                "57876026/f KatarynaLK 2000/k 57876029/k 57876030/t 600 1200": "continue/64 15/farmer 64 15 2 KatarynaLK 65 16 0/addConversationTopic DateKataryna1 14/skippable/pause 500/emote farmer 8/pause 500/speak KatarynaLK \"{{i18n:57876026.01}}\"/pause 500/emote KatarynaLK 28/pause 500/speak KatarynaLK \"{{i18n:57876026.02}}\"/quickQuestion #{{i18n:57876026.03}}#{{i18n:57876026.04}}(break)switchEvent 57876026_YesDateKat(break)switchEvent 57876026_NoDateKat",
+                "57876026_YesDateKat": "pause 500/emote KatarynaLK 32/speak KatarynaLK \"{{i18n:57876026.57876026_YesDateKat.01}}\"/pause 1000/faceDirection KatarynaLK 2/emote farmer 8/pause 500/playSound achievement/message \"{{i18n:57876026.57876026_YesDateKat.02}}\"/pause 1000/end",
+                "57876026_NoDateKat": "addMailReceived NoDateKataryna/addConversationTopic Kataryna_NoDate/pause 500/emote KatarynaLK 60/speak KatarynaLK \"{{i18n:57876026.57876026_NoDateKat.01}}\"/pause 500/faceDirection KatarynaLK 2/emote farmer 8/pause 1000/end",
+                "57876027/f KatarynaLK 2000/e 57876026/k 57876030/A DateKataryna1/t 600 1200": "continue/64 15/farmer 64 15 2 KatarynaLK 65 16 0/addConversationTopic DateKataryna2 14/skippable/pause 500/emote farmer 8/pause 500/speak KatarynaLK \"{{i18n:57876027.01}}\"/pause 500/emote KatarynaLK 28/pause 500/speak KatarynaLK \"{{i18n:57876027.02}}\"/quickQuestion #{{i18n:57876027.03}}#{{i18n:57876027.04}}(break)switchEvent 57876027_YesDateKat(break)switchEvent 57876027_NoDateKat",
+                "57876027_YesDateKat": "pause 500/emote KatarynaLK 32/speak KatarynaLK \"{{i18n:57876027.57876027_YesDateKat.01}}\"/pause 500/faceDirection KatarynaLK 2/emote farmer 8/pause 500/playSound achievement/message \"{{i18n:57876026.57876026_YesDateKat.02}}\"/pause 1000/end",
+                "57876027_NoDateKat": "addMailReceived NoDateKataryna/addConversationTopic Kataryna_NoDate/pause 500/emote KatarynaLK 60/speak KatarynaLK \"{{i18n:57876027.57876027_NoDateKat.01}}\"/pause 500/faceDirection KatarynaLK 2/emote farmer 8/pause 1000/end",
+                "57876029/f KatarynaLK 2000/e 57876027/A DateKataryna2/k 57876030/t 600 1200": "continue/64 15/farmer 64 15 2 KatarynaLK 65 16 0/addMailReceived NoDateKataryna/skippable/pause 500/emote farmer 8/pause 500/speak KatarynaLK \"{{i18n:57876029.01}}\"/pause 500/emote farmer 28/pause 500/speak KatarynaLK \"{{i18n:57876029.02}}\"/faceDirection KatarynaLK 2/pause 1000/emote KatarynaLK 40/pause 1000/faceDirection KatarynaLK 0/speak KatarynaLK \"{{i18n:57876029.03}}\"/pause 500/emote farmer 56/speak KatarynaLK \"{{i18n:57876029.04}}\"/pause 500/faceDirection KatarynaLK 2/pause 500/emote farmer 8/pause 1000/end",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "HasValue:{{spouse}}": "true",
+                "Relationship: KatarynaLK |contains=Dating, Engaged, Married": false,
+                "HasFlag | contains=NoDateKataryna": false
+            },
+            "Entries": {
+                "57876031/O {{spouse}}/o KatarynaLK/f KatarynaLK 2000/t 600 1200": "continue/64 15/farmer 64 15 2 KatarynaLK 65 16 0/addMailReceived NoDateKataryna/addConversationTopic Kataryna_NoDate/skippable/pause 500/emote farmer 8/pause 500/speak KatarynaLK \"{{i18n:57876031.01}}\"/pause 500/emote farmer 36/pause 500/speak KatarynaLK \"{{i18n:57876031.02}}\"/faceDirection KatarynaLK 2/pause 1000/emote KatarynaLK 40/pause 1000/faceDirection KatarynaLK 0/speak KatarynaLK \"{{i18n:57876031.03}}\"/pause 500/faceDirection KatarynaLK 2/pause 500/emote farmer 8/pause 1000/end"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "KatarynaDatability": false
+            },
+            "Entries": {
+                "57876031/f KatarynaLK 2000/t 600 1200": "continue/64 15/farmer 64 15 2 KatarynaLK 65 16 0/addMailReceived NoDateKataryna/addConversationTopic Kataryna_NoDate/skippable/pause 500/emote farmer 8/pause 500/speak KatarynaLK \"{{i18n:57876031.01}}\"/pause 500/emote farmer 36/pause 500/speak KatarynaLK \"{{i18n:57876031.02}}\"/faceDirection KatarynaLK 2/pause 1000/emote KatarynaLK 40/pause 1000/faceDirection KatarynaLK 0/speak KatarynaLK \"{{i18n:57876031.03}}\"/pause 500/faceDirection KatarynaLK 2/pause 500/emote farmer 8/pause 1000/end"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Spouse: AnyPlayer": "KatarynaLK"
+            },
+            "Entries": {
+                "57876031/o KatarynaLK/t 600 1200/f KatarynaLK 2000": "continue/64 15/farmer 64 15 2 KatarynaLK 65 16 0/addMailReceived NoDateKataryna/addConversationTopic Kataryna_NoDate/skippable/pause 500/emote farmer 8/pause 500/speak KatarynaLK \"{{i18n:57876031.01}}\"/pause 500/emote farmer 36/pause 500/speak KatarynaLK \"{{i18n:57876031.02}}\"/faceDirection KatarynaLK 2/pause 1000/emote KatarynaLK 40/pause 1000/faceDirection KatarynaLK 0/speak KatarynaLK \"{{i18n:57876031.03}}\"/pause 500/faceDirection KatarynaLK 2/pause 500/emote farmer 8/pause 1000/end"
+            }
+        },
+        //***********************************************
+        //M A R R I A G E
+        {
+            "LogName": "Engagement Dialogue",
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "KatarynaLK0": "{{i18n:engagement.kataryna0}}",
+                "KatartynaLK1": "{{i18n:engagement.kataryna1}}"
+            }
+        },
+        {
+            "LogName": "Marriage Dialogue",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/MarriageDialogueKatarynaLK",
+            "FromFile": "assets/Characters/Dialogue/KatarynaLK/MarriageDialogueKataryna.json"
+        },
+        { //Abyss
+            "LogName": "Abyss",
+            "Action": "EditData",
+            "Target": "Characters/schedules/Abyssrooster",
+            "When": {
+                "Relationship:KatarynaLK":"Married"
+            },
+            "Entries": {
+                "rain": "0 FarmHouse 37 16 2/630 FarmHouse 37 15 square_3_3/1900 FarmHouse 38 14 2 abyss_sleep",
+                "Mon": "0 Custom_ESAbyssCoop 3 5 0/630 Custom_ESAbyssCoop 3 5 square_3_3/830 ArchaeologyHouse 4 12 0 square_5_3/1200 Blacksmith 2 15 2 abyss_perch/1600 Saloon 13 20 2 abyss_perch/1900 BusStop 13 15 square_5_5",
+                "Tue": "0 Custom_ESAbyssCoop 3 5 0/630 Custom_ESAbyssCoop 3 5 square_3_3/1900 Custom_ESAbyssCoop 4 6 abyss_sleep",
+                "Wed": "0 Custom_ESAbyssCoop 3 5 0/630 Custom_ESAbyssCoop 3 5 square_3_3/830 Forest 6 37 0/1300 Forest 93 94 2/1600 Saloon 13 20 2 abyss_perch/2000 BusStop 13 15 square_5_5",
+                "Fri": "0 Custom_ESAbyssCoop 3 5 0/630 Custom_ESAbyssCoop 3 5 square_3_3/900 Town 41 58 2/1420 Beach 43 36 2/1730 Beach 24 35 3/2000 BusStop 13 15 square_5_5",
+                "winter_15": "GOTO Tue",
+                "spring": "0 Custom_ESAbyssCoop 3 5 0/630 Custom_ESAbyssCoop 3 5 square_3_3/1900 Custom_ESAbyssCoop 4 6 abyss_sleep",
             }
         },
     ]
