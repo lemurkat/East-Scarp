@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="10" height="5" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="90">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="10" height="5" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="90">
  <editorsettings>
-  <export target="." format="tmx"/>
+  <export format="tmx"/>
  </editorsettings>
  <tileset firstgid="1" name="outdoors" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
-  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+  <image source="winter_outdoorsTileSheet.png" width="400" height="1264"/>
   <tile id="150">
    <properties>
     <property name="Spawnable" value="t"/>
@@ -1495,8 +1495,8 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="1976" name="Paths" tilewidth="16" tileheight="16" tilecount="32" columns="4">
-  <image source="paths" width="64" height="128"/>
+ <tileset firstgid="1976" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths" width="64" height="144"/>
   <tile id="0">
    <properties>
     <property name="PathType" value="NE"/>
@@ -1528,7 +1528,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="2008" name="Town" tilewidth="16" tileheight="16" tilecount="2304" columns="32">
+ <tileset firstgid="2012" name="Town" tilewidth="16" tileheight="16" tilecount="2304" columns="32">
   <image source="spring_town.png" width="512" height="1152"/>
   <tile id="12">
    <animation>
@@ -1774,7 +1774,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="4312" name="ES-buildings" tilewidth="16" tileheight="16" tilecount="682" columns="22">
+ <tileset firstgid="4316" name="ES-buildings" tilewidth="16" tileheight="16" tilecount="682" columns="22">
   <image source="spring_EastScarpe.png" width="352" height="496"/>
   <tile id="435">
    <animation>
@@ -1789,7 +1789,7 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="4994" name="ES_beach" tilewidth="16" tileheight="16" tilecount="527" columns="17">
+ <tileset firstgid="4998" name="ES_beach" tilewidth="16" tileheight="16" tilecount="527" columns="17">
   <image source="spring_beach.png" width="272" height="496"/>
   <tile id="7">
    <properties>
@@ -2880,43 +2880,43 @@
  </tileset>
  <layer id="1" name="Back" width="10" height="5">
   <data encoding="csv">
-0,202,202,204,276,276,276,176,176,176,
+202,202,202,204,276,276,276,176,176,176,
 228,179,252,254,201,180,181,206,202,180,
 252,254,276,276,251,252,253,232,177,207,
-276,276,326,327,251,352,251,252,252,252,
-326,327,329,352,301,305,355,356,357,352
+276,276,326,327,302,328,251,252,252,252,
+326,327,329,352,301,379,302,302,302,352
 </data>
  </layer>
  <objectgroup id="2" name="Back">
   <object id="84" name="TileData" x="144" y="16" width="16" height="16">
    <properties>
-    <property name="TouchAction" value="Warp Custom_GrampletonFields 2 110"/>
+    <property name="TouchAction" value="LoadMap GrampletonFields 2 110"/>
    </properties>
   </object>
   <object id="85" name="TileData" x="144" y="32" width="16" height="16">
    <properties>
-    <property name="TouchAction" value="Warp Custom_GrampletonFields 2 111"/>
+    <property name="TouchAction" value="LoadMap GrampletonFields 2 111"/>
    </properties>
   </object>
   <object id="86" name="TileData" x="144" y="48" width="16" height="16">
    <properties>
-    <property name="TouchAction" value="Warp Custom_GrampletonFields 2 112"/>
+    <property name="TouchAction" value="LoadMap GrampletonFields 2 112"/>
    </properties>
   </object>
  </objectgroup>
  <layer id="3" name="Buildings" width="10" height="5">
   <data encoding="csv">
-180,0,0,0,98,150,100,0,158,159,
+0,0,0,0,98,150,100,0,158,159,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,436,0,0,0,0,0,0,0,
-0,0,0,0,0,0,355,0,69,70
+0,0,0,0,0,0,0,0,69,70
 </data>
  </layer>
  <objectgroup id="4" name="Buildings">
   <object id="80" name="TileData" x="80" y="0" width="16" height="16">
    <properties>
-    <property name="Action" value="Warp 4 20 Custom_ESSilo"/>
+    <property name="Action" value="Warp 4 20 Silo"/>
    </properties>
   </object>
   <object id="89" name="TileData" x="32" y="48" width="16" height="16">
@@ -2935,7 +2935,7 @@
 </data>
  </layer>
  <objectgroup id="8" name="Paths"/>
- <layer id="9" name="Front" width="10" height="5">
+ <layer id="9" name="Front" width="10" height="5" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
@@ -2945,7 +2945,7 @@
 </data>
  </layer>
  <objectgroup id="10" name="Front"/>
- <layer id="11" name="AlwaysFront" width="10" height="5">
+ <layer id="11" name="AlwaysFront" width="10" height="5" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,11,12,13,0,0,0,0,

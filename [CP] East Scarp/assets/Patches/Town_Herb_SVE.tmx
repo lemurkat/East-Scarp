@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="8" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="298">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="8" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="298">
  <tileset firstgid="1" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet" width="400" height="1264"/>
   <tile id="150">
@@ -1350,10 +1350,10 @@
  <tileset firstgid="1976" name="z_SVEbuildingShadow" tilewidth="16" tileheight="16" tilecount="456" columns="24">
   <image source="z_SVEbuildingShadow.png" width="384" height="304"/>
  </tileset>
- <tileset firstgid="2432" name="zspring_z_extras" tilewidth="16" tileheight="16" tilecount="1875" columns="25">
-  <image source="spring_z_extras.png" width="400" height="1200"/>
+ <tileset firstgid="2432" name="zspring_z_extras" tilewidth="16" tileheight="16" tilecount="5375" columns="25">
+  <image source="spring_z_extras.png" width="400" height="3440"/>
  </tileset>
- <tileset firstgid="4307" name="Town" tilewidth="16" tileheight="16" tilecount="2304" columns="32">
+ <tileset firstgid="7807" name="Town" tilewidth="16" tileheight="16" tilecount="2304" columns="32">
   <image source="spring_town.png" width="512" height="1152"/>
   <tile id="159">
    <properties>
@@ -1622,7 +1622,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="6611" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+ <tileset firstgid="10111" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths.png" width="64" height="144"/>
   <tile id="0">
    <properties>
@@ -1655,10 +1655,10 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="6647" name="zspring_beach" tilewidth="16" tileheight="16" tilecount="527" columns="17">
+ <tileset firstgid="10147" name="zspring_beach" tilewidth="16" tileheight="16" tilecount="527" columns="17">
   <image source="spring_beach.png" width="272" height="496"/>
  </tileset>
- <tileset firstgid="7174" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+ <tileset firstgid="10674" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
   <tile id="150">
    <properties>
@@ -3028,36 +3028,36 @@
 405,406,406,407,352,405,406,407,
 377,377,377,377,377,377,277,278,
 181,206,202,202,202,180,181,206,
-179,252,253,179,252,252,252,252,
-254,176,226,229,176,327,302,303,
-302,353,7399,7402,7499,7500,7500,7500,
-330,353,7399,7402,7524,7525,7525,7525,
-352,353,7399,7402,7549,377,377,377,
-352,353,7399,7351,7375,7353,7354,7354,
-305,353,7424,7426,7400,599,7400,7400,
-352,379,328,7424,7425,7425,7425,7425,
+179,252,253,179,252,252,253,232,
+254,176,226,229,176,327,251,252,
+302,353,10899,10902,10999,11000,11000,11000,
+330,353,10899,10902,11024,11025,11025,11025,
+352,353,10899,10902,11049,377,377,377,
+352,353,10899,10851,10875,10853,10854,10854,
+305,353,10924,10926,10900,599,10900,10900,
+352,379,328,10924,10925,10925,10925,10925,
 330,352,379,327,327,327,327,327,
 352,352,380,381,382,352,352,352,
 330,352,405,406,407,352,355,356
 </data>
  </layer>
  <objectgroup id="2" name="Back">
-  <object id="5" name="TileData" x="80" y="16" width="16" height="16">
+  <object id="5" name="TileData" x="112" y="16" width="16" height="16">
    <properties>
     <property name="TouchAction" value="Warp Custom_Garden 4 28"/>
    </properties>
   </object>
-  <object id="6" name="TileData" x="80" y="32" width="16" height="16">
+  <object id="6" name="TileData" x="112" y="32" width="16" height="16">
    <properties>
     <property name="TouchAction" value="Warp Custom_Garden 4 28"/>
    </properties>
   </object>
-  <object id="7" name="TileData" x="80" y="48" width="16" height="16">
+  <object id="7" name="TileData" x="112" y="48" width="16" height="16">
    <properties>
     <property name="TouchAction" value="Warp Custom_Garden 4 28"/>
    </properties>
   </object>
-  <object id="8" name="TileData" x="80" y="64" width="16" height="16">
+  <object id="8" name="TileData" x="112" y="64" width="16" height="16">
    <properties>
     <property name="TouchAction" value="Warp Custom_Garden 4 28"/>
    </properties>
@@ -3110,19 +3110,19 @@
  <layer id="7" name="Buildings" width="8" height="14">
   <data encoding="csv">
 0,114,115,64,65,66,233,407,
-0,0,0,0,0,0,277,278,
-0,0,0,0,0,0,181,206,
-0,0,0,0,0,0,252,252,
-0,0,0,0,0,327,302,303,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,327,0,0,
 233,0,0,0,144,145,0,0,
-5221,5222,0,0,169,170,5157,5158,
-103,352,0,0,0,103,5194,103,
+8721,8722,0,0,169,170,8657,8658,
+103,352,0,0,0,103,8694,103,
 0,308,0,0,0,0,0,308,
 0,103,0,0,0,0,0,0,
 103,103,0,0,0,0,0,0,
 0,0,0,0,0,0,0,55,
 0,0,0,130,132,258,79,80,
-5157,5158,5159,0,0,0,103,105
+8657,8658,8659,0,0,0,103,105
 </data>
  </layer>
  <objectgroup id="8" name="Buildings"/>
@@ -3167,32 +3167,32 @@
 </data>
  </layer>
  <objectgroup id="12" name="Paths"/>
- <layer id="13" name="Front" width="8" height="14">
+ <layer id="13" name="Front" width="8" height="14" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,119,120,0,0,
-5189,5190,0,0,0,0,5125,5126,
+8689,8690,0,0,0,0,8625,8626,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
-5093,5094,5095,0,0,0,0,0,
-5125,5126,5127,0,0,0,0,0,
+8593,8594,8595,0,0,0,0,0,
+8625,8626,8627,0,0,0,0,0,
 0,0,17,18,19,20,21,22
 </data>
  </layer>
  <objectgroup id="14" name="Front"/>
- <layer id="15" name="AlwaysFront" width="8" height="14">
+ <layer id="15" name="AlwaysFront" width="8" height="14" visible="0">
   <data encoding="csv">
 0,0,17,18,19,20,21,22,
 0,0,42,43,44,45,46,47,
 0,0,67,68,69,70,71,72,
 0,0,92,93,94,95,96,97,
-0,0,0,0,0,0,5093,5094,
+0,0,0,0,0,0,8593,8594,
 0,0,0,0,0,0,0,0,
 22,0,0,0,0,0,0,0,
 0,0,4,5,6,0,0,0,
@@ -3205,7 +3205,7 @@
 </data>
  </layer>
  <objectgroup id="16" name="AlwaysFront"/>
- <layer id="17" name="AlwaysFront2" width="8" height="14">
+ <layer id="17" name="AlwaysFront2" width="8" height="14" visible="0">
   <properties>
    <property name="Draw" value="AlwaysFront"/>
   </properties>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="10" height="6" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="62">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="13" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="21" nextobjectid="99">
  <tileset firstgid="1" name="outdoors" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
   <tile id="150">
@@ -7,38 +7,6 @@
     <property name="Spawnable" value="t"/>
     <property name="Type" value="Grass"/>
    </properties>
-   <animation>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="420" duration="100"/>
-    <frame tileid="421" duration="100"/>
-    <frame tileid="422" duration="100"/>
-    <frame tileid="423" duration="100"/>
-    <frame tileid="420" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-    <frame tileid="150" duration="100"/>
-   </animation>
   </tile>
   <tile id="151">
    <properties>
@@ -46,13 +14,18 @@
    </properties>
    <animation>
     <frame tileid="151" duration="1000"/>
-    <frame tileid="151" duration="1000"/>
     <frame tileid="152" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="152">
+   <animation>
+    <frame tileid="152" duration="1000"/>
+    <frame tileid="151" duration="1000"/>
    </animation>
   </tile>
   <tile id="156">
    <properties>
-    <property name="Spawnable" value="t"/>
+    <property name="Spawnable" value="T"/>
     <property name="Type" value="Grass"/>
    </properties>
   </tile>
@@ -99,6 +72,24 @@
     <property name="Type" value="Dirt"/>
    </properties>
   </tile>
+  <tile id="183">
+   <animation>
+    <frame tileid="183" duration="1000"/>
+    <frame tileid="1182" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="184">
+   <animation>
+    <frame tileid="184" duration="1000"/>
+    <frame tileid="1183" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="185">
+   <animation>
+    <frame tileid="185" duration="1000"/>
+    <frame tileid="1184" duration="1000"/>
+   </animation>
+  </tile>
   <tile id="200">
    <properties>
     <property name="Spawnable" value="t"/>
@@ -137,10 +128,20 @@
     <property name="Type" value="Dirt"/>
    </properties>
   </tile>
+  <tile id="208">
+   <animation>
+    <frame tileid="208" duration="1000"/>
+    <frame tileid="1207" duration="1000"/>
+   </animation>
+  </tile>
   <tile id="209">
    <properties>
     <property name="Water" value="t"/>
    </properties>
+   <animation>
+    <frame tileid="209" duration="1000"/>
+    <frame tileid="1208" duration="1000"/>
+   </animation>
   </tile>
   <tile id="225">
    <properties>
@@ -180,10 +181,28 @@
     <property name="Type" value="Dirt"/>
    </properties>
   </tile>
+  <tile id="233">
+   <animation>
+    <frame tileid="233" duration="1000"/>
+    <frame tileid="1232" duration="1000"/>
+   </animation>
+  </tile>
   <tile id="234">
    <properties>
     <property name="Water" value="t"/>
    </properties>
+  </tile>
+  <tile id="235">
+   <animation>
+    <frame tileid="235" duration="1000"/>
+    <frame tileid="1290" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="238">
+   <animation>
+    <frame tileid="238" duration="1000"/>
+    <frame tileid="1292" duration="1000"/>
+   </animation>
   </tile>
   <tile id="250">
    <properties>
@@ -221,6 +240,12 @@
     <property name="Type" value="Grass"/>
    </properties>
   </tile>
+  <tile id="260">
+   <animation>
+    <frame tileid="260" duration="1000"/>
+    <frame tileid="1315" duration="1000"/>
+   </animation>
+  </tile>
   <tile id="265">
    <properties>
     <property name="Type" value="Dirt"/>
@@ -246,6 +271,18 @@
    <properties>
     <property name="Type" value="Grass"/>
    </properties>
+  </tile>
+  <tile id="283">
+   <animation>
+    <frame tileid="283" duration="1000"/>
+    <frame tileid="1312" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="284">
+   <animation>
+    <frame tileid="284" duration="1000"/>
+    <frame tileid="1313" duration="1000"/>
+   </animation>
   </tile>
   <tile id="285">
    <properties>
@@ -282,6 +319,10 @@
    <properties>
     <property name="Water" value="t"/>
    </properties>
+   <animation>
+    <frame tileid="308" duration="1000"/>
+    <frame tileid="1316" duration="1000"/>
+   </animation>
   </tile>
   <tile id="309">
    <properties>
@@ -477,74 +518,9 @@
     <property name="Type" value="Grass"/>
    </properties>
   </tile>
-  <tile id="430">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="432">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="455">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="457">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="458">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="459">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="462">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="463">
-   <properties>
-    <property name="Diggable" value="T"/>
-   </properties>
-  </tile>
-  <tile id="487">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="488">
-   <properties>
-    <property name="Diggable" value="T"/>
-   </properties>
-  </tile>
   <tile id="512">
    <properties>
     <property name="Type" value="Dirt"/>
-   </properties>
-  </tile>
-  <tile id="513">
-   <properties>
-    <property name="Diggable" value="T"/>
-   </properties>
-  </tile>
-  <tile id="528">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="529">
-   <properties>
-    <property name="Type" value="Wood"/>
    </properties>
   </tile>
   <tile id="534">
@@ -567,27 +543,11 @@
     <property name="Type" value="Dirt"/>
    </properties>
   </tile>
-  <tile id="553">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="554">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
   <tile id="558">
    <properties>
     <property name="Diggable" value="t"/>
     <property name="Type" value="Dirt"/>
    </properties>
-  </tile>
-  <tile id="559">
-   <animation>
-    <frame tileid="559" duration="1000"/>
-    <frame tileid="1289" duration="1000"/>
-   </animation>
   </tile>
   <tile id="560">
    <properties>
@@ -648,27 +608,11 @@
     <property name="Type" value="Grass"/>
    </properties>
   </tile>
-  <tile id="578">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="579">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
   <tile id="583">
    <properties>
     <property name="Diggable" value="t"/>
     <property name="Type" value="Dirt"/>
    </properties>
-  </tile>
-  <tile id="584">
-   <animation>
-    <frame tileid="584" duration="1000"/>
-    <frame tileid="1314" duration="1000"/>
-   </animation>
   </tile>
   <tile id="585">
    <properties>
@@ -748,23 +692,6 @@
     <property name="Type" value="Stone"/>
    </properties>
   </tile>
-  <tile id="603">
-   <animation>
-    <frame tileid="603" duration="1000"/>
-    <frame tileid="1287" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="604">
-   <animation>
-    <frame tileid="604" duration="1000"/>
-    <frame tileid="1288" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="605">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
   <tile id="606">
    <properties>
     <property name="Diggable" value="t"/>
@@ -782,12 +709,6 @@
     <property name="Diggable" value="t"/>
     <property name="Type" value="Dirt"/>
    </properties>
-  </tile>
-  <tile id="609">
-   <animation>
-    <frame tileid="609" duration="1000"/>
-    <frame tileid="1285" duration="1000"/>
-   </animation>
   </tile>
   <tile id="610">
    <properties>
@@ -904,18 +825,6 @@
     <property name="Type" value="Dirt"/>
    </properties>
   </tile>
-  <tile id="637">
-   <animation>
-    <frame tileid="637" duration="200"/>
-    <frame tileid="638" duration="200"/>
-    <frame tileid="639" duration="200"/>
-    <frame tileid="640" duration="200"/>
-    <frame tileid="641" duration="200"/>
-    <frame tileid="642" duration="200"/>
-    <frame tileid="643" duration="200"/>
-    <frame tileid="644" duration="200"/>
-   </animation>
-  </tile>
   <tile id="653">
    <properties>
     <property name="Water" value="t"/>
@@ -1010,73 +919,15 @@
     <property name="Type" value="Grass"/>
    </properties>
   </tile>
-  <tile id="708">
-   <animation>
-    <frame tileid="708" duration="1000"/>
-    <frame tileid="1234" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="709">
-   <animation>
-    <frame tileid="709" duration="1000"/>
-    <frame tileid="1235" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="710">
-   <animation>
-    <frame tileid="710" duration="1000"/>
-    <frame tileid="1236" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="733">
-   <animation>
-    <frame tileid="733" duration="1000"/>
-    <frame tileid="1259" duration="1000"/>
-   </animation>
-  </tile>
   <tile id="734">
    <properties>
     <property name="Water" value="t"/>
    </properties>
-   <animation>
-    <frame tileid="734" duration="1000"/>
-    <frame tileid="1260" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="735">
-   <animation>
-    <frame tileid="735" duration="1000"/>
-    <frame tileid="1261" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="756">
-   <animation>
-    <frame tileid="756" duration="1000"/>
-    <frame tileid="1282" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="757">
-   <animation>
-    <frame tileid="757" duration="1000"/>
-    <frame tileid="1283" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="758">
-   <animation>
-    <frame tileid="758" duration="1000"/>
-    <frame tileid="1284" duration="1000"/>
-   </animation>
   </tile>
   <tile id="759">
    <properties>
     <property name="Water" value="t"/>
    </properties>
-  </tile>
-  <tile id="760">
-   <animation>
-    <frame tileid="760" duration="1000"/>
-    <frame tileid="1286" duration="1000"/>
-   </animation>
   </tile>
   <tile id="779">
    <properties>
@@ -1102,18 +953,6 @@
     <property name="Type" value="Wood"/>
    </properties>
   </tile>
-  <tile id="783">
-   <animation>
-    <frame tileid="783" duration="1000"/>
-    <frame tileid="1309" duration="1000"/>
-   </animation>
-  </tile>
-  <tile id="785">
-   <animation>
-    <frame tileid="785" duration="1000"/>
-    <frame tileid="1311" duration="1000"/>
-   </animation>
-  </tile>
   <tile id="809">
    <properties>
     <property name="Passable" value="T"/>
@@ -1130,13 +969,6 @@
     <property name="Type" value="Stone"/>
    </properties>
   </tile>
-  <tile id="817">
-   <animation>
-    <frame tileid="817" duration="30"/>
-    <frame tileid="746" duration="30"/>
-    <frame tileid="771" duration="30"/>
-   </animation>
-  </tile>
   <tile id="834">
    <properties>
     <property name="Passable" value="T"/>
@@ -1149,7 +981,25 @@
     <property name="Type" value="Wood"/>
    </properties>
   </tile>
+  <tile id="860">
+   <properties>
+    <property name="Passable" value="T"/>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
   <tile id="884">
+   <properties>
+    <property name="Passable" value="T"/>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="885">
+   <properties>
+    <property name="Passable" value="T"/>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="910">
    <properties>
     <property name="Passable" value="T"/>
     <property name="Type" value="Wood"/>
@@ -1268,6 +1118,7 @@
   </tile>
   <tile id="1248">
    <properties>
+    <property name="Passable" value="F"/>
     <property name="Water" value="T"/>
    </properties>
   </tile>
@@ -1337,6 +1188,7 @@
   <tile id="1269">
    <properties>
     <property name="Water" value="T"/>
+    <property name="asdf" value="F"/>
    </properties>
   </tile>
   <tile id="1270">
@@ -1392,10 +1244,10 @@
   </tile>
   <tile id="1293">
    <animation>
-    <frame tileid="1293" duration="400"/>
-    <frame tileid="1294" duration="400"/>
-    <frame tileid="1295" duration="400"/>
-    <frame tileid="1296" duration="400"/>
+    <frame tileid="1293" duration="450"/>
+    <frame tileid="1294" duration="450"/>
+    <frame tileid="1295" duration="450"/>
+    <frame tileid="1296" duration="450"/>
    </animation>
   </tile>
   <tile id="1297">
@@ -1441,83 +1293,73 @@
   </tile>
   <tile id="1318">
    <animation>
-    <frame tileid="1318" duration="450"/>
-    <frame tileid="1319" duration="450"/>
-    <frame tileid="1320" duration="450"/>
-    <frame tileid="1321" duration="450"/>
+    <frame tileid="1318" duration="500"/>
+    <frame tileid="1319" duration="500"/>
+    <frame tileid="1320" duration="500"/>
+    <frame tileid="1321" duration="500"/>
    </animation>
+  </tile>
+  <tile id="1322">
+   <properties>
+    <property name="Water" value="T"/>
+   </properties>
   </tile>
   <tile id="1323">
    <properties>
     <property name="Water" value="T"/>
    </properties>
   </tile>
-  <tile id="1775">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1776">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1777">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1790">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1791">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1800">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1801">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1802">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1815">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1816">
-   <properties>
-    <property name="Type" value="Wood"/>
-   </properties>
-  </tile>
-  <tile id="1843">
+  <tile id="1324">
    <properties>
     <property name="Water" value="T"/>
    </properties>
   </tile>
-  <tile id="1844">
+  <tile id="1345">
+   <properties>
+    <property name="Passable" value="T"/>
+   </properties>
+  </tile>
+  <tile id="1637">
+   <properties>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="1638">
+   <properties>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="1639">
+   <properties>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="1662">
+   <properties>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="1663">
+   <properties>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="1664">
+   <properties>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="1716">
    <properties>
     <property name="Water" value="T"/>
    </properties>
   </tile>
-  <tile id="1868">
+  <tile id="1717">
    <properties>
     <property name="Water" value="T"/>
    </properties>
   </tile>
-  <tile id="1869">
+  <tile id="1718">
    <properties>
     <property name="Water" value="T"/>
    </properties>
@@ -1556,109 +1398,214 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="2012" name="untitled tile sheet2" tilewidth="16" tileheight="16" tilecount="256" columns="16">
-  <image source="spring_outdoorsTileSheet2.png" width="256" height="256"/>
+ <tileset firstgid="2012" name="spring_town" tilewidth="16" tileheight="16" tilecount="2304" columns="32">
+  <image source="spring_town.png" width="512" height="1152"/>
  </tileset>
- <layer id="1" name="Back" width="10" height="6">
+ <tileset firstgid="4316" name="spring_beach" tilewidth="16" tileheight="16" tilecount="527" columns="17">
+  <image source="spring_beach.png" width="272" height="496"/>
+ </tileset>
+ <tileset firstgid="4843" name="spring_z_extras" tilewidth="16" tileheight="16" tilecount="5375" columns="25">
+  <image source="spring_z_extras.png" width="400" height="3440"/>
+ </tileset>
+ <tileset firstgid="10218" name="fall_treehouse" tilewidth="16" tileheight="16" tilecount="100" columns="10">
+  <image source="fall_treehouse.png" width="160" height="160"/>
+ </tileset>
+ <tileset firstgid="10318" name="dnextras" tilewidth="16" tileheight="16" tilecount="1800" columns="30">
+  <image source="spring_daisyextras.png" width="480" height="960"/>
+ </tileset>
+ <layer id="1" name="Back" width="13" height="13">
   <data encoding="csv">
-176,276,376,377,404,354,377,378,1673,1673,
-656,151,176,201,204,378,682,682,1673,1673,
-631,276,276,251,254,176,657,631,1673,1623,
-631,276,201,204,276,152,631,631,1673,1573,
-631,276,226,229,176,201,204,1673,1623,1624,
-631,276,226,178,204,251,178,204,1624,1625
+177,176,176,152,176,376,277,278,279,404,306,305,354,
+252,257,176,176,153,176,401,326,328,376,377,377,378,
+176,176,176,176,176,152,176,376,378,176,176,402,326,
+176,257,257,257,176,257,176,176,176,176,326,327,329,
+176,176,176,176,176,176,176,176,153,326,329,306,352,
+257,257,176,176,153,152,176,176,152,351,330,352,352,
+257,401,176,176,176,176,176,176,255,376,404,330,306,
+176,257,176,176,176,152,151,176,326,328,351,352,352,
+153,176,176,176,176,153,176,152,376,378,351,301,305,
+176,176,152,176,176,176,176,326,327,328,376,404,352,
+257,151,176,176,152,176,176,351,330,353,401,351,352,
+176,176,176,176,176,152,176,376,377,378,176,351,306,
+152,176,153,176,176,176,176,151,176,152,176,376,377
 </data>
  </layer>
- <objectgroup id="2" name="Back">
-  <object id="44" name="TileData" x="16" y="48" width="16" height="16">
-   <properties>
-    <property name="NPCBarrier" value="T"/>
-   </properties>
-  </object>
-  <object id="45" name="TileData" x="32" y="48" width="16" height="16">
-   <properties>
-    <property name="NPCBarrier" value="T"/>
-   </properties>
-  </object>
-  <object id="46" name="TileData" x="48" y="48" width="16" height="16">
-   <properties>
-    <property name="NPCBarrier" value="T"/>
-   </properties>
-  </object>
-  <object id="50" name="TileData" x="32" y="80" width="16" height="16">
-   <properties>
-    <property name="TouchAction" value="Warp Town 111 1"/>
-   </properties>
-  </object>
-  <object id="51" name="TileData" x="48" y="80" width="16" height="16">
-   <properties>
-    <property name="TouchAction" value="Warp Town 112 1"/>
-   </properties>
-  </object>
-  <object id="58" name="TileData" x="96" y="80" width="16" height="16">
-   <properties>
-    <property name="TouchAction" value="Warp Custom_EastScarpe 3 1"/>
-   </properties>
-  </object>
-  <object id="59" name="TileData" x="112" y="80" width="16" height="16">
-   <properties>
-    <property name="TouchAction" value="Warp Custom_EastScarpe 4 1"/>
-   </properties>
-  </object>
-  <object id="61" name="TileData" x="64" y="80" width="16" height="16">
-   <properties>
-    <property name="TouchAction" value="Warp Town 113 1"/>
-   </properties>
-  </object>
- </objectgroup>
- <layer id="3" name="Buildings" width="10" height="6">
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Back2" width="13" height="13">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
   <data encoding="csv">
-342,0,0,0,0,0,0,0,445,0,
-367,0,0,0,0,0,295,369,470,1699,
-442,0,0,0,0,0,320,394,495,0,
-467,292,0,0,0,0,345,419,520,0,
-492,317,0,0,0,0,0,444,545,0,
-517,342,0,0,0,436,0,61,62,63
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,10285,0,0,0,0,0,0,
+0,0,10540,0,10293,10294,10295,10285,0,0,0,0,0,
+0,0,10570,0,10303,10293,10294,10295,0,0,0,0,0,
+0,0,0,0,10313,10303,0,0,0,0,0,0,0,
+0,0,0,0,0,10313,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="4" name="Buildings">
-  <object id="57" name="TileData" x="80" y="80" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;ESMountainSC.1&quot;"/>
-   </properties>
-  </object>
- </objectgroup>
- <layer id="5" name="Paths" width="10" height="6">
+ <objectgroup id="4" name="Back2"/>
+ <layer id="5" name="Back3" width="13" height="13">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,1987,0,0,0,0,
-0,2001,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="6" name="Paths"/>
- <layer id="7" name="Front" width="10" height="6">
+ <objectgroup id="6" name="Back3"/>
+ <layer id="7" name="Buildings" width="13" height="13">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,411,0,390,0,0,
-0,0,0,0,0,0,0,0,0,0
+392,0,0,0,0,0,0,0,0,0,0,0,0,
+417,0,0,0,0,0,0,0,0,0,0,0,0,
+392,0,0,0,0,0,0,0,0,0,0,0,0,
+417,64,65,66,0,0,0,0,0,0,0,0,0,
+416,0,0,0,0,0,0,0,0,0,0,0,0,
+114,115,0,0,0,132,132,132,132,0,0,0,0,
+0,0,0,0,0,10273,10274,10275,10276,10565,0,0,0,
+0,0,0,0,0,10283,10284,0,10286,0,0,0,0,
+0,0,10565,0,10292,0,0,0,10296,10565,0,0,0,
+0,0,0,10301,10302,0,10304,10305,10306,0,0,0,0,
+10568,10309,10310,10311,10312,0,10314,10315,10316,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="8" name="Front"/>
- <layer id="9" name="AlwaysFront" width="10" height="6">
+ <objectgroup id="8" name="Buildings"/>
+ <layer id="9" name="Buildings2" width="13" height="13">
+  <properties>
+   <property name="Draw" value="Buildings"/>
+  </properties>
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-11,12,13,0,0,0,0,11,12,13,
-36,37,38,0,0,0,0,36,37,38,
-61,62,63,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="10" name="AlwaysFront"/>
+ <objectgroup id="10" name="Buildings2"/>
+ <layer id="11" name="Buildings 3" width="13" height="13">
+  <properties>
+   <property name="Draw" value="Buildings"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="12" name="Buildings 3"/>
+ <layer id="13" name="Paths" width="13" height="13">
+  <data encoding="csv">
+0,0,0,1987,0,0,0,0,0,0,0,0,2002,
+0,0,1998,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,1986,0,0,0,0,1998,0,0,
+0,0,1998,0,0,0,0,0,0,0,0,0,1998,
+0,0,0,1998,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,1987,0,
+0,1985,0,0,0,0,0,0,0,0,1998,0,0,
+0,1998,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,1998,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1998,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="14" name="Paths"/>
+ <layer id="15" name="Front" width="13" height="13">
+  <data encoding="csv">
+387,0,0,0,0,0,0,0,0,0,0,0,0,
+387,14,15,16,0,0,0,0,0,0,0,0,0,
+387,39,40,41,0,0,0,0,0,0,0,0,0,
+412,0,0,0,0,0,0,0,0,0,0,0,0,
+437,90,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,10265,0,10535,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,10535,0,0,0,0,0,0,10535,0,0,0,
+0,0,0,0,0,0,0,0,0,10297,0,0,0,
+10538,10299,10300,0,0,0,0,0,0,10307,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="16" name="Front"/>
+ <layer id="17" name="Front2" width="13" height="13">
+  <properties>
+   <property name="Draw" value="Front"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+89,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="18" name="Front2"/>
+ <layer id="19" name="AlwaysFront" width="13" height="13">
+  <data encoding="csv">
+63,0,0,0,0,0,0,0,0,0,0,0,0,
+10218,10219,10220,10221,10222,10223,10224,10225,10226,0,0,0,0,
+10228,10229,10230,10231,10232,10233,10234,10235,10236,10237,0,0,0,
+10238,10239,10240,10241,10242,10243,10244,10245,10246,10247,0,0,0,
+10248,10249,10250,10251,10252,10253,10254,10255,10256,10257,0,0,0,
+10258,10259,10260,10261,10262,10263,10264,0,10266,10267,0,0,0,
+10268,10269,10270,10271,10272,0,0,0,0,10277,0,0,0,
+10278,10279,10280,10281,10282,0,0,0,0,10287,0,0,0,
+10288,10289,10290,10291,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="20" name="AlwaysFront"/>
 </map>

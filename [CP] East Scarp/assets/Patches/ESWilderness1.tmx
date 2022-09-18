@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="35" height="35" tilewidth="16" tileheight="16" infinite="0" nextlayerid="16" nextobjectid="51">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="35" height="35" tilewidth="16" tileheight="16" infinite="0" nextlayerid="16" nextobjectid="52">
  <editorsettings>
-  <export target="." format="tmx"/>
+  <export format="tmx"/>
  </editorsettings>
  <tileset firstgid="1" name="outdoors" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
@@ -3070,7 +3070,7 @@
  <layer id="3" name="Buildings" width="35" height="35">
   <data encoding="csv">
 325,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-350,325,442,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+350,325,442,0,0,0,0,0,0,0,64,65,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 400,350,467,291,441,0,0,0,0,343,369,1744,1745,291,292,439,0,0,0,438,0,4717,4634,4635,4636,0,2955,2956,0,4634,4635,4636,0,0,0,
 0,375,492,316,466,468,469,468,469,368,394,493,490,316,493,445,0,0,0,442,0,0,0,0,0,0,2987,2988,0,0,0,0,0,0,0,
 0,0,517,341,491,493,494,493,494,393,419,518,515,341,518,470,0,0,0,467,469,442,384,385,385,385,385,385,385,385,385,385,386,0,0,
@@ -3109,37 +3109,37 @@
  <objectgroup id="4" name="Buildings">
   <object id="38" name="TileData" x="176" y="80" width="16" height="16">
    <properties>
-    <property name="Action" value="Say A landslide has completely covered the mine entrance."/>
+    <property name="Action" value="Message &quot;ESWilderness.1&quot;"/>
    </properties>
   </object>
   <object id="41" name="TileData" x="192" y="96" width="16" height="16">
    <properties>
-    <property name="Action" value="Say It's old and rusty, and will never run again."/>
+    <property name="Action" value="Message &quot;ESWilderness.2&quot;"/>
    </properties>
   </object>
   <object id="42" name="TileData" x="112" y="112" width="16" height="16">
    <properties>
-    <property name="Action" value="Say The inside is black with coal dust."/>
+    <property name="Action" value="Message &quot;ESWilderness.3&quot;"/>
    </properties>
   </object>
   <object id="43" name="TileData" x="96" y="112" width="16" height="16">
    <properties>
-    <property name="Action" value="Say The inside is black with coal dust."/>
+    <property name="Action" value="Message &quot;ESWilderness.4&quot;"/>
    </properties>
   </object>
   <object id="44" name="TileData" x="208" y="208" width="16" height="16">
    <properties>
-    <property name="Action" value="Say Someone has put out water for the wildlife."/>
+    <property name="Action" value="Message &quot;ESWilderness.5&quot;"/>
    </properties>
   </object>
   <object id="47" name="TileData" x="288" y="432" width="16" height="16">
    <properties>
-    <property name="Action" value="Warp 44 31 EastScarpeInn"/>
+    <property name="Action" value="Warp 44 35 Custom_EastScarpeInn"/>
    </properties>
   </object>
   <object id="48" name="TileData" x="304" y="432" width="16" height="16">
    <properties>
-    <property name="Action" value="Warp 44 31 EastScarpeInn"/>
+    <property name="Action" value="Warp 44 35 Custom_EastScarpeInn"/>
    </properties>
   </object>
   <object id="49" name="TileData" x="320" y="432" width="16" height="16">
@@ -3150,6 +3150,11 @@
   <object id="50" name="TileData" x="336" y="432" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;InnOuter.01&quot;"/>
+   </properties>
+  </object>
+  <object id="51" name="TileData" x="176" y="16" width="16" height="16">
+   <properties>
+    <property name="Action" value="playsound leafrustle"/>
    </properties>
   </object>
  </objectgroup>
@@ -3195,7 +3200,7 @@
  <objectgroup id="8" name="Paths"/>
  <layer id="9" name="Front" width="35" height="35">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4683,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,39,40,41,0,0,0,0,0,0,0,0,4683,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4700,0,0,0,0,2923,2924,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,1768,1769,1770,1771,442,0,0,0,0,0,0,0,359,360,360,360,360,360,360,360,360,360,361,0,0,
