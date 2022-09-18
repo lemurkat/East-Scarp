@@ -1,5 +1,4 @@
 # East-Scarp
-The latest version (2.0.5)
 
 ADDED in 2.2
 - Rosa's 10 heart event (complete with personalized stationery, additional content if Mr Ginger and/or Jessie & Juliet installed and finally, that recipe.
