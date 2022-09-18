@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="4" height="4" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="1">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="8" height="4" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="2">
  <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths" width="64" height="144"/>
   <tile id="0">
@@ -1612,48 +1612,57 @@
    </properties>
   </tile>
  </tileset>
- <layer id="1" name="Back" width="4" height="4">
+ <tileset firstgid="2012" name="zz_chickenShack" tilewidth="16" tileheight="16" tilecount="12" columns="3">
+  <image source="chickenShack.png" width="48" height="64"/>
+ </tileset>
+ <layer id="1" name="Back" width="8" height="4">
   <data encoding="csv">
-0,0,0,0,
-0,0,0,0,
-0,0,0,0,
-0,0,0,0
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
 </data>
  </layer>
  <objectgroup id="2" name="Back"/>
- <layer id="3" name="Buildings" width="4" height="4">
+ <layer id="3" name="Buildings" width="8" height="4">
   <data encoding="csv">
-0,0,0,0,
-185,0,1135,0,
-1135,0,0,185,
-0,1160,0,0
+0,0,0,0,0,0,0,0,
+185,0,1135,0,0,2018,2019,2020,
+1135,0,0,185,185,2021,2022,2023,
+0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="4" name="Buildings"/>
- <layer id="5" name="Paths" width="4" height="4">
+ <objectgroup id="4" name="Buildings">
+  <object id="1" name="TileData" x="80" y="32" width="16" height="16">
+   <properties>
+    <property name="Action" value="Warp 2 7 Custom_ESAbyssCoop"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="5" name="Paths" width="8" height="4">
   <data encoding="csv">
-0,0,0,0,
-0,0,0,0,
-0,0,8,0,
-0,0,0,0
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,8,0,0,0,0,0,
+0,0,0,0,8,0,0,0
 </data>
  </layer>
  <objectgroup id="6" name="Paths"/>
- <layer id="7" name="Front" width="4" height="4">
+ <layer id="7" name="Front" width="8" height="4">
   <data encoding="csv">
-160,0,0,0,
-0,0,0,160,
-0,0,0,0,
-0,0,0,0
+160,0,0,0,0,2015,2016,2017,
+0,0,0,160,160,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
 </data>
  </layer>
  <objectgroup id="8" name="Front"/>
- <layer id="9" name="AlwaysFront" width="4" height="4">
+ <layer id="9" name="AlwaysFront" width="8" height="4">
   <data encoding="csv">
-0,0,0,0,
-0,0,0,0,
-0,0,0,0,
-0,0,0,0
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
 </data>
  </layer>
  <objectgroup id="10" name="AlwaysFront"/>
