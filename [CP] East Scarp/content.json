@@ -170,13 +170,10 @@
                 "InnBath"
             ]
         },
-        /*{
-            "Name": "Custom_ESHartResidence",
-            "FromMapFile": "assets/Locations/InnInteriors/HartResidence.tmx",
-            "MigrateLegacyNames": [
-                "HartResidence"
-            ]
-        },*/
+        {
+            "Name": "Custom_UnderwaterLexi",
+            "FromMapFile": "assets/Locations/TempMaps/UnderwaterMap2.tmx",
+        },
         {
             "Name": "Custom_ES_InnRoomRosa",
             "FromMapFile": "assets/Locations/InnInteriors/InnRoomRosa.tmx"
@@ -255,6 +252,25 @@
         }
     },
     "DynamicTokens": [
+        //Recolor Options
+        {
+            "Name": "recolor",
+            "Value": "vanilla"
+        },
+        {
+            "Name": "recolor",
+            "Value": "VPR",
+            "When": {
+                "HasMod": "grapeponta.VibrantPastoralRecolor"
+            }
+        },
+        {
+            "Name": "recolor",
+            "Value": "ER",
+            "When": {
+                "HasMod": "DaisyNiko.EarthyRecolour"
+            }
+        },
         //Yri Flower Tokens
         {
             "Name": "FlowerStyle",
@@ -323,7 +339,7 @@
             "When": {
                 "HasSeenEvent": "57870004",
                 "Weather": "sun",
-                "season":"spring,summer,fall"
+                "season": "spring,summer,fall"
             }
         },
         {
@@ -332,7 +348,7 @@
             "When": {
                 "HasSeenEvent": "57870003",
                 "Weather": "sun",
-                "season":"spring,summer,fall"
+                "season": "spring,summer,fall"
             }
         },
         {
@@ -342,7 +358,7 @@
                 "HasSeenEvent|contains=57870003": true,
                 "HasSeenEvent|contains=57870004": true,
                 "Weather": "sun",
-                "season":"spring,summer,fall"
+                "season": "spring,summer,fall"
             }
         }
     ],
@@ -371,12 +387,20 @@
             "Action": "EditMap",
             "Target": "Maps/Custom_EastScarpe,Custom_ESClearingHouse, Custom_ESMeadowFarm, Custom_ESOrchard",
             "MapProperties": {
-                "Music": "nightTime"
+                "Music": "spring_night_ambient"
             },
             "Update": "OnTimeChange",
             "When": {
-                "Time": "{{range:1800, 2600}}",
-                "Weather |contains=rain,storm": false
+                "Time": "{{range:1900, 2600}}",
+                "Weather |contains=rain,storm": false,
+                "Season":"summer, spring, fall"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EastScarpeInn",
+            "MapProperties": {
+                "Music": "SettlingIn"
             }
         },
         {
@@ -433,6 +457,11 @@
             "Action": "Load",
             "Target": "Maps/spring_cottage, Maps/summer_cottage, Maps/fall_cottage, Maps/winter_cottage, Maps/lemurfurniture, Maps/lemur_coffeeshop",
             "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/spring_rockpools, Maps/summer_rockpools, Maps/fall_rockpools, Maps/winter_rockpools",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}_{{recolor}}.png"
         },
         {
             "Action": "Load",
@@ -495,6 +524,34 @@
             },
             "When": {
                 "River": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EastScarpe",
+            "FromFile": "assets/Patches/EastScarpeRiverPatch1-waterfall.tmx",
+            "ToArea": {
+                "X": 19,
+                "Y": 0,
+                "Width": 19,
+                "Height": 26
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EastScarpe",
+            "FromFile": "assets/Patches/EastScarpeRiverPatch2.tmx",
+            "ToArea": {
+                "X": 38,
+                "Y": 15,
+                "Width": 42,
+                "Height": 17
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
             }
         },
         {
@@ -586,7 +643,8 @@
             },
             "When": {
                 "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
-                "HasMod |contains=DaisyNiko.SVR2": false
+                "HasMod |contains=DaisyNiko.SVR2": false,
+                "HasMod |contains=DaisyNiko.SVR3": false
             }
         },
         /*{
@@ -1024,7 +1082,7 @@
                         "MapProperties",
                         "Warp"
                     ],
-                    "Value": "88 -1 Custom_ESDeepMountains 7 61 89 -1 Custom_ESDeepMountains 7 61 90 -1 Custom_ESDeepMountains 7 61 91 -1 Custom_ESDeepMountains 7 61",
+                    "Value": "88 -1 Custom_ESDeepMountains 7 61 89 -1 Custom_ESDeepMountains 7 61",
                     "Delimiter": " "
                 }
             ],
@@ -1052,6 +1110,23 @@
                 "Width": 3,
                 "Height": 2
             },
+            "When": {
+                "HasSeenEvent": "57872012"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ESSeaCave",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 32,
+                        "Y": 23
+                    },
+                    "Layer": "Buildings",
+                    "Remove": true
+                },
+            ],
             "When": {
                 "HasSeenEvent": "57872012"
             }
@@ -1090,13 +1165,14 @@
             "Entries": {
                 "Custom_EastScarpe": "-1/-1/-1/-1/153 -1 142 0 152 -1 129 1 147 1 131 2 148 2 708 2/153 -1 142 0 144 0 152 -1 154 1 128 2 130 2 146 2 149 2 150 2 155 2 708 2 701 2 267 2/153 -1 142 0 269 0 152 -1 129 1 154 1 155 1 131 2 148 2 150 2 705 2 701 2/153 -1 142 0 269 0 152 -1 147 1 155 1 708 2 130 2 131 2 146 2 150 2 151 2 154 2 705 2/107 .01 378 .08 579 .1 588 .1 581 .1 583 .1 102 .15 390 .25 330 1",
                 "Custom_ESDeepDark": "-1/-1/-1/-1/153 -1 156 -1 157 -1 158 -1/153 -1 156 -1 157 -1 158 -1/153 -1 156 -1 157 -1 158 -1/153 -1 156 -1 157 -1 158 -1/107 .01 378 .08 579 .1 588 .1 581 .1 583 .1",
-                "Custom_ESOrchard": "-1/-1/-1/-1/139 -1 698 -1 147 -1 136 -1 699 -1 138 -1 129 -1/139 -1 137 -1 136 -1 699 -1 148 -1/698 -1 137 -1 136 -1 699 -1/147 -1 136 -1 699 -1/110 .1 118 .1 100 .05 103 .05 106 .05 102 .15 390 .25 330 1",
+                "Custom_ESOrchard": "-1/-1/-1/-1/698 -1 129 -1 699 -1 136 0 139 1 147 1 138 1/699 -1 137 -1 148 -1 138 0 136 0 139 1/699 -1 698 -1 136 0 139 0 137 0/699 -1 136 0 147 1/110 .1 118 .1 100 .05 103 .05 106 .05 102 .15 390 .25 330 1",
                 "Custom_ESVineyard": "18 .9/402 .9/410 .6/418 .7 414 .1 283 .5/137 -1 132 -1 143 -1 145 -1 153 -1 706 -1/138 -1 132 -1 144 -1 145 -1 153 -1 706 -1 704 -1/139 -1 137 -1 132 -1 140 -1 143 -1 153 -1 706 -1 699 -1/132 -1 140 -1 141 -1 143 -1 144 -1 153 -1 707 -1 699 -1/378 .2 110 .2 583 .1 102 .2 390 .25 330 1",
                 "Custom_ESClearingHouse": "18 .9/402 .9/410 .6/418 .7 414 .1 283 .5/137 -1 132 -1 143 -1 145 -1 153 -1 706 -1/138 -1 132 -1 144 -1 145 -1 153 -1 706 -1 704 -1/139 -1 137 -1 132 -1 140 -1 143 -1 153 -1 706 -1 699 -1/132 -1 140 -1 141 -1 143 -1 144 -1 153 -1 707 -1 699 -1/378 .2 110 .2 583 .1 102 .2 390 .25 330 1",
                 "Custom_ESMineEntrance": "-1/-1/-1/-1/136 -1 142 -1 153 -1 702 -1 700 -1/136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
                 "Custom_ESSeaCave": "-1/-1/-1/-1/152 -1 153 -1 148 -1 156 -1/152 -1 153 -1 156 -1/152 -1 153 -1 148 -1 154 -1 156 -1/152 -1 153 -1 154 -1 156 -1/110 .1 118 .1 100 .05 103 .05 106 .05 102 .15 390 .25 330 1",
                 "Custom_ESSmugglerDen": "-1/-1/-1/-1/153 -1 157 -1 147 -1 156 -1 796 -1/153 -1 157 -1 147 -1 156 -1 796 -1/153 -1 157 -1 147 -1 156 -1 796 -1/153 -1 157 -1 147 -1 156 -1 796 -1/330 1",
-                "Custom_ESMeadowFarm": "-1/-1/-1/-1/137 -1 132 -1 143 -1 145 -1 153 -1 706 -1/138 -1 132 -1 144 -1 145 -1 153 -1 706 -1 704 -1/139 -1 137 -1 132 -1 140 -1 143 -1 153 -1 706 -1 699 -1/132 -1 140 -1 141 -1 143 -1 144 -1 153 -1 707 -1 699 -1/382 .05 770 .1 390 .25 330 1"
+                "Custom_ESMeadowFarm": "-1/-1/-1/-1/137 -1 132 -1 143 -1 145 -1 153 -1 706 -1/138 -1 132 -1 144 -1 145 -1 153 -1 706 -1 704 -1/139 -1 137 -1 132 -1 140 -1 143 -1 153 -1 706 -1 699 -1/132 -1 140 -1 141 -1 143 -1 144 -1 153 -1 707 -1 699 -1/382 .05 770 .1 390 .25 330 1",
+                "Custom_UnderwaterLexi": "-1/-1/-1/-1/155 -1 130 -1 128 -1 267 -1 837 -1/155 -1 130 -1 128 -1 267 -1 837 -1/155 -1 130 -1 128 -1 267 -1 837 -1/155 -1 130 -1 128 -1 267 -1 837 -1/749 1",
             }
         },
         {
@@ -1884,7 +1960,7 @@
             "Target": "Maps/Custom_EastScarpe",
             "When": {
                 "HasMod": "PeacefulEnd.CustomCompanions",
-                "OutsideAnimals":"Fowl"
+                "OutsideAnimals": "Fowl"
             },
             "MapTiles": [
                 {
@@ -1929,8 +2005,8 @@
                 }
             ]
         },
-    //Adds animals inside as long as they're not outside!
-    //Alpaca and Horse
+        //Adds animals inside as long as they're not outside!
+        //Alpaca and Horse
         {
             "Action": "EditMap",
             "Target": "Maps/Custom_ESJacobBarn",
@@ -1979,7 +2055,7 @@
             "Update": "OnLocationChange",
             "When": {
                 "HasMod": "PeacefulEnd.CustomCompanions",
-                "OutsideAnimals |contains=Fowl":false,
+                "OutsideAnimals |contains=Fowl": false,
                 "HasSeenEvent": "57870003"
             },
             "MapTiles": [
